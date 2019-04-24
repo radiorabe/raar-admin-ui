@@ -1,0 +1,20 @@
+.downgrade-value {
+  font-weight: 500;
+  text-align: right;
+  display: inline-block;
+}
+
+sd-downgrade-action {
+  &.disabled {
+    color: $brand-disabled;
+
+    .glyphicon {
+      color: $brand-disabled;
+    }
+  }
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 100px;
+}

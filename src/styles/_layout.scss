@@ -1,0 +1,74 @@
+body {
+  font-weight: 300;
+}
+
+a {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.sidebar {
+  width: 270px;
+  float: left;
+
+  .well {
+    background-color: transparentize($brand-info, 0.5);
+    border: 0;
+  }
+}
+
+.content {
+  position: relative;
+  vertical-align: top;
+  padding: 0;
+  height: 100%;
+  transition: margin 200ms ease;
+  margin-left: 300px;
+}
+
+.paragraph {
+  margin-bottom: 10px;
+}
+
+.icon-pulse {
+  overflow: hidden;
+  font-size: 32px;
+  line-height: 14px;
+  color: $gray;
+  animation: icon-pulse 1s infinite linear;
+}
+
+@keyframes icon-pulse {
+  0% {
+    width: 11px;
+  }
+  32% {
+    width: 11px;
+  }
+  33% {
+    width: 22px;
+  }
+  65% {
+    width: 22px;
+  }
+  66% {
+    width: 32px;
+  }
+  100% {
+    width: 32px;
+  }
+}

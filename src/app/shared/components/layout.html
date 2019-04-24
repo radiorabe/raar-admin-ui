@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#nav"
+        aria-expanded="false"
+        (click)="toggleNav()"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href=".">Raar Admin</a>
+    </div>
+
+    <div
+      [class.collapse]="collapsibleNav"
+      [class.navbar-collapse]="collapsibleNav"
+      [class.in]="showNav"
+    >
+      <ng-content select="nav"></ng-content>
+    </div>
+  </div>
+</nav>
+
+<div class="container" [class.active]="showNav">
+  <aside id="nav" class="sidebar">
+    <div class="sidebar-content">
+      <ng-content select="aside"></ng-content>
+    </div>
+
+    <footer>
+      <small>
+        Copyright &copy; <a href="http://rabe.ch">Radio Bern RaBe</a> 2016 -
+        2019
+        <br />
+        <a href="https://github.com/radiorabe/raar-admin-ui">Quellcode</a>
+        verfügbar unter der
+        <a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL</a>
+        <br />
+        Entwickelt von
+        <a href="http://codez.ch">code!z</a>
+      </small>
+    </footer>
+  </aside>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

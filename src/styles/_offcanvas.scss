@@ -1,0 +1,32 @@
+@media screen and (max-width: 767px) {
+  .container {
+    position: relative;
+    transition: all 0.25s ease-out;
+    left: 0;
+  }
+
+  .container .sidebar {
+    left: -285px;
+
+    sd-shows .list-group {
+      display: none;
+    }
+  }
+
+  .container.active {
+    left: 300px;
+
+    sd-shows .list-group {
+      display: block;
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+  }
+
+  .content {
+    margin-left: 0 !important;
+  }
+}
