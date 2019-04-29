@@ -15,7 +15,8 @@ export class ModelsService<T extends CrudModel> {
   private entries$ = new BehaviorSubject<T[]>([]);
 
   constructor(protected crudRest: CrudRestService<T>) {
-    this.reload();
+    // only reload after instance variables from subclasses have been set.
+    setTimeout(() => this.reload());
   }
 
   getEntries(): Observable<T[]> {

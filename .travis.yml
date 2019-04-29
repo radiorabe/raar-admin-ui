@@ -18,7 +18,7 @@ script:
   - ng build --prod
 
 before_deploy:
-  - cd dist/raar-admin-ui && gzip -k *.{css,js} && tar czf ../raar-admin-ui.tar.gz *
+  - cd dist/raar-admin-ui && gzip -kf *.{css,js} && tar czf ../raar-admin-ui.tar.gz .
 
 deploy:
   provider: releases
