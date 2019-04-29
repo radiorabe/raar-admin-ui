@@ -5,8 +5,6 @@ import { CommonModule } from "@angular/common";
 import { AppComponent } from "./app.component";
 import { SharedModule } from "./shared/shared.module";
 
-import * as moment from "moment";
-import "moment/locale/de";
 import { NotificationComponent } from "./shared/components/notification.component";
 import { AudioEncodingsService } from "./shared/services/audio-encodings.service";
 import { NotificationService } from "./shared/services/notification.service";
@@ -15,8 +13,6 @@ import { ShowsModule } from "./shows/shows.module";
 import { ProfilesModule } from "./profiles/profiles.module";
 import { PlaybackFormatsModule } from "./playback-formats/playback-formats.module";
 import { AccessCodesModule } from "./access-codes/access-codes.module";
-
-moment.locale("de");
 
 @NgModule({
   imports: [
