@@ -15,6 +15,9 @@ import { AudioEncodingsService } from "../../shared/services/audio-encodings.ser
 import { ProfileModel } from "../models/profile.model";
 import { ArchiveFormatModel } from "../models/archive-format.model";
 import { NotificationService } from "../../shared/services/notification.service";
+import { ShowsService } from "src/app/shows/services/shows.service";
+import { ShowModel } from "src/app/shows/models/show.model";
+import { filter, map } from "rxjs/operators";
 
 @Component({
   selector: "sd-profile-form",
@@ -35,6 +38,7 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
     router: Router,
     profilesService: ProfilesService,
     public archiveFormatsRest: ArchiveFormatsRestService,
+    private showsService: ShowsService,
     private audioEncodingsService: AudioEncodingsService,
     notificationSerivce: NotificationService,
     changeDetector: ChangeDetectorRef,
@@ -82,6 +86,20 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
     } else {
       this.shownArchiveFormat = format;
     }
+  }
+
+  relatedShows() {
+    return this.showsService
+      .getEntries()
+      .pipe(
+        map(list =>
+          list.filter(
+            show =>
+              show.relationships.profile &&
+              show.relationships.profile.data.id === this.entry.id
+          )
+        )
+      );
   }
 
   protected setEntry(profile: ProfileModel) {
