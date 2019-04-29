@@ -4,7 +4,7 @@
 ng build --prod || exit 1
 
 # build tarball
-cd dist/raar-admin-ui && gzip -k *.{css,js} && tar czf ../raar-admin-ui.tar.gz *
+(cd dist/raar-admin-ui && gzip -kf *.{css,js} && tar czf ../raar-admin-ui.tar.gz .)
 
 # upload archive
 scp dist/raar-admin-ui.tar.gz raar@archiv:/var/www/raar-ui/admin/raar-admin-ui.new.tar.gz
