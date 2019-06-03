@@ -14,11 +14,8 @@ cache:
     - node_modules
 
 script:
-  - ng test --watch=false --browsers=ChromeHeadlessNoSandbox
-  - ng build --prod
-
-before_deploy:
-  - cd dist/raar-admin-ui && gzip -kf *.{css,js} && tar czf ../raar-admin-ui.tar.gz .
+  - npm run test:ci
+  - npm run build:prod
 
 deploy:
   provider: releases

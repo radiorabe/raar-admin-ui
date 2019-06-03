@@ -8,11 +8,13 @@ An Angular web client for the Radio Archive [RAAR](https://github.com/radiorabe/
 
 Run `npm install` to install all the dependencies.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. The backend API must be running on `http://localhost:3000/`. See https://github.com/radiorabe/raar for corresponding instructions.
 
-Run `ng test` to run the unit tests of the project.
+Run `ng test` to run the unit tests of the project (Currently, some dummy specs only).
 
-Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build:prod` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+To keep dependencies up-to-date, run `ng update` to get a list of available updates and follow the instructions.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
