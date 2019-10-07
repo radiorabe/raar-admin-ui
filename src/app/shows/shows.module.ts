@@ -5,6 +5,7 @@ import { ShowsComponent } from "./components/shows.component";
 import { ShowsInitComponent } from "./components/shows-init.component";
 import { ShowFormComponent } from "./components/show-form.component";
 import { ShowMergeComponent } from "./components/show-merge.component";
+import { StatsComponent } from "./components/stats.component";
 import { ShowsService } from "./services/shows.service";
 import { ShowsRestService } from "./services/shows-rest.service";
 import { ProfilesService } from "../profiles/services/profiles.service";
@@ -16,7 +17,8 @@ import { ProfilesRestService } from "../profiles/services/profiles-rest.service"
     ShowsComponent,
     ShowsInitComponent,
     ShowFormComponent,
-    ShowMergeComponent
+    ShowMergeComponent,
+    StatsComponent
   ],
   exports: [],
   providers: [

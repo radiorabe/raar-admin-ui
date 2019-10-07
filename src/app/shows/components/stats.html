@@ -1,0 +1,47 @@
+<h3>Statistiken</h3>
+
+<p>
+  Hier kannst du eine CSV Datei mit diversen Kennzahlen zu allen Sendungen und
+  gespielten Tracks beziehen. Gibt dazu das entsprechende Jahr und optional den
+  Monat ein.
+</p>
+
+<form [formGroup]="statsForm" (ngSubmit)="downloadStats()">
+  <div class="form-row">
+    <div class="col-md-2">
+      <label class="sr-only" for="year">Jahr</label>
+      <input
+        id="year"
+        type="number"
+        class="form-control"
+        placeholder="Jahr"
+        formControlName="year"
+      />
+    </div>
+
+    <div class="col-md-2">
+      <label class="sr-only" for="month">Monat (optional)</label>
+      <input
+        id="month"
+        type="number"
+        min="1"
+        max="12"
+        class="form-control"
+        placeholder="Monat"
+        formControlName="month"
+      />
+    </div>
+
+    <div class="col-md-2">
+      <button
+        type="submit"
+        [disabled]="!statsForm.valid"
+        class="btn btn-primary"
+      >
+        Download CSV
+      </button>
+    </div>
+  </div>
+
+  <a #downloadLink></a>
+</form>
