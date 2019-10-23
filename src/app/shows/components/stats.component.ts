@@ -2,10 +2,12 @@ import {
   Component,
   ChangeDetectionStrategy,
   ViewChild,
-  ElementRef
+  ElementRef,
+  ChangeDetectorRef
 } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
+import { finalize } from "rxjs/operators";
 
 @Component({
   selector: "sd-stats",
@@ -15,16 +17,29 @@ import { HttpClient } from "@angular/common/http";
 export class StatsComponent {
   statsForm: FormGroup;
 
+  loading = false;
+
   @ViewChild("downloadLink", { static: true })
   private downloadLink: ElementRef;
 
-  constructor(fb: FormBuilder, private http: HttpClient) {
+  constructor(
+    fb: FormBuilder,
+    private http: HttpClient,
+    private cd: ChangeDetectorRef
+  ) {
     this.createStatsForm(fb);
   }
 
   downloadStats(): void {
+    this.loading = true;
     this.http
       .get(this.statsUrl, { responseType: "blob" as "json" })
+      .pipe(
+        finalize(() => {
+          this.loading = false;
+          this.cd.markForCheck();
+        })
+      )
       .subscribe(blob => this.openBlob(blob));
   }
 
