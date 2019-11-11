@@ -36,7 +36,7 @@ export class AccessCodeModel extends CrudModel {
   }
 
   private leftPad(n: number): string {
-    if (n < 9) {
+    if (n < 10) {
       return "0" + n;
     }
     return n.toString();
