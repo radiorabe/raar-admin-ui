@@ -34,5 +34,5 @@ $ ./deploy.sh
 ## License
 
 raar-admin-ui is released under the terms of the GNU Affero General Public License.
-Copyright 2016-2019 Radio RaBe.
+Copyright 2016-2020 Radio RaBe.
 See `LICENSE` for further information.
