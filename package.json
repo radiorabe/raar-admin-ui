@@ -10,7 +10,6 @@
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "format": "prettier --write \"./**/*.{js,ts,json,css,scss,html,md,yaml}\""
   },
   "private": true,
@@ -46,7 +45,6 @@
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.3",
     "prettier": "^2.0.2",
-    "protractor": "^5.4.3",
     "ts-node": "^8.8.1",
     "tslint": "^6.1.0",
     "tslint-config-prettier": "^1.18.0",
