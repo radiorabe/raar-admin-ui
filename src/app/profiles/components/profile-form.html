@@ -60,7 +60,7 @@
 <div *ngIf="entry && entry.id">
   <br />
 
-  <h3>Archivierungsformate</h3>
+  <h3>Archivierungsformate & Zugriffsberechtigungen</h3>
 
   <div class="accordion panel-group" role="tablist" aria-multiselectable="true">
     <div
@@ -69,13 +69,23 @@
       [class.panel-open]="shownArchiveFormat === format"
     >
       <div class="panel card panel-default">
-        <div class="panel-heading card-header" role="tab">
+        <div
+          class="panel-heading card-header"
+          role="tab"
+          role="button"
+          (click)="toggleArchiveFormat(format)"
+        >
           <div
             class="panel-title"
-            role="button"
-            (click)="toggleArchiveFormat(format)"
             [attr.aria-expanded]="shownArchiveFormat === format"
           >
+            <span class="pull-right">
+              <i
+                class="glyphicon"
+                [class.glyphicon-menu-down]="shownArchiveFormat !== format"
+                [class.glyphicon-menu-up]="shownArchiveFormat === format"
+              ></i>
+            </span>
             <h4>{{ format.toString() }}</h4>
           </div>
         </div>
@@ -110,9 +120,9 @@
       class="form-control"
     >
       <option></option>
-      <option *ngFor="let codec of availableCodecs" [value]="codec">{{
-        codec.toUpperCase()
-      }}</option>
+      <option *ngFor="let codec of availableCodecs" [value]="codec"
+        >{{ codec.toUpperCase() }}</option
+      >
     </select>
   </div>
 </div>
