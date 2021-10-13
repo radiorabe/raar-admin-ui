@@ -1,6 +1,6 @@
 # Raar-Admin-Ui
 
-[![Build Status](https://travis-ci.org/radiorabe/raar-admin-ui.svg?branch=master)](https://travis-ci.org/radiorabe/raar-admin-ui)
+[![Build Status](https://app.travis-ci.com/radiorabe/raar-admin-ui.svg?branch=master)](https://app.travis-ci.com/github/radiorabe/raar-admin-ui)
 
 An Angular web client for the Radio Archive [RAAR](https://github.com/radiorabe/raar) Admin Area.
 
@@ -34,5 +34,5 @@ $ ./deploy.sh
 ## License
 
 raar-admin-ui is released under the terms of the GNU Affero General Public License.
-Copyright 2016-2020 Radio RaBe.
+Copyright 2016-2021 Radio RaBe.
 See `LICENSE` for further information.
