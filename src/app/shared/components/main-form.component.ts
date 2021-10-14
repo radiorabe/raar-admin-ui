@@ -1,4 +1,4 @@
-import { OnInit, OnDestroy, ChangeDetectorRef } from "@angular/core";
+import { OnInit, OnDestroy, ChangeDetectorRef, Directive } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder } from "@angular/forms";
 import { Observable, of } from "rxjs";
@@ -16,6 +16,7 @@ import {
 } from "rxjs/operators";
 import { CrudModel } from "../models/crud.model";
 
+@Directive()
 export class MainFormComponent<T extends CrudModel>
   extends ValidatedFormComponent
   implements OnInit, OnDestroy {

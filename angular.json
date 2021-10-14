@@ -17,15 +17,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/raar-admin-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/.htaccess", "src/assets"],
-            "styles": ["src/styles/main.scss"],
-            "es5BrowserSupport": true
+            "assets": [
+              "src/.htaccess",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles/main.scss"
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -39,9 +48,7 @@
               "outputHashing": "all",
               "baseHref": "/admin/",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -57,13 +64,14 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "raar-admin-ui:build",
-            "proxyConfig": "proxy.conf.json"
+            "proxyConfig": "proxy-prod.conf.json"
           },
           "configurations": {
             "production": {
