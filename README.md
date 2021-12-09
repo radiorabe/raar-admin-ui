@@ -1,6 +1,6 @@
 # Raar-Admin-Ui
 
-[![Build Status](https://app.travis-ci.com/radiorabe/raar-admin-ui.svg?branch=master)](https://app.travis-ci.com/github/radiorabe/raar-admin-ui)
+[![Build Status](https://github.com/radiorabe/raar-admin-ui/actions/workflows/build.yml/badge.svg)](https://github.com/radiorabe/raar-admin-ui/actions/workflows/build.yml)
 
 An Angular web client for the Radio Archive [RAAR](https://github.com/radiorabe/raar) Admin Area.
 
