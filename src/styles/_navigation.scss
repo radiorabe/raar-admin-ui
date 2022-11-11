@@ -32,7 +32,6 @@
     padding-bottom: 0px;
   }
 
-  /**/
   li small {
     padding-top: 0px;
     display: inline-block;
@@ -46,18 +45,10 @@
 .navbar-right {
   float: right;
 
-  li a {
-    padding-top: 11px;
-    padding-bottom: 8px;
-  }
-
-  li small {
-    padding-top: 10px;
+  li > small {
+    padding-top: 23px;
+    padding-bottom: 0;
     display: inline-block;
-
-    &.user {
-      font-weight: 500;
-    }
   }
 }
 

@@ -1,7 +1,7 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { LoginService } from "../../shared/services/login.service";
 import { AdminAuthService } from "../../shared/services/admin-auth.service";
@@ -10,7 +10,7 @@ import { UserModel } from "src/app/shared/models/user.model";
 @Component({
   selector: "sd-login-page",
   templateUrl: "login-page.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginPageComponent {
   username: string;
@@ -30,10 +30,15 @@ export class LoginPageComponent {
     this.loginUser();
   }
 
+  get hasUser(): boolean {
+    return this.auth.isUserAuthenticated;
+  }
+
   private loginUser() {
-    this.login
-      .post(this.username, this.password)
-      .subscribe(user => this.loginSuccess(user), err => this.loginFailed());
+    this.login.post(this.username, this.password).subscribe(
+      (user) => this.loginSuccess(user),
+      (err) => this.loginFailed()
+    );
   }
 
   private loginSuccess(user: UserModel) {
