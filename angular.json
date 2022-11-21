@@ -99,5 +99,8 @@
       }
     }
   },
-  "defaultProject": "raar-admin-ui"
+  "cli": {
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
+  }
 }
