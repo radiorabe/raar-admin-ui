@@ -3,7 +3,7 @@ import {
   ChangeDetectionStrategy,
   ViewChild,
   ElementRef,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
@@ -12,7 +12,7 @@ import { finalize } from "rxjs/operators";
 @Component({
   selector: "sd-stats",
   templateUrl: "stats.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StatsComponent {
   statsForm: FormGroup;
@@ -33,24 +33,27 @@ export class StatsComponent {
   downloadStats(): void {
     this.loading = true;
     this.http
-      .get(this.statsUrl, { responseType: "blob" as "json" })
+      .get(this.statsUrl, { responseType: "blob" })
       .pipe(
         finalize(() => {
           this.loading = false;
           this.cd.markForCheck();
         })
       )
-      .subscribe(blob => this.openBlob(blob));
+      .subscribe((blob) => this.openBlob(blob));
   }
 
   private createStatsForm(fb: FormBuilder): void {
     this.statsForm = fb.group({
       year: [new Date().getFullYear(), Validators.required],
-      month: [null, Validators.compose([Validators.min(1), Validators.max(12)])]
+      month: [
+        null,
+        Validators.compose([Validators.min(1), Validators.max(12)]),
+      ],
     });
   }
 
-  private openBlob(blob: Object): void {
+  private openBlob(blob: Blob): void {
     const fileUrl = window.URL.createObjectURL(blob);
     const link = this.downloadLink.nativeElement;
     link.href = fileUrl;
