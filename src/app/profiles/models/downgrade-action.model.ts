@@ -11,7 +11,7 @@ export class DowngradeActionModel extends CrudModel {
     channels: 2
   };
 
-  ereasing: boolean = false;
+  ereasing = false;
 
   init() {
     this.ereasing = !this.attributes.bitrate;

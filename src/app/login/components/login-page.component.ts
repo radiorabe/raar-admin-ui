@@ -15,8 +15,8 @@ import { UserModel } from "src/app/shared/models/user.model";
 export class LoginPageComponent {
   username: string;
   password: string;
-  checking: boolean = false;
-  failure: boolean = false;
+  checking = false;
+  failure = false;
 
   constructor(
     private login: LoginService,

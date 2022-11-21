@@ -4,7 +4,7 @@ export class LoginWindowService {
   show$ = new EventEmitter<boolean>();
   closed$ = new EventEmitter<boolean>();
 
-  show(userLogin: boolean = false) {
+  show(userLogin = false) {
     this.show$.emit(userLogin);
   }
 

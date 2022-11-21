@@ -12,7 +12,7 @@ export class TokenAuthService {
 
   private _user: UserModel | void;
 
-  private _initialized: boolean = false;
+  private _initialized = false;
 
   constructor(protected login: LoginService, protected router: Router) {}
 

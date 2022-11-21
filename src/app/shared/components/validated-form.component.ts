@@ -33,7 +33,7 @@ const MESSAGES: any = {
 export class ValidatedFormComponent {
   form: FormGroup;
 
-  submitted: boolean = false;
+  submitted = false;
 
   constructor(
     fb: FormBuilder,
@@ -52,7 +52,7 @@ export class ValidatedFormComponent {
   }
 
   fieldErrors(name: string): string[] | void {
-    let control = this.findFieldControl(name);
+    const control = this.findFieldControl(name);
     if (control && (control.touched || this.submitted) && control.errors) {
       return this.getErrors(control);
     } else {
@@ -138,7 +138,7 @@ export class ValidatedFormComponent {
   }
 
   private collectValidationErrors(res: any): any {
-    let errors: any = {};
+    const errors: any = {};
     res.errors.forEach((e: ValidationError) => {
       const attr = e.source.pointer.split("/").pop();
       if (attr) {

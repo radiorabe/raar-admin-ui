@@ -28,7 +28,7 @@ export class CrudRestService<T extends CrudModel> extends ReadRestService<T> {
   }
 
   protected rootedJson(entity: T): string {
-    let data: any = {};
+    const data: any = {};
     data["data"] = entity;
     return JSON.stringify(data);
   }

@@ -9,7 +9,7 @@ import { Subscription } from "rxjs";
 export class LayoutComponent implements OnDestroy {
   @Input() collapsibleNav = true;
 
-  private _showNav: boolean = false;
+  private _showNav = false;
 
   private routerSub: Subscription;
 

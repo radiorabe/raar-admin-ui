@@ -53,7 +53,7 @@ export class ReadRestService<T extends CrudModel> {
     json: any,
     builder: () => R
   ): CrudList<R> {
-    let list = new CrudList<R>();
+    const list = new CrudList<R>();
     list.entries = json["data"].map((item: any) =>
       this.copyAttributes(item, builder())
     );
