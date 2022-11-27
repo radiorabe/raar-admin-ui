@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": "582437164",
+      "type": "archive_formats",
+      "attributes": {
+        "codec": "flac",
+        "initial_bitrate": 1,
+        "initial_channels": 2,
+        "download_permission": "admin",
+        "max_public_bitrate": 0,
+        "max_logged_in_bitrate": 0,
+        "max_priviledged_bitrate": 0,
+        "priviledged_groups": ["asdf"],
+        "created_at": "2017-11-29T20:40:14.921+01:00",
+        "updated_at": "2017-12-01T22:33:42.378+01:00",
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": { "self": "/admin/profiles/178335203/archive_formats/582437164" }
+    },
+    {
+      "id": "143504119",
+      "type": "archive_formats",
+      "attributes": {
+        "codec": "mp3",
+        "initial_bitrate": 320,
+        "initial_channels": 2,
+        "download_permission": "public",
+        "max_public_bitrate": 192,
+        "max_logged_in_bitrate": null,
+        "max_priviledged_bitrate": null,
+        "priviledged_groups": [],
+        "created_at": "2016-04-25T21:23:20.469+02:00",
+        "updated_at": "2017-07-24T21:47:49.203+02:00",
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": { "self": "/admin/profiles/178335203/archive_formats/143504119" }
+    }
+  ],
+  "jsonapi": { "version": "1.0" },
+  "links": {
+    "self": "http://localhost:4200/admin/profiles/178335203/archive_formats?page%5Bnumber%5D=1\u0026page%5Bsize%5D=50",
+    "first": "http://localhost:4200/admin/profiles/178335203/archive_formats?page%5Bnumber%5D=1\u0026page%5Bsize%5D=50",
+    "prev": null,
+    "next": null,
+    "last": "http://localhost:4200/admin/profiles/178335203/archive_formats?page%5Bnumber%5D=1\u0026page%5Bsize%5D=50"
+  }
+}

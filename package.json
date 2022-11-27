@@ -10,7 +10,13 @@
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
-    "format": "prettier --write \"./**/*.{js,ts,json,css,scss,html,md,yaml}\""
+    "format": "prettier --write \"./**/*.{js,ts,json,css,scss,html,md,yaml}\"",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run_with_server": "run-p --race start:ci cy:run",
+    "cy:ci": "npm run prepare:ci && npm run cy:run_with_server",
+    "prepare:ci": "ln -sf index.html dist/raar-admin-ui/404.html",
+    "start:ci": "http-server ./dist/raar-admin-ui -a localhost -p 4200 -c-1"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +47,10 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.43.0",
     "@typescript-eslint/parser": "5.43.0",
+    "cypress": "^11.2.0",
     "eslint": "^8.28.0",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
     "ts-node": "^8.8.1",
     "typescript": "^4.6.4"

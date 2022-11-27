@@ -24,5 +24,15 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Build
-        run: npm run build:prod
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          config: video=false
+          build: npm run build
+          start: npm run cy:ci
+
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

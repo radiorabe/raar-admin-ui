@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": "179146569",
+      "type": "downgrade_actions",
+      "attributes": {
+        "months": 12,
+        "bitrate": 224,
+        "channels": 2,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": {
+        "self": "/admin/profiles/178335203/archive_formats/143504119/downgrade_actions/179146569"
+      }
+    },
+    {
+      "id": "910228391",
+      "type": "downgrade_actions",
+      "attributes": {
+        "months": 24,
+        "bitrate": null,
+        "channels": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": {
+        "self": "/admin/profiles/178335203/archive_formats/143504119/downgrade_actions/910228391"
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "http://localhost:4200/admin/profiles/178335203/archive_formats/143504119/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+    "first": "http://localhost:4200/admin/profiles/178335203/archive_formats/143504119/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+    "prev": null,
+    "next": null,
+    "last": "http://localhost:4200/admin/profiles/178335203/archive_formats/143504119/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50"
+  }
+}

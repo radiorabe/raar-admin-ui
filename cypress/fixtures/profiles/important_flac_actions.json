@@ -1,0 +1,13 @@
+{
+  "data": [],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "http://localhost:4200/admin/profiles/178335203/archive_formats/582437164/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+    "first": "http://localhost:4200/admin/profiles/178335203/archive_formats/582437164/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+    "prev": null,
+    "next": null,
+    "last": "http://localhost:4200/admin/profiles/178335203/archive_formats/582437164/downgrade_actions?page%5Bnumber%5D=1&page%5Bsize%5D=50"
+  }
+}

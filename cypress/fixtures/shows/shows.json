@@ -1,0 +1,1417 @@
+{
+  "data": [
+      {
+          "id": "894544280",
+          "type": "shows",
+          "attributes": {
+              "name": "70-80-90-Mambo!",
+              "details": "<p>Immer wieder MONTACHS, 13.00-16.00: Grooviges puuures Vinyl aus den 70er80er90ern + des Tomzoff-Motorators Geschwätz + Alles, was IHR, liebe Hörer und Innen per mail &amp; sms beisteuern könnt und wollt.<br> Das ZIEL: INTERAKTIVES Montach-Nachmittachs-Überlebens-Radio, KAMPF DEM MONTAGS-FRUST + GO-GO-GO!!!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T21:23:43.644+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544280"
+          }
+      },
+      {
+          "id": "894544294",
+          "type": "shows",
+          "attributes": {
+              "name": "AbbAZappA",
+              "details": "More infos",
+              "created_at": null,
+              "updated_at": "2022-11-23T21:37:55.083+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544294"
+          }
+      },
+      {
+          "id": "894544321",
+          "type": "shows",
+          "attributes": {
+              "name": "All Big Band",
+              "details": "Mehr Infos",
+              "created_at": null,
+              "updated_at": "2022-11-23T21:46:52.091+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544321"
+          }
+      },
+      {
+          "id": "894544325",
+          "type": "shows",
+          "attributes": {
+              "name": "AlphaBeta",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544325"
+          }
+      },
+      {
+          "id": "894544326",
+          "type": "shows",
+          "attributes": {
+              "name": "alphatier",
+              "details": "sdescadfa asdfsaf sadfsa",
+              "created_at": null,
+              "updated_at": "2022-11-21T23:21:22.693+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544326"
+          }
+      },
+      {
+          "id": "894544278",
+          "type": "shows",
+          "attributes": {
+              "name": "Balgarski Tschass",
+              "details": "<p>Die bulgarische Stimme auf RaBe – jeden zweiten Sonntag von 17:00-18:00 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:09:11.030+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544278"
+          }
+      },
+      {
+          "id": "894544327",
+          "type": "shows",
+          "attributes": {
+              "name": "Berufsbildungsradio",
+              "details": "<p>Im Berufsbildungsradio porträtiert RaBe die Vielfalt der Berufswelt – vom Anlagenbauer bis zur Verpackungstechnologin. Bis jetzt gibt es rund 40 verschiedene Berufsporträts in folgenden Bereichen:<br> <a href=\"https://rabe.ch/tag/bau-und-haustechnikberuf/\">Bau und Haustechnik</a><br> <a href=\"https://rabe.ch/tag/dienstleistungsberuf/\">Dienstleistung</a><br> <a href=\"https://rabe.ch/tag/industrieberuf/\">Industrie</a><br> <a href=\"https://rabe.ch/tag/verkehrsberuf/\">Verkehr</a><br> <a href=\"https://rabe.ch/tag/naturberuf/\">Natur</a></p><p>Berufsbildungsradio entstand in Zusammenarbeit mit folgenden Berufsverbänden, Organisationen der Arbeit und Unternehmungen:<br> <a href=\"http://www.lehre.admin.ch\">Eidgenössisches Personalamt EPA</a><br> <a href=\"http://www.login.org\">login</a><br> <a href=\"http://www.swissmem-berufsbildung.ch/berufsinformationen.html\">Swissmem</a><br> <a href=\"http://jugendraum.post.ch/de?DCSext.wt_shortcut=lehrstellen&amp;WT.mc_id=shortcut_lehrstellen\">Die Post</a><br> <a href=\"http://www.toplehrstellen.ch/de\">Schweizerisch-Liechtensteinischer Gebäudetechnikverband (suissetec)</a><br> <a href=\"http://www.agvs.ch/Aus-und-Weiterbildung.11+M54a708de802.0.html\">Auto Gewerbe Verband Schweiz (AGVS)</a><br> <a href=\"http://www.jardinsuisse.ch/\">JardinSuisse</a><br> <a href=\"http://www.polybau.ch/\">Verein Polybau</a><br> <a href=\"http://www.pavidensa.ch/bildung/\">Pavidensa</a><br> <a href=\"http://www.i-be.ch/\">ICT-Berufsbildung Bern</a><br> <a href=\"http://www.vsd.ch/home/\">Verband Schweizer Druckindustrie</a><br> <a href=\"http://www.strom.ch/de.html\">Verband Schweizerischer Elektrizitätsunternehmen</a><br> <a href=\"http://www.infra-schweiz.ch/de/fachverband_infra/index.html\">Fachverband Infra</a><br> <a href=\"http://www.codoc.ch/\">Codoc</a><br> <a href=\"http://www.bernerbauern.ch/de-ch/\">Berner Bauern Verband</a><br> <a href=\"http://www.sbk.ch/\">Schweizer Berufsverband der Pflegefachfrauen und Pflegefachmänner</a><br> <a href=\"http://www.recyclist.ch/\">R-Suisse</a><br> <a href=\"http://www.coiffuresuisse.ch\">coiffureSUISSE</a><br> <a href=\"http://www.mueller-in.ch/de/desktopdefault.aspx/tabid-222/\">Schweizerischer Verein Arbeitswelt Müller/in </a><br> <a href=\"http://www.vsci.ch/xml_1/internet/de/application/d13/f75.cfm\">Schweizerischer Carrosserieverband (VSCI)</a><br> <a href=\"https://www.electrosuisse.ch/de/kurse-veranstaltungen.html\">Electrosuisse</a><br> <a href=\"http://www.lebensmitteltechnologe.ch/de/grundbildung/lebensmitteltechnologe-efz/berufsbild.html\">Arbeitsgemeinschaft Lebensmitteltechnologen</a><br> <a href=\"http://www.odasante.ch/Berufliche_Grundbildung.html\">OdASanté</a></p><p>Gesendet wurde Berufsbildungsradio auf:<br> <a href=\"https://rabe.ch\">Radio Bern RaBe</a><br> <a href=\"http://www.radiox.ch\">Radio X Basel</a><br> <a href=\"http://www.kanalk.ch\">Kanal K Aarau</a><br> <a href=\"http://www.stadtfilter.ch\">Radio Stadtfilter Winterthur</a></p><p>2019 produziert RaBe eine neue Serie Berufsporträts. Interessierte können uns gerne eine <a href=\"mailto:michael@rabe.ch\">Mail</a> schicken.</p>",
+              "created_at": "2019-03-25T18:10:15.621+01:00",
+              "updated_at": "2019-03-25T18:12:42.585+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "125059792",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544327"
+          }
+      },
+      {
+          "id": "894544273",
+          "type": "shows",
+          "attributes": {
+              "name": "Best Of",
+              "details": "<p>Blues, Beat, Rock, Soul, Folk und Pop – Jeden zweiten Sonntag von 15 bis 17 Uhr (im Wechsel mit Blues Zeppelin).</p><p>Kann der Begriff, der als CD- oder LP – Titel bei jedem engagierten Musikfreak ein verächtliches Ohrenrümpfen erzeugt, tatsächlich und ausgerechnet im RaBe-Programm auftauchen? Aber sicher, das passt! Voraussetzung ist die kompromisslose Umsetzung des Begriffs: Nur das Beste wird gespielt, alles hand- respektive ohrverlesen. Dazu – nach der naturgemäss völlig subjektiven Meinung des Sendungsmachers – die richtige Musik: Blues, Beat, Rock, Pop, Soul, R’n‘B, Folk und was der liebenswerten Dinge mehr sind in der Welt der Musik! Jede zweite Sendung ist einem besonderen Thema gewidmet.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:09:40.464+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544273"
+          }
+      },
+      {
+          "id": "894544319",
+          "type": "shows",
+          "attributes": {
+              "name": "Blues Zeppelin",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544319"
+          }
+      },
+      {
+          "id": "894544306",
+          "type": "shows",
+          "attributes": {
+              "name": "Bärner Schlagerwelt",
+              "details": "<p>Die einzige Schlagershow in Bern. Seit 2006 präsentiert Moderator Mike R. Läderach alle zwei Wochen neue Perlen aus dem regionalen und globalen Schlagerschaffen.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:09:11.283+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544306"
+          }
+      },
+      {
+          "id": "894544307",
+          "type": "shows",
+          "attributes": {
+              "name": "Carnotzet Voltaire",
+              "details": "<p>Welsche Kultur On Air – Ein Westwind weht auf RaBe: Die Sendung Carnotzet Voltaire präsentiert kulturelle Entdeckungen aus der Romandie. Diese gibt es jeden zweiten Donnerstag von 19.00 – 20.00 Uhr auf 95.6 MHz zu hören. Gesprochen wird Französisch und ein wenig Bärndüütsch.</p><p>Von Rock bis Jazz bieten wir den Hörerinnen und Hörern eine breite Musikpalette und berichten über diverse Festivals, Independent-Filme und inspirierende Literatur. Zwischen zwei Sprachregionen gelegen, ist Bern der ideale Standort für den kulturellen Austausch.</p><p>Hast du Lust, den Röstigraben zu überqueren? Dann schalte dein Radio an und höre bei uns rein! Unser Carnotzet ist für alle geöffnet, die ihre westlichen Nachbarn besser kennenlernen möchten.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:09:41.260+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544307"
+          }
+      },
+      {
+          "id": "894544279",
+          "type": "shows",
+          "attributes": {
+              "name": "der Morgen",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544279"
+          }
+      },
+      {
+          "id": "894544289",
+          "type": "shows",
+          "attributes": {
+              "name": "die80er.ch",
+              "details": "<p>Zwei Leitsätze dienen uns als „St. Elmo’s Fire“: „Radio Gaga“ und „Now to something completely different“. Beiden versuchen wir gerecht zu werden, in dem wir eine einigermassen unausgewogene Mischung aus Hits, Peinlichkeiten und Trouvaillen spielen. Und das jeden zweiten Montagabend seit 2002. Weil wir seit 17 Jahren senden, gehören wir zum alten Eisen, aber – hey – wer nicht dabei war, kann sich ja auch nicht erinnern ans Jahrzehnt des schlechten Geschmacks. Wir können das.</p><p>Christian Raaflaub und Christian Walther bieten querbeet alles aus Britannien, den USA, Deutschland sowie manchmal auch aus musikalisch weniger beachteten Ländern wie Jugoslawien, Finnland, Japan oder Argentinien. Es ist nicht alles aus den 80ern, was wir spielen, aber es hat immer etwas mit den 80ern zu tun. Kurz: die80er.ch – der bescht Mix us de 80er, de 80er, de 80er u de 80er.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:27.909+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544289"
+          }
+      },
+      {
+          "id": "894544292",
+          "type": "shows",
+          "attributes": {
+              "name": "Drivin' Home",
+              "details": "<p>Musik für den Weg nach Hause, aber auch für daheim! Hier gibts  Folk, Bluegrass und Country für Eure Ohren, alle vierzehn Tage Donnerstags von 17-18 Uhr.</p><p>Moderation: Dirk Drescher</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:31.975+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544292"
+          }
+      },
+      {
+          "id": "894544312",
+          "type": "shows",
+          "attributes": {
+              "name": "El Gato Calculista",
+              "details": "<p>Tangos, südamerikanische Musik, Literatur, Fussball und nützliche Tipps, um sich in der klebrigen Masse, die sich Welt nennt, einen Weg zu bahnen. Jeden Freitag von 19h bis 20h auf Radio RaBe.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:35.033+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544312"
+          }
+      },
+      {
+          "id": "894544288",
+          "type": "shows",
+          "attributes": {
+              "name": "Espaço Brasil",
+              "details": "<p>Die brasilianische Sendung auf RaBe mit Musik, Kultur und Politik. Alle vier Wochen montags von 19 – 20 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:45.544+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544288"
+          }
+      },
+      {
+          "id": "894544277",
+          "type": "shows",
+          "attributes": {
+              "name": "Galaxy Space Night",
+              "details": "<p>Galaxy Space Night, dieser Name steht seit über 20 Jahre für elektronische Musik auf den Lokalradiostationen Radio RaBe, Radio Stadtfilter und Radio LoRa.</p><p>Die Sendung besteht aus Sublabels und erhält dadurch Ihre Einzigartigkeit in der elektronischen Musikwelt.</p><p>Jeden Samstag von 21 Uhr bis 04 Uhr.</p><p>Galaxy Space Night   gehört…..gehört….</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:47.208+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544277"
+          }
+      },
+      {
+          "id": "894544282",
+          "type": "shows",
+          "attributes": {
+              "name": "ganzOhr",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544282"
+          }
+      },
+      {
+          "id": "894544287",
+          "type": "shows",
+          "attributes": {
+              "name": "ganzOhr (w)",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544287"
+          }
+      },
+      {
+          "id": "894544275",
+          "type": "shows",
+          "attributes": {
+              "name": "Gay Radio",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544275"
+          }
+      },
+      {
+          "id": "894544268",
+          "type": "shows",
+          "attributes": {
+              "name": "Geschäch9schlimmers",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544268"
+          }
+      },
+      {
+          "id": "894544295",
+          "type": "shows",
+          "attributes": {
+              "name": "Groovэxpress",
+              "details": "<p>Groovэxpress spielt seit dem 5. August 2008 jeden Dienstag live auf RaBe Club Tunes ab 1965.</p><p>Das musikalische Spektrum reicht von Northern-Soul bis House und Trance, alles was zwischen Los Angeles, Rimini, Frankfurt, Ibiza und Küngoldingen zum Mittanzen einlädt.</p><p>Jede Sendung ist auf unserer <a href=\"http://www.groovexpress.com\">Homepage</a> abrufbar, wie auch die vollständigen Playlists.</p><p>Groovie Tunes for groovie people.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:15:55.848+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544295"
+          }
+      },
+      {
+          "id": "894544313",
+          "type": "shows",
+          "attributes": {
+              "name": "Gschächnütschlimmers",
+              "details": "<p>Die Rap-Sendung am Freitagabend – jeweils von 20 bis 22 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:00.275+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544313"
+          }
+      },
+      {
+          "id": "894544283",
+          "type": "shows",
+          "attributes": {
+              "name": "HellasRadio",
+              "details": "<p>Hellas Radio bringt, neben viel griechischer Musik, Informationen und Veranstaltungshinweise für Griechinnen und Griechen in der Schweiz und natürlich für alle anderen Interessierten. Sowie Interviews mit verschiedenen Landsleuten aus allen Ecken der Schweiz.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T21:24:47.774+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544283"
+          }
+      },
+      {
+          "id": "894544317",
+          "type": "shows",
+          "attributes": {
+              "name": "House Music DJ Lord",
+              "details": "<p>House Music mit DJ Lord – jeden Samstag von 19 bis 20 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:15.268+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544317"
+          }
+      },
+      {
+          "id": "193540442",
+          "type": "shows",
+          "attributes": {
+              "name": "Info",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/193540442"
+          }
+      },
+      {
+          "id": "894544274",
+          "type": "shows",
+          "attributes": {
+              "name": "Jadran",
+              "details": "<p>Kroatische Hintergrundsendung zu Themen aus Kultur, Politik und Gesellschaft – jeden Sonntag von 18 bsi 19 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:24.082+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544274"
+          }
+      },
+      {
+          "id": "894544269",
+          "type": "shows",
+          "attributes": {
+              "name": "Jazz am Sunntig",
+              "details": "<p>In der Sendung „Jazz am Sunntig“ zwischen 10 und 11 Uhr präsentieren Christian Schütz und Simon Petermann Musik aus der weiten Welt des Jazz.</p><p>Die Sendung beinhaltet zwei Teile: Die erste Dreiviertelstunde ist jeden Sonntag einem bestimmten Thema gewidmet. Darin werden einerseits wichtige Figuren der Jazzgeschichte vorgestellt und Perlen ihres Schaffens präsentiert, andererseits bietet die Sendung Gelegenheit, von Exponenten der regionalen und nationalen Musikszene persönliches zu erfahren, wenn sie als Studiogäste von ihrem Schaffen und ihrer Auseinandersetzung mit der Musik berichten.</p><p>Der zweite Teil der Sendung bietet eine Vorschau auf die Jazzkonzerte in der Region Bern der folgenden Woche, wobei zwei Bands mit Hörproben vorgestellt werden, um beim passionierten Jazzpublikum Lust auf einen Konzertbesuch zu wecken.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:26.050+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544269"
+          }
+      },
+      {
+          "id": "415164569",
+          "type": "shows",
+          "attributes": {
+              "name": "Klangbecken",
+              "details": "<p>„Musig ohni Gschnurr drzwüsche“… wenn keine Sendung läuft, gibt’s das legendäre Klangbecken, das regelmässig vom RaBe-Musikredaktor mit neuer Musik gefüllt wird.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:27.128+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "125059792",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/415164569"
+          }
+      },
+      {
+          "id": "894544302",
+          "type": "shows",
+          "attributes": {
+              "name": "Las Venas Abiertas",
+              "details": "<p>Seit mehr als 500 Jahren sind die Adern Lateinamerikas geöffnet und das erklärt, warum Europa heute reich und Lateinamerika arm ist.</p><p>Las Venas Abiertas („Die offenen Adern Lateinamerikas“ E. Galeano) ist keine neue Musiksendung auf Radio RaBe, sondern Lärm und brutale Entladungen voller Verzerrungen, Geschwindigkeit und Schreie. Schreie, die die Apokalypse ankündigen und die Schrecken von Krieg, Elend, Ungleichheit und diesem System anklagen.</p><p>Wir spielen Stücke ab Mitte der 1970er Jahre bis heute, von Crust, Punk und HC über Metal zu Grindcore und Powerviolence. Es gibt Bands aus der ganzen Welt und in allen Sprachen zu hören. Jeweils am Mittwoch alle 14 Tage um 20 Uhr.</p><p>Es ist mehr als 30 Jahre her, dass ich zum ersten Mal Punk und Metal gehört habe und jetzt möchte ich das teilen.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:30.682+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544302"
+          }
+      },
+      {
+          "id": "894544318",
+          "type": "shows",
+          "attributes": {
+              "name": "lila_blue(s) (w)",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544318"
+          }
+      },
+      {
+          "id": "894544284",
+          "type": "shows",
+          "attributes": {
+              "name": "Lost in Disco",
+              "details": "<p>Disco-Musik von den 70’s bis zu den 80’s. Italodisco, Synthpop, New Wave, Disco / Funk</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:34.296+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544284"
+          }
+      },
+      {
+          "id": "894544314",
+          "type": "shows",
+          "attributes": {
+              "name": "Multiversum",
+              "details": "<p>Im Multiversum erwartet euch Musik von Ambient bis Goa-Psy über Trance bis Chillout – mit Jürä alias Venom und Andrea alias Marion und ihm Hintergrund, verantwortlich für Jingels und Intros, ist Rolä alias D-Project, der mit seinem eigenen Sound als Produzent unterwegs ist!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:37.315+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544314"
+          }
+      },
+      {
+          "id": "894544272",
+          "type": "shows",
+          "attributes": {
+              "name": "Onda Libera",
+              "details": "<p>Die älteste RaBe-Sendung – seit 1996 – italienisches Radio mit DJ Salvi.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:38.649+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544272"
+          }
+      },
+      {
+          "id": "894544324",
+          "type": "shows",
+          "attributes": {
+              "name": "Organic Voice",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544324"
+          }
+      },
+      {
+          "id": "894544271",
+          "type": "shows",
+          "attributes": {
+              "name": "Pars Ava",
+              "details": "<p>Ich glaube, dass Kultur, Sprache und Musik die besten Mittel sind, damit sich Menschen aus verschiedenen Nationen und Kulturen näher kommen können. Um dazu einen Beitrag zu leisten, habe ich mit meiner Sendung „Pars Ava“ auf dem Kultursender RaBe gestartet.</p><p>Zur Bedeutung des Sendungsnamens: Pars ist die Bezeichnung für den Iran zur Zeit des Cyrus-Imperiums. Cyrus der Grosse gilt als erster und sehr barmherziger Herrscher des altpersischen Weltreiches (529 v. Chr.). Ava bedeutet soviel wie Klang. „Pars Ava“ – eine Stimme erhob sich aus dem Land des Cyrus.</p><p>Ich möchte versuchen, den RadiohörerInnen die persische Kultur, mit persischer Musik, Geschichte, Poesie und Literatur von persischen Dichtern und Schriftstellern, näher zu bringen.</p><p>Die Moderationen in der Sendung sind zweisprachig. Dadurch möchte ich einerseits meine persischen Landsleute, die in der Schweiz leben, erreichen, aber genau so auch die ZuhörerInnen, die kein persisch verstehen.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:39.901+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544271"
+          }
+      },
+      {
+          "id": "894544315",
+          "type": "shows",
+          "attributes": {
+              "name": "Piazza Italia",
+              "details": "<p>Un servizio per la collettività italiana di Berna e regione con musica, notizie, informazioni e tanto divertimento.<br> Una voce per le associazioni italiane e italofone che desiderano farsi conoscere ed esporre i loro programmi.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:40.962+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544315"
+          }
+      },
+      {
+          "id": "894544320",
+          "type": "shows",
+          "attributes": {
+              "name": "RaBass",
+              "details": "<p>Schwergewicht auf Mix-Sets. Der eine Sonntag ist Drum and Bass gewidmet, der andere den Breaks.</p><p>Sonntag – alle 4 Wochen 21:00–23:00 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:48.840+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544320"
+          }
+      },
+      {
+          "id": "894544285",
+          "type": "shows",
+          "attributes": {
+              "name": "RaBe-Info",
+              "details": "<p>«Hört hin, wo andere wegschauen.»</p><p>Das Nachrichten- und Hintergrundmagazin berichtet seit 1996 täglich über Themen aus Politik, Gesellschaft, Wirtschaft und Kultur.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:51.774+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544285"
+          }
+      },
+      {
+          "id": "894544297",
+          "type": "shows",
+          "attributes": {
+              "name": "RaBe-Info & Subkutan",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544297"
+          }
+      },
+      {
+          "id": "894544286",
+          "type": "shows",
+          "attributes": {
+              "name": "RaBe-Info (w)",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544286"
+          }
+      },
+      {
+          "id": "894544308",
+          "type": "shows",
+          "attributes": {
+              "name": "Radieschen",
+              "details": "<p>Die Sendung mit Musik aus dem mehr oder weniger Schweizer Untergrund. Jeden zweiten Donnerstagabend zwischen 20.00 Uhr und 22.00 Uhr.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:52.499+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544308"
+          }
+      },
+      {
+          "id": "894544304",
+          "type": "shows",
+          "attributes": {
+              "name": "Radio Goethe",
+              "details": "<p>Englisch produziert in den USA – über die Musikszenen in Deutschland, der Schweiz und Österreich. Weltweit auf 39 Sendern.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:16:55.012+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544304"
+          }
+      },
+      {
+          "id": "894544270",
+          "type": "shows",
+          "attributes": {
+              "name": "Radio Silbergrau",
+              "details": "<p>Senioren machen Radio.</p><p>Vor allem machen wir alle vier Wochen eine einstündige Sendung, die gegenwärtig über Radio Rabe und auf Kanal K im Aargau ausgestrahlt wird. „Nur eine Stunde pro Monat“ fragen Sie – Sie dürfen ruhig einmal bei uns vorbeikommen, um zu sehen, was es alles braucht, bis eine solche Stunde bereit ist. Recherchieren, Kontakte knüpfen, mit Leuten reden, Aufnahmen machen, Aufnahmen redigieren, auf dem PC schneiden, in eine fertige Form bringen, Zwischentexte moderieren, Musik einfügen – das ist es, was unsere Tätigkeit so interessant und spannend macht. Dabei kann jedes Mitglied seine speziellen Fähigkeiten einbringen und das machen, was es am besten kann.</p><p>Wir haben monatlich eine Redaktionssitzung, an der wir unsere Programme besprechen. Unsere Radioarbeit machen wir in unserem einfachen Studio in Schliern bei Köniz (Schaufelweg 33), wo wir Aufnahmen machen können und alle Sendungen auf dem PC vorbereiten.</p><p>Ein abgeschlossenes Programmkonzept haben wir nicht. Wir machen vor allem die Beiträge, die unsere Mitglieder interessieren, jeder kann Vorschläge machen. Da wir alle Seniorinnen und Senioren sind, haben die Beiträge oft Themen, die vor allem Senioren ansprechen. Das ist jedoch kein konkretes Ziel, sondern es ergibt sich aus den Interessen der Mitglieder. Dabei kann es um Literatur, Entwicklungshilfe, Ausstellungen, Film, Wandertipps, seltene Sportarten, aktuelle Anlässe und vieles andere gehen; die Form kann ein Interview, eine Reportage, ein gestalteter Beitrag, ein besinnliches Gespräch oder eine eher kabarettistische Bearbeitung eines Themas sein, alles ist möglich. Selbstverständlich machen wir jedoch ebenso Beiträge, die auch Jüngere ansprechen. Die stündige Sendung setzt sich meistens aus 3-5 Wortbeiträgen und dazwischen Musik zusammen; ab und zu machen wir auch Themensendungen.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:00.938+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544270"
+          }
+      },
+      {
+          "id": "894544322",
+          "type": "shows",
+          "attributes": {
+              "name": "Radio Sur le Pont",
+              "details": "<p>Mainstream für die alternative Radiohörerschaft haben sich die drei Musikenthusiasten Ruedi, Beni und Urs auf die Fahne geschrieben und Ziel ist nichts geringeres, als mit ihrer Sendung den perfekten Einstieg ins Wochenende zu gewähren. Musik aus den verschiedensten Genres und Epochen, von Evergreen bis Newcomer Track, alles ist dabei, Hauptsache seelenvoll.</p><p>Gegliedert wird das Ganze durch vier Rubriken, welche von interessanten Anekdoten zu Bands (Hidden Track) über Neuheiten der Popkultur (Bart) sowie herausragenden Musikvideos (Must-See) bis hin zu Perlen der Feierabend-Unterhaltung (Fyrabebier) führen. Der Rote Faden bilden dabei die Räuberpistolen der drei Moderatoren, die durch ihre sonstigen Verstrickungen als Veranstalter, Barkeeper und DJ’s, einiges aus dem städtischen Untergrund zu berichten wissen.</p><p>„Radio Sur le Pont“ steht für Hörgenuss und Savoir Vivre, tune in!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:03.140+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544322"
+          }
+      },
+      {
+          "id": "894544311",
+          "type": "shows",
+          "attributes": {
+              "name": "Radio Sur le Pont & The Vidiot",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544311"
+          }
+      },
+      {
+          "id": "894544301",
+          "type": "shows",
+          "attributes": {
+              "name": "RadioActivos",
+              "details": "<p>„Wir sind ein Liebesseufzer, queremos aquí y ahora. Somos un suspiro de amor, wir wollen hier und jetzt. Wir sind die verbotene Frucht, somos el pecado radial. Somos verdugos del olvido, wir wollen die Utopie ausgraben. Wir sind impuntuales, somos π*Daumen, charlatanes. Somos Maradona gegen England, der Dorn in deinem Gewissen. Wir sind die offenen Adern, la voz de los ausentes. Somos el pastor de los cuervos, alles weisse Schäfchen. Somos un mate caliente, ein scharfer Chili, el agua para el chocolate, der Strumpfhalter der Braut. Wir sind der fröhliche Rhythmus, queremos envolver tu cuerpo y hacerte bailar. Somos el bigote de Frida Kahlo, die Lanze vom Quijote. Somos la melancolía, wir wollen hier leben dort sein, unseren Abdruck in eurer Seele hinterlassen. Queremos acariciarte con nuestras voces, calarte hondo. Somos el abrazo fraternal, die Liebe in Zeiten der Cholera.<br> Wir sind RadioActivos.“</p><p>„RadioActivos, mittwochs, ungefähr ab 19 Uhr.“</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:05.105+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544301"
+          }
+      },
+      {
+          "id": "894544303",
+          "type": "shows",
+          "attributes": {
+              "name": "Ready to Rock",
+              "details": "<p>Die Sendung „Ready to Rock“ mit DJ Electric hat sich zum Ziel gesetzt, Indie-Rockmusik der letzten 50 Jahre zu präsentieren. Indie-Rockmusik heisst weitgehend unkommerzielle, aber dafür unkonventionelle und manchmal auch avantgardistische Rockmusik.</p><p>Die Sendung wird Schwerpunktthemen haben: Daten und Biografien zu Bands und Musikern, historische Ereignisse im Rock, stilprägende Richtungen, werden vorgestellt, natürlich mit den entsprechenden Musikbeispielen. Es erklingen alle Arten von Rock, von Krautrock oder Artrock über Metal und neuer Indiemusik bis zu Punk, und alles kommt ab Vinylplatten.</p><p>Dazu gibt’s die ständige Rubrik „Original + Fälschung“, wo jeweils eine Coverversion dem Original gegenübergestellt wird.</p><p>If you are ready to rock, listen to Radio Rabe!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:05.953+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544303"
+          }
+      },
+      {
+          "id": "894544323",
+          "type": "shows",
+          "attributes": {
+              "name": "Rhythm And Blues Juke Box",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544323"
+          }
+      },
+      {
+          "id": "894544299",
+          "type": "shows",
+          "attributes": {
+              "name": "Riffs",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544299"
+          }
+      },
+      {
+          "id": "894544296",
+          "type": "shows",
+          "attributes": {
+              "name": "Spazz-Time Kontinuum",
+              "details": "<p>Aus der Asche des fünfjährigen Experiments Jazz-Time Kontinuum ist nun die neue Sendung Spazz-Time Kontinuum entsprungen. Die alte Sendung war der grenzenlose Versuch eines Musikfreaks, durch eine Mischung aus Jazz und „anderen Sachen“, den Einfluss des Jazz auf Legionen von Musikern anderer Stile, zu zeigen. Mit der neuen Sendung wird sich die Balance weg vom Jazz bewegen; d.h., „less jazzin“ and „more spazzin“.</p><p>Jazz wird in der Sendung immer seinen Platz haben. Der Fokus bewegt sich aber diesmal eher zur bewusstseinsverändernden Musik, deren kommerzielle Blütezeit die späten Sechzigerjahre waren, die aber auch heute noch einen Einfluss auf das Musikschaffen hat. Das ist Musik geboren aus chemisch erweiterten Experimenten und neuen Aufnahmetechniken, die den Hörer ohne Bewegung an einen anderen Ort transportiert, an den Ort zwischen den Ohren. „Arrive without travelling.“ Eine Art Audio-Eskapismus, sozusagen, und in Zeiten wie diesen ist das nicht schlecht. So get on board and enjoy the ride!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:08.718+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544296"
+          }
+      },
+      {
+          "id": "894544298",
+          "type": "shows",
+          "attributes": {
+              "name": "Stadtgespräch",
+              "details": "<p>Kein Talk, sondern ein Gespräch. Das Stadtgespräch ist die andere Gesprächssendung im Berner Äther. Einmal im Monat kommt eine Zeitgenossin oder ein Zeitgenosse zu Wort. Ausführlich, ehrlich und persönlich – moderiert von Roger Spindler.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:17:12.617+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544298"
+          }
+      },
+      {
+          "id": "894544290",
+          "type": "shows",
+          "attributes": {
+              "name": "Stadtgschichte",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "178335203",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544290"
+          }
+      },
+      {
+          "id": "894544316",
+          "type": "shows",
+          "attributes": {
+              "name": "Stereo Freeze",
+              "details": "<p>Stereo Freeze – cool wie die Brise, mit Fi und Daddy Noc, die euch jeden Samstag von 18:00-19:00 Uhr soulvolle Vibes servieren. Ein grosser Teil des Programms ist der jamaikanischen Musik und Kultur gewidmet. Wir spielen alle Arten jamaikanischer Musik von den 50er bis zu den späten 90er Jahren und auch ein bisschen moderne Sachen, und geben euch dazu die entsprechenden Hintergrundinformationen. Ebenfalls senden wir Kulturbeiträge zum Land Jamaika. Angereichert werden die Insel-Sounds mit Soul, Funk, Jazz und Hip Hop, und im ‚Brocki Corner‘ präsentieren wir groovige Platten gefunden in Brockenstuben. Auch haben wir immer mal wieder eine Überraschung auf Lager, sei es ein Special, ein live Sound Clash oder betrunkene Brockenstuben Mash Ups.<br> Das Programm wird in Englisch, Jamaikanischem Patois und Bärndütsch präsentiert. Es geht um Eure Unterhaltung, ohne Ego und ohne Mätzchen. Schaltet Stereo Freeze ein und tanzt zu den Riddims!</p><p>Stereo Freeze – cool like the breeze, with hosts Fi and Daddy Noc serving soulful vibes, every saturday from 18:00-19:00. A big portion of the Program is dedicated to Jamaican music and culture. We play all types of Jamaican music from the 50’s to the late 90’s and a bit of modern stuff too and give you the corresponding information to go along with the tunes. To round off the program we incorporate Soul, Funk, Jazz and Hip Hop to go along with the island sounds to make for a tasty mixture of music, and in the ‘Brocki Corner’ section of the program we present groovy vinyl found in charity shops. Every now and again we also have a surprise in store, be it a Special, a live on air Sound Clash or a drunken Charity Shop Mash Up.<br> The program is presented in English, Jamaican Patois and Bärndütsch. It’s all about your entertainment – no ego and no gimmicks. Tune in to Stereo Freeze and skank to the riddim!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:19:56.725+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544316"
+          }
+      },
+      {
+          "id": "894544293",
+          "type": "shows",
+          "attributes": {
+              "name": "Stimme der Kutüsch",
+              "details": "<p>Die kurdisch-türkisch Sendung – Dienstag, alle 4 Wochen 19:00-20:00 Uhr.<br> Sendungsmacher: Sadik Kolusari</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:19:57.222+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544293"
+          }
+      },
+      {
+          "id": "894544305",
+          "type": "shows",
+          "attributes": {
+              "name": "Supernova",
+              "details": "<p>Der Fixstern am Berner Samstagshimmel: Soul, Smooth Jazz, House, Electronica, Latin. Wenn Staubsauger verstummen, Telefonate abgeklemmt werden und Weekend-Einkäufe nur noch mit Kopfhörer erledigt werden – dann flirrt wohl gerade die Supernova durch den Äther. Seit bald zehn Jahren verbreiten Daniel Imhof und Luca D’Alessandro musikalische Glückseligkeit in ihrer Umlaufbahn – von Bäriswil bis nach Koh Phangan. Unterstützt wird das Zweiergespann seit neuestem von Toni Varela.</p><p>Seit 2006 präsentieren die drei Supernovisten am Samstagnachmittag mit viel Leidenschaft ihre handverlesenen Perlen auf Radio Bern RaBe. Ihre Musik bewegt sich irgendwo zwischen Soul, Smooth Jazz, House, Electronica und Latin. Ob alte Souldiva auf knisterndem Vinyl oder unveröffentlichte Neuentdeckungen von Wohnzimmertüftlern – Hauptsache die Musik geht unter die Haut. Und manchmal, wenn ein Song einem vor Schönheit erschaudern lässt und man die Augen schliesst, dann kann man sie sehen, die Supernova: das kurzzeitige, helle Aufleuchten eines Sterns in allen Farben des Universums.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:19:59.751+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544305"
+          }
+      },
+      {
+          "id": "894544281",
+          "type": "shows",
+          "attributes": {
+              "name": "The Vidiot",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544281"
+          }
+      },
+      {
+          "id": "894544276",
+          "type": "shows",
+          "attributes": {
+              "name": "unerhörtes-ungehörtes",
+              "details": "<p>Experimentelle Musik und Toncollagen, eine Reise von den Synapsen bis zu den auralen Grenzen und darüber hinaus. Von IDM über Noisemusic bis Psychill und alles, wo Dub eingeflochten wurde.</p><p>Nach 15 Jahren im Alleingang mit über 350 Sendungen von Harry Schaumburger aka DJ Hemi Sync wurde die Sendung für experimentelle Musik im September 2012 mit Mo/Lcp ideal ergänzt.</p><p>LiebhaberInnen der etwas anderen Musik kommen hier auf ihre Kosten.</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:20:12.658+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544276"
+          }
+      },
+      {
+          "id": "894544310",
+          "type": "shows",
+          "attributes": {
+              "name": "UrbanWolf",
+              "details": "<p>Moritz Wolf aka Cityanimal und Urban Stalder aka Swampfever präsentieren monatlich ihre geliebten Musikstücke ohne eine Stilrichtung zu bevorzugen. Das heisst, eigentlich spielen sich zwei ältere Herren ihre Lieblingstracks vor.<br> Unter dem Motto: „Handicapped Beats with flowering flavor“ tummelten sich die beiden Moderatoren schon vor Jahren im tiefsten Stadtsumpf des Berner Untergrunds. Es beschreibt nicht nur etwas aus ihrem Leben sondern betitelt auch ihren ganz eigenen Stil.</p><p>UrbanWolf versucht mit seinem breiten musikalischen Spektrum die HörerInnen immer wieder von Neuem zu verblüffen.<br> Von der RaBe-Programmkommission wurde die für den Freitagnachmittag vorgesehene Sendung auf den Samstagnachmittag geschoben, mit der Begründung: „Zu abgefahren für den Freitagnachmittag!“</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:20:16.134+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544310"
+          }
+      },
+      {
+          "id": "894544291",
+          "type": "shows",
+          "attributes": {
+              "name": "Worldwyld",
+              "details": "<p>Einen lauen Sommerabend in Indien oder drinnen vor dem Cheminée bei äusseren 10 Grad minus. Wunderschön aber dennoch enorm selten… Seltene und wunderschöne Tracks stellt Euch jetzt „Worldwyld“ vor. Nach nunmehr 20 Jahren der intensiven Recherche und Auslagen kann der Programmgestalter mittlerweilen auf zirka 4000 Schallplatten schauen und nun in einem unkomplizierten Medium darstellen.</p><p>Die Sendung, welche jeweils am Montagabend von zehn bis elf Uhr ausgestrahlt wird, umfasst die Stile von Accoustic-Folk bis Zaffaraya-Rap mit der Oberhand des Jazz und Soul. Durch die Sendung führt Stefan Müller (DJ sEAR) welcher bereits im Kindergartenalter zu Hause mit einem Lenco Plattenspieler Wunschkonzert gespielt hat. Seither ging einiges, sei es als Musiker, DJ, Barkeeper oder eben als Radiomacher. Mit der Musik wachsen – denn Musik ist Leben &amp; Liebe.</p><p>Worldwyld nimmt dich mit auf eine Reise, jede Woche neu und frei interpretiert, von Analog nach Digital und rückwärts und jeweils live ab den Nadeln des RaBe Studios.</p><p>Tune in – „Worldwyld“ loves you!</p>",
+              "created_at": null,
+              "updated_at": "2019-03-25T18:20:20.702+01:00",
+              "creator_id": null,
+              "updater_id": 135138680
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544291"
+          }
+      },
+      {
+          "id": "894544309",
+          "type": "shows",
+          "attributes": {
+              "name": "Ämplifier",
+              "details": null,
+              "created_at": null,
+              "updated_at": null,
+              "creator_id": null,
+              "updater_id": null
+          },
+          "relationships": {
+              "profile": {
+                  "data": {
+                      "id": "593363170",
+                      "type": "profiles"
+                  }
+              }
+          },
+          "links": {
+              "self": "/admin/shows/894544309"
+          }
+      }
+  ],
+  "jsonapi": {
+      "version": "1.0"
+  },
+  "links": {
+      "self": "http://localhost:4200/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=name",
+      "first": "http://localhost:4200/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=name",
+      "prev": null,
+      "next": null,
+      "last": "http://localhost:4200/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=name"
+  }
+}

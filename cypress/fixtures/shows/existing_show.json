@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": "894544321",
+    "type": "shows",
+    "attributes": {
+      "name": "All Big Band",
+      "details": "Bla bla bla",
+      "created_at": null,
+      "updated_at": "2022-11-23T21:46:52.091+01:00",
+      "creator_id": null,
+      "updater_id": 135138680
+    },
+    "relationships": {
+      "profile": { "data": { "id": "593363170", "type": "profiles" } }
+    },
+    "links": { "self": "/admin/shows/894544321" }
+  },
+  "jsonapi": { "version": "1.0" }
+}

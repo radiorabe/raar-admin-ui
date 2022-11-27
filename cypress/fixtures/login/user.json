@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "42",
+    "type": "users",
+    "attributes": {
+      "username": "admin",
+      "first_name": null,
+      "last_name": null,
+      "groups": [],
+      "api_token": "42",
+      "api_key_expires_at": null,
+      "admin": true
+    }
+  },
+  "jsonapi": {
+    "version": "1.0"
+  }
+}

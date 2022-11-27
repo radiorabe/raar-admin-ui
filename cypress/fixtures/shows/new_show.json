@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": "42",
+    "type": "shows",
+    "attributes": {
+      "name": "Test Send",
+      "details": "Mehr Infos",
+      "created_at": null,
+      "updated_at": null,
+      "creator_id": null,
+      "updater_id": null
+    },
+    "relationships": {
+      "profile": { "data": { "id": "178335203", "type": "profiles" } }
+    },
+    "links": { "self": "/admin/shows/42" }
+  },
+  "jsonapi": { "version": "1.0" }
+}

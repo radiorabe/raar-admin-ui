@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": "flac",
+      "type": "audio_encoding",
+      "attributes": {
+        "codec": "flac",
+        "file_extension": "flac",
+        "mime_type": "audio/flac",
+        "bitrates": [1],
+        "channels": [1, 2]
+      }
+    },
+    {
+      "id": "mp3",
+      "type": "audio_encoding",
+      "attributes": {
+        "codec": "mp3",
+        "file_extension": "mp3",
+        "mime_type": "audio/mpeg",
+        "bitrates": [
+          32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320
+        ],
+        "channels": [1, 2]
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  }
+}
