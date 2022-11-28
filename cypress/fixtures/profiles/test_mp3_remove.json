@@ -1,0 +1,22 @@
+{
+  "data": {
+    "id": "45",
+    "type": "downgrade_actions",
+    "attributes": {
+      "months": 36,
+      "bitrate": null,
+      "channels": null,
+      "created_at": null,
+      "updated_at": null,
+      "creator_id": null,
+      "updater_id": null
+    },
+    "links": {
+      "self": "/admin/profiles/42/archive_formats/43/downgrade_actions/45"
+    }
+  },
+
+  "jsonapi": {
+    "version": "1.0"
+  }
+}

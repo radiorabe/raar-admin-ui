@@ -40,7 +40,7 @@ describe("shows", () => {
     cy.get(".list-group-item")
       .contains("All Big Band")
       .should("have.class", "active");
-    cy.get("sd-show-form h1").should("have.text", "All Big Band");
+    cy.get(".content h1").should("have.text", "All Big Band");
     cy.get("#details").should("have.value", "Bla bla bla");
   });
 
@@ -61,7 +61,7 @@ describe("shows", () => {
     cy.visit("/shows", { failOnStatusCode: false });
 
     cy.get("a.btn-add").click();
-    cy.get("sd-show-form h1").should("have.text", "Neue Sendung");
+    cy.get(".content h1").should("have.text", "Neue Sendung");
     cy.get("#name").type("Test Send");
     cy.get("#details").type("Mehr Infos");
     cy.get(".btn-primary").click();

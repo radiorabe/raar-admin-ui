@@ -1,0 +1,22 @@
+{
+  "data": {
+    "id": "43",
+    "type": "archive_formats",
+    "attributes": {
+      "codec": "mp3",
+      "initial_bitrate": 256,
+      "initial_channels": 2,
+      "download_permission": "priviledged",
+      "max_public_bitrate": 96,
+      "max_logged_in_bitrate": 128,
+      "max_priviledged_bitrate": 192,
+      "priviledged_groups": ["sendungsmachende", "admins"],
+      "created_at": "2016-04-25T21:23:20.469+02:00",
+      "updated_at": "2017-07-24T21:47:49.203+02:00",
+      "creator_id": null,
+      "updater_id": null
+    },
+    "links": { "self": "/admin/profiles/42/archive_formats/43" }
+  },
+  "jsonapi": { "version": "1.0" }
+}

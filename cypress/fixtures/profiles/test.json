@@ -1,0 +1,17 @@
+{
+  "data": {
+    "id": "42",
+    "type": "profiles",
+    "attributes": {
+      "name": "Test",
+      "description": "Just a test",
+      "default": false,
+      "created_at": "2016-04-25T21:23:20.481+02:00",
+      "updated_at": "2017-12-01T22:33:36.092+01:00",
+      "creator_id": null,
+      "updater_id": null
+    },
+    "links": { "self": "/admin/profiles/42" }
+  },
+  "jsonapi": { "version": "1.0" }
+}
