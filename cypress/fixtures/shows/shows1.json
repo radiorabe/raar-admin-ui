@@ -1,0 +1,474 @@
+{
+  "data": [
+    {
+      "id": "894544280",
+      "type": "shows",
+      "attributes": {
+        "name": "70-80-90-Mambo!",
+        "details": "<p>Immer wieder MONTACHS, 13.00-16.00: Grooviges puuures Vinyl aus den 70er80er90ern + des Tomzoff-Motorators Geschwätz + Alles, was IHR, liebe Hörer und Innen per mail &amp; sms beisteuern könnt und wollt.<br> Das ZIEL: INTERAKTIVES Montach-Nachmittachs-Überlebens-Radio, KAMPF DEM MONTAGS-FRUST + GO-GO-GO!!!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T21:23:43.644+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544280"
+      }
+    },
+    {
+      "id": "894544294",
+      "type": "shows",
+      "attributes": {
+        "name": "AbbAZappA",
+        "details": "More infos",
+        "created_at": null,
+        "updated_at": "2022-11-23T21:37:55.083+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544294"
+      }
+    },
+    {
+      "id": "894544321",
+      "type": "shows",
+      "attributes": {
+        "name": "All Big Band",
+        "details": "Mehr Infos",
+        "created_at": null,
+        "updated_at": "2022-11-23T21:46:52.091+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544321"
+      }
+    },
+    {
+      "id": "894544325",
+      "type": "shows",
+      "attributes": {
+        "name": "AlphaBeta",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "178335203",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544325"
+      }
+    },
+    {
+      "id": "894544326",
+      "type": "shows",
+      "attributes": {
+        "name": "alphatier",
+        "details": "sdescadfa asdfsaf sadfsa",
+        "created_at": null,
+        "updated_at": "2022-11-21T23:21:22.693+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "178335203",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544326"
+      }
+    },
+    {
+      "id": "894544278",
+      "type": "shows",
+      "attributes": {
+        "name": "Balgarski Tschass",
+        "details": "<p>Die bulgarische Stimme auf RaBe – jeden zweiten Sonntag von 17:00-18:00 Uhr.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:09:11.030+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544278"
+      }
+    },
+    {
+      "id": "894544327",
+      "type": "shows",
+      "attributes": {
+        "name": "Berufsbildungsradio",
+        "details": "<p>Im Berufsbildungsradio porträtiert RaBe die Vielfalt der Berufswelt – vom Anlagenbauer bis zur Verpackungstechnologin. Bis jetzt gibt es rund 40 verschiedene Berufsporträts in folgenden Bereichen:<br> <a href=\"https://rabe.ch/tag/bau-und-haustechnikberuf/\">Bau und Haustechnik</a><br> <a href=\"https://rabe.ch/tag/dienstleistungsberuf/\">Dienstleistung</a><br> <a href=\"https://rabe.ch/tag/industrieberuf/\">Industrie</a><br> <a href=\"https://rabe.ch/tag/verkehrsberuf/\">Verkehr</a><br> <a href=\"https://rabe.ch/tag/naturberuf/\">Natur</a></p><p>Berufsbildungsradio entstand in Zusammenarbeit mit folgenden Berufsverbänden, Organisationen der Arbeit und Unternehmungen:<br> <a href=\"http://www.lehre.admin.ch\">Eidgenössisches Personalamt EPA</a><br> <a href=\"http://www.login.org\">login</a><br> <a href=\"http://www.swissmem-berufsbildung.ch/berufsinformationen.html\">Swissmem</a><br> <a href=\"http://jugendraum.post.ch/de?DCSext.wt_shortcut=lehrstellen&amp;WT.mc_id=shortcut_lehrstellen\">Die Post</a><br> <a href=\"http://www.toplehrstellen.ch/de\">Schweizerisch-Liechtensteinischer Gebäudetechnikverband (suissetec)</a><br> <a href=\"http://www.agvs.ch/Aus-und-Weiterbildung.11+M54a708de802.0.html\">Auto Gewerbe Verband Schweiz (AGVS)</a><br> <a href=\"http://www.jardinsuisse.ch/\">JardinSuisse</a><br> <a href=\"http://www.polybau.ch/\">Verein Polybau</a><br> <a href=\"http://www.pavidensa.ch/bildung/\">Pavidensa</a><br> <a href=\"http://www.i-be.ch/\">ICT-Berufsbildung Bern</a><br> <a href=\"http://www.vsd.ch/home/\">Verband Schweizer Druckindustrie</a><br> <a href=\"http://www.strom.ch/de.html\">Verband Schweizerischer Elektrizitätsunternehmen</a><br> <a href=\"http://www.infra-schweiz.ch/de/fachverband_infra/index.html\">Fachverband Infra</a><br> <a href=\"http://www.codoc.ch/\">Codoc</a><br> <a href=\"http://www.bernerbauern.ch/de-ch/\">Berner Bauern Verband</a><br> <a href=\"http://www.sbk.ch/\">Schweizer Berufsverband der Pflegefachfrauen und Pflegefachmänner</a><br> <a href=\"http://www.recyclist.ch/\">R-Suisse</a><br> <a href=\"http://www.coiffuresuisse.ch\">coiffureSUISSE</a><br> <a href=\"http://www.mueller-in.ch/de/desktopdefault.aspx/tabid-222/\">Schweizerischer Verein Arbeitswelt Müller/in </a><br> <a href=\"http://www.vsci.ch/xml_1/internet/de/application/d13/f75.cfm\">Schweizerischer Carrosserieverband (VSCI)</a><br> <a href=\"https://www.electrosuisse.ch/de/kurse-veranstaltungen.html\">Electrosuisse</a><br> <a href=\"http://www.lebensmitteltechnologe.ch/de/grundbildung/lebensmitteltechnologe-efz/berufsbild.html\">Arbeitsgemeinschaft Lebensmitteltechnologen</a><br> <a href=\"http://www.odasante.ch/Berufliche_Grundbildung.html\">OdASanté</a></p><p>Gesendet wurde Berufsbildungsradio auf:<br> <a href=\"https://rabe.ch\">Radio Bern RaBe</a><br> <a href=\"http://www.radiox.ch\">Radio X Basel</a><br> <a href=\"http://www.kanalk.ch\">Kanal K Aarau</a><br> <a href=\"http://www.stadtfilter.ch\">Radio Stadtfilter Winterthur</a></p><p>2019 produziert RaBe eine neue Serie Berufsporträts. Interessierte können uns gerne eine <a href=\"mailto:michael@rabe.ch\">Mail</a> schicken.</p>",
+        "created_at": "2019-03-25T18:10:15.621+01:00",
+        "updated_at": "2019-03-25T18:12:42.585+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "125059792",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544327"
+      }
+    },
+    {
+      "id": "894544273",
+      "type": "shows",
+      "attributes": {
+        "name": "Best Of",
+        "details": "<p>Blues, Beat, Rock, Soul, Folk und Pop – Jeden zweiten Sonntag von 15 bis 17 Uhr (im Wechsel mit Blues Zeppelin).</p><p>Kann der Begriff, der als CD- oder LP – Titel bei jedem engagierten Musikfreak ein verächtliches Ohrenrümpfen erzeugt, tatsächlich und ausgerechnet im RaBe-Programm auftauchen? Aber sicher, das passt! Voraussetzung ist die kompromisslose Umsetzung des Begriffs: Nur das Beste wird gespielt, alles hand- respektive ohrverlesen. Dazu – nach der naturgemäss völlig subjektiven Meinung des Sendungsmachers – die richtige Musik: Blues, Beat, Rock, Pop, Soul, R’n‘B, Folk und was der liebenswerten Dinge mehr sind in der Welt der Musik! Jede zweite Sendung ist einem besonderen Thema gewidmet.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:09:40.464+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544273"
+      }
+    },
+    {
+      "id": "894544319",
+      "type": "shows",
+      "attributes": {
+        "name": "Blues Zeppelin",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544319"
+      }
+    },
+    {
+      "id": "894544306",
+      "type": "shows",
+      "attributes": {
+        "name": "Bärner Schlagerwelt",
+        "details": "<p>Die einzige Schlagershow in Bern. Seit 2006 präsentiert Moderator Mike R. Läderach alle zwei Wochen neue Perlen aus dem regionalen und globalen Schlagerschaffen.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:09:11.283+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544306"
+      }
+    },
+    {
+      "id": "894544307",
+      "type": "shows",
+      "attributes": {
+        "name": "Carnotzet Voltaire",
+        "details": "<p>Welsche Kultur On Air – Ein Westwind weht auf RaBe: Die Sendung Carnotzet Voltaire präsentiert kulturelle Entdeckungen aus der Romandie. Diese gibt es jeden zweiten Donnerstag von 19.00 – 20.00 Uhr auf 95.6 MHz zu hören. Gesprochen wird Französisch und ein wenig Bärndüütsch.</p><p>Von Rock bis Jazz bieten wir den Hörerinnen und Hörern eine breite Musikpalette und berichten über diverse Festivals, Independent-Filme und inspirierende Literatur. Zwischen zwei Sprachregionen gelegen, ist Bern der ideale Standort für den kulturellen Austausch.</p><p>Hast du Lust, den Röstigraben zu überqueren? Dann schalte dein Radio an und höre bei uns rein! Unser Carnotzet ist für alle geöffnet, die ihre westlichen Nachbarn besser kennenlernen möchten.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:09:41.260+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544307"
+      }
+    },
+    {
+      "id": "894544279",
+      "type": "shows",
+      "attributes": {
+        "name": "der Morgen",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544279"
+      }
+    },
+    {
+      "id": "894544289",
+      "type": "shows",
+      "attributes": {
+        "name": "die80er.ch",
+        "details": "<p>Zwei Leitsätze dienen uns als „St. Elmo’s Fire“: „Radio Gaga“ und „Now to something completely different“. Beiden versuchen wir gerecht zu werden, in dem wir eine einigermassen unausgewogene Mischung aus Hits, Peinlichkeiten und Trouvaillen spielen. Und das jeden zweiten Montagabend seit 2002. Weil wir seit 17 Jahren senden, gehören wir zum alten Eisen, aber – hey – wer nicht dabei war, kann sich ja auch nicht erinnern ans Jahrzehnt des schlechten Geschmacks. Wir können das.</p><p>Christian Raaflaub und Christian Walther bieten querbeet alles aus Britannien, den USA, Deutschland sowie manchmal auch aus musikalisch weniger beachteten Ländern wie Jugoslawien, Finnland, Japan oder Argentinien. Es ist nicht alles aus den 80ern, was wir spielen, aber es hat immer etwas mit den 80ern zu tun. Kurz: die80er.ch – der bescht Mix us de 80er, de 80er, de 80er u de 80er.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:15:27.909+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544289"
+      }
+    },
+    {
+      "id": "894544292",
+      "type": "shows",
+      "attributes": {
+        "name": "Drivin' Home",
+        "details": "<p>Musik für den Weg nach Hause, aber auch für daheim! Hier gibts  Folk, Bluegrass und Country für Eure Ohren, alle vierzehn Tage Donnerstags von 17-18 Uhr.</p><p>Moderation: Dirk Drescher</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:15:31.975+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544292"
+      }
+    },
+    {
+      "id": "894544312",
+      "type": "shows",
+      "attributes": {
+        "name": "El Gato Calculista",
+        "details": "<p>Tangos, südamerikanische Musik, Literatur, Fussball und nützliche Tipps, um sich in der klebrigen Masse, die sich Welt nennt, einen Weg zu bahnen. Jeden Freitag von 19h bis 20h auf Radio RaBe.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:15:35.033+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544312"
+      }
+    },
+    {
+      "id": "894544288",
+      "type": "shows",
+      "attributes": {
+        "name": "Espaço Brasil",
+        "details": "<p>Die brasilianische Sendung auf RaBe mit Musik, Kultur und Politik. Alle vier Wochen montags von 19 – 20 Uhr.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:15:45.544+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544288"
+      }
+    },
+    {
+      "id": "894544277",
+      "type": "shows",
+      "attributes": {
+        "name": "Galaxy Space Night",
+        "details": "<p>Galaxy Space Night, dieser Name steht seit über 20 Jahre für elektronische Musik auf den Lokalradiostationen Radio RaBe, Radio Stadtfilter und Radio LoRa.</p><p>Die Sendung besteht aus Sublabels und erhält dadurch Ihre Einzigartigkeit in der elektronischen Musikwelt.</p><p>Jeden Samstag von 21 Uhr bis 04 Uhr.</p><p>Galaxy Space Night   gehört…..gehört….</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:15:47.208+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544277"
+      }
+    },
+    {
+      "id": "894544282",
+      "type": "shows",
+      "attributes": {
+        "name": "ganzOhr",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544282"
+      }
+    },
+    {
+      "id": "894544287",
+      "type": "shows",
+      "attributes": {
+        "name": "ganzOhr (w)",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544287"
+      }
+    },
+    {
+      "id": "894544275",
+      "type": "shows",
+      "attributes": {
+        "name": "Gay Radio",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "178335203",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544275"
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=20&sort=name",
+    "first": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=20&sort=name",
+    "prev": null,
+    "next": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=2&page%5Bsize%5D=20&sort=name",
+    "last": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=3&page%5Bsize%5D=20&sort=name"
+  }
+}

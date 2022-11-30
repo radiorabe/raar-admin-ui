@@ -1,0 +1,428 @@
+{
+  "data": [
+    {
+      "id": "894544304",
+      "type": "shows",
+      "attributes": {
+        "name": "Radio Goethe",
+        "details": "<p>Englisch produziert in den USA – über die Musikszenen in Deutschland, der Schweiz und Österreich. Weltweit auf 39 Sendern.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:16:55.012+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544304"
+      }
+    },
+    {
+      "id": "894544270",
+      "type": "shows",
+      "attributes": {
+        "name": "Radio Silbergrau",
+        "details": "<p>Senioren machen Radio.</p><p>Vor allem machen wir alle vier Wochen eine einstündige Sendung, die gegenwärtig über Radio Rabe und auf Kanal K im Aargau ausgestrahlt wird. „Nur eine Stunde pro Monat“ fragen Sie – Sie dürfen ruhig einmal bei uns vorbeikommen, um zu sehen, was es alles braucht, bis eine solche Stunde bereit ist. Recherchieren, Kontakte knüpfen, mit Leuten reden, Aufnahmen machen, Aufnahmen redigieren, auf dem PC schneiden, in eine fertige Form bringen, Zwischentexte moderieren, Musik einfügen – das ist es, was unsere Tätigkeit so interessant und spannend macht. Dabei kann jedes Mitglied seine speziellen Fähigkeiten einbringen und das machen, was es am besten kann.</p><p>Wir haben monatlich eine Redaktionssitzung, an der wir unsere Programme besprechen. Unsere Radioarbeit machen wir in unserem einfachen Studio in Schliern bei Köniz (Schaufelweg 33), wo wir Aufnahmen machen können und alle Sendungen auf dem PC vorbereiten.</p><p>Ein abgeschlossenes Programmkonzept haben wir nicht. Wir machen vor allem die Beiträge, die unsere Mitglieder interessieren, jeder kann Vorschläge machen. Da wir alle Seniorinnen und Senioren sind, haben die Beiträge oft Themen, die vor allem Senioren ansprechen. Das ist jedoch kein konkretes Ziel, sondern es ergibt sich aus den Interessen der Mitglieder. Dabei kann es um Literatur, Entwicklungshilfe, Ausstellungen, Film, Wandertipps, seltene Sportarten, aktuelle Anlässe und vieles andere gehen; die Form kann ein Interview, eine Reportage, ein gestalteter Beitrag, ein besinnliches Gespräch oder eine eher kabarettistische Bearbeitung eines Themas sein, alles ist möglich. Selbstverständlich machen wir jedoch ebenso Beiträge, die auch Jüngere ansprechen. Die stündige Sendung setzt sich meistens aus 3-5 Wortbeiträgen und dazwischen Musik zusammen; ab und zu machen wir auch Themensendungen.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:00.938+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544270"
+      }
+    },
+    {
+      "id": "894544322",
+      "type": "shows",
+      "attributes": {
+        "name": "Radio Sur le Pont",
+        "details": "<p>Mainstream für die alternative Radiohörerschaft haben sich die drei Musikenthusiasten Ruedi, Beni und Urs auf die Fahne geschrieben und Ziel ist nichts geringeres, als mit ihrer Sendung den perfekten Einstieg ins Wochenende zu gewähren. Musik aus den verschiedensten Genres und Epochen, von Evergreen bis Newcomer Track, alles ist dabei, Hauptsache seelenvoll.</p><p>Gegliedert wird das Ganze durch vier Rubriken, welche von interessanten Anekdoten zu Bands (Hidden Track) über Neuheiten der Popkultur (Bart) sowie herausragenden Musikvideos (Must-See) bis hin zu Perlen der Feierabend-Unterhaltung (Fyrabebier) führen. Der Rote Faden bilden dabei die Räuberpistolen der drei Moderatoren, die durch ihre sonstigen Verstrickungen als Veranstalter, Barkeeper und DJ’s, einiges aus dem städtischen Untergrund zu berichten wissen.</p><p>„Radio Sur le Pont“ steht für Hörgenuss und Savoir Vivre, tune in!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:03.140+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544322"
+      }
+    },
+    {
+      "id": "894544301",
+      "type": "shows",
+      "attributes": {
+        "name": "RadioActivos",
+        "details": "<p>„Wir sind ein Liebesseufzer, queremos aquí y ahora. Somos un suspiro de amor, wir wollen hier und jetzt. Wir sind die verbotene Frucht, somos el pecado radial. Somos verdugos del olvido, wir wollen die Utopie ausgraben. Wir sind impuntuales, somos π*Daumen, charlatanes. Somos Maradona gegen England, der Dorn in deinem Gewissen. Wir sind die offenen Adern, la voz de los ausentes. Somos el pastor de los cuervos, alles weisse Schäfchen. Somos un mate caliente, ein scharfer Chili, el agua para el chocolate, der Strumpfhalter der Braut. Wir sind der fröhliche Rhythmus, queremos envolver tu cuerpo y hacerte bailar. Somos el bigote de Frida Kahlo, die Lanze vom Quijote. Somos la melancolía, wir wollen hier leben dort sein, unseren Abdruck in eurer Seele hinterlassen. Queremos acariciarte con nuestras voces, calarte hondo. Somos el abrazo fraternal, die Liebe in Zeiten der Cholera.<br> Wir sind RadioActivos.“</p><p>„RadioActivos, mittwochs, ungefähr ab 19 Uhr.“</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:05.105+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544301"
+      }
+    },
+    {
+      "id": "894544303",
+      "type": "shows",
+      "attributes": {
+        "name": "Ready to Rock",
+        "details": "<p>Die Sendung „Ready to Rock“ mit DJ Electric hat sich zum Ziel gesetzt, Indie-Rockmusik der letzten 50 Jahre zu präsentieren. Indie-Rockmusik heisst weitgehend unkommerzielle, aber dafür unkonventionelle und manchmal auch avantgardistische Rockmusik.</p><p>Die Sendung wird Schwerpunktthemen haben: Daten und Biografien zu Bands und Musikern, historische Ereignisse im Rock, stilprägende Richtungen, werden vorgestellt, natürlich mit den entsprechenden Musikbeispielen. Es erklingen alle Arten von Rock, von Krautrock oder Artrock über Metal und neuer Indiemusik bis zu Punk, und alles kommt ab Vinylplatten.</p><p>Dazu gibt’s die ständige Rubrik „Original + Fälschung“, wo jeweils eine Coverversion dem Original gegenübergestellt wird.</p><p>If you are ready to rock, listen to Radio Rabe!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:05.953+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544303"
+      }
+    },
+    {
+      "id": "894544323",
+      "type": "shows",
+      "attributes": {
+        "name": "Rhythm And Blues Juke Box",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544323"
+      }
+    },
+    {
+      "id": "894544299",
+      "type": "shows",
+      "attributes": {
+        "name": "Riffs",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544299"
+      }
+    },
+    {
+      "id": "894544296",
+      "type": "shows",
+      "attributes": {
+        "name": "Spazz-Time Kontinuum",
+        "details": "<p>Aus der Asche des fünfjährigen Experiments Jazz-Time Kontinuum ist nun die neue Sendung Spazz-Time Kontinuum entsprungen. Die alte Sendung war der grenzenlose Versuch eines Musikfreaks, durch eine Mischung aus Jazz und „anderen Sachen“, den Einfluss des Jazz auf Legionen von Musikern anderer Stile, zu zeigen. Mit der neuen Sendung wird sich die Balance weg vom Jazz bewegen; d.h., „less jazzin“ and „more spazzin“.</p><p>Jazz wird in der Sendung immer seinen Platz haben. Der Fokus bewegt sich aber diesmal eher zur bewusstseinsverändernden Musik, deren kommerzielle Blütezeit die späten Sechzigerjahre waren, die aber auch heute noch einen Einfluss auf das Musikschaffen hat. Das ist Musik geboren aus chemisch erweiterten Experimenten und neuen Aufnahmetechniken, die den Hörer ohne Bewegung an einen anderen Ort transportiert, an den Ort zwischen den Ohren. „Arrive without travelling.“ Eine Art Audio-Eskapismus, sozusagen, und in Zeiten wie diesen ist das nicht schlecht. So get on board and enjoy the ride!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:08.718+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544296"
+      }
+    },
+    {
+      "id": "894544298",
+      "type": "shows",
+      "attributes": {
+        "name": "Stadtgespräch",
+        "details": "<p>Kein Talk, sondern ein Gespräch. Das Stadtgespräch ist die andere Gesprächssendung im Berner Äther. Einmal im Monat kommt eine Zeitgenossin oder ein Zeitgenosse zu Wort. Ausführlich, ehrlich und persönlich – moderiert von Roger Spindler.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:17:12.617+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "178335203",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544298"
+      }
+    },
+    {
+      "id": "894544290",
+      "type": "shows",
+      "attributes": {
+        "name": "Stadtgschichte",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "178335203",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544290"
+      }
+    },
+    {
+      "id": "894544316",
+      "type": "shows",
+      "attributes": {
+        "name": "Stereo Freeze",
+        "details": "<p>Stereo Freeze – cool wie die Brise, mit Fi und Daddy Noc, die euch jeden Samstag von 18:00-19:00 Uhr soulvolle Vibes servieren. Ein grosser Teil des Programms ist der jamaikanischen Musik und Kultur gewidmet. Wir spielen alle Arten jamaikanischer Musik von den 50er bis zu den späten 90er Jahren und auch ein bisschen moderne Sachen, und geben euch dazu die entsprechenden Hintergrundinformationen. Ebenfalls senden wir Kulturbeiträge zum Land Jamaika. Angereichert werden die Insel-Sounds mit Soul, Funk, Jazz und Hip Hop, und im ‚Brocki Corner‘ präsentieren wir groovige Platten gefunden in Brockenstuben. Auch haben wir immer mal wieder eine Überraschung auf Lager, sei es ein Special, ein live Sound Clash oder betrunkene Brockenstuben Mash Ups.<br> Das Programm wird in Englisch, Jamaikanischem Patois und Bärndütsch präsentiert. Es geht um Eure Unterhaltung, ohne Ego und ohne Mätzchen. Schaltet Stereo Freeze ein und tanzt zu den Riddims!</p><p>Stereo Freeze – cool like the breeze, with hosts Fi and Daddy Noc serving soulful vibes, every saturday from 18:00-19:00. A big portion of the Program is dedicated to Jamaican music and culture. We play all types of Jamaican music from the 50’s to the late 90’s and a bit of modern stuff too and give you the corresponding information to go along with the tunes. To round off the program we incorporate Soul, Funk, Jazz and Hip Hop to go along with the island sounds to make for a tasty mixture of music, and in the ‘Brocki Corner’ section of the program we present groovy vinyl found in charity shops. Every now and again we also have a surprise in store, be it a Special, a live on air Sound Clash or a drunken Charity Shop Mash Up.<br> The program is presented in English, Jamaican Patois and Bärndütsch. It’s all about your entertainment – no ego and no gimmicks. Tune in to Stereo Freeze and skank to the riddim!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:19:56.725+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544316"
+      }
+    },
+    {
+      "id": "894544293",
+      "type": "shows",
+      "attributes": {
+        "name": "Stimme der Kutüsch",
+        "details": "<p>Die kurdisch-türkisch Sendung – Dienstag, alle 4 Wochen 19:00-20:00 Uhr.<br> Sendungsmacher: Sadik Kolusari</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:19:57.222+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544293"
+      }
+    },
+    {
+      "id": "894544305",
+      "type": "shows",
+      "attributes": {
+        "name": "Supernova",
+        "details": "<p>Der Fixstern am Berner Samstagshimmel: Soul, Smooth Jazz, House, Electronica, Latin. Wenn Staubsauger verstummen, Telefonate abgeklemmt werden und Weekend-Einkäufe nur noch mit Kopfhörer erledigt werden – dann flirrt wohl gerade die Supernova durch den Äther. Seit bald zehn Jahren verbreiten Daniel Imhof und Luca D’Alessandro musikalische Glückseligkeit in ihrer Umlaufbahn – von Bäriswil bis nach Koh Phangan. Unterstützt wird das Zweiergespann seit neuestem von Toni Varela.</p><p>Seit 2006 präsentieren die drei Supernovisten am Samstagnachmittag mit viel Leidenschaft ihre handverlesenen Perlen auf Radio Bern RaBe. Ihre Musik bewegt sich irgendwo zwischen Soul, Smooth Jazz, House, Electronica und Latin. Ob alte Souldiva auf knisterndem Vinyl oder unveröffentlichte Neuentdeckungen von Wohnzimmertüftlern – Hauptsache die Musik geht unter die Haut. Und manchmal, wenn ein Song einem vor Schönheit erschaudern lässt und man die Augen schliesst, dann kann man sie sehen, die Supernova: das kurzzeitige, helle Aufleuchten eines Sterns in allen Farben des Universums.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:19:59.751+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544305"
+      }
+    },
+    {
+      "id": "894544281",
+      "type": "shows",
+      "attributes": {
+        "name": "The Vidiot",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544281"
+      }
+    },
+    {
+      "id": "894544276",
+      "type": "shows",
+      "attributes": {
+        "name": "unerhörtes-ungehörtes",
+        "details": "<p>Experimentelle Musik und Toncollagen, eine Reise von den Synapsen bis zu den auralen Grenzen und darüber hinaus. Von IDM über Noisemusic bis Psychill und alles, wo Dub eingeflochten wurde.</p><p>Nach 15 Jahren im Alleingang mit über 350 Sendungen von Harry Schaumburger aka DJ Hemi Sync wurde die Sendung für experimentelle Musik im September 2012 mit Mo/Lcp ideal ergänzt.</p><p>LiebhaberInnen der etwas anderen Musik kommen hier auf ihre Kosten.</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:20:12.658+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544276"
+      }
+    },
+    {
+      "id": "894544310",
+      "type": "shows",
+      "attributes": {
+        "name": "UrbanWolf",
+        "details": "<p>Moritz Wolf aka Cityanimal und Urban Stalder aka Swampfever präsentieren monatlich ihre geliebten Musikstücke ohne eine Stilrichtung zu bevorzugen. Das heisst, eigentlich spielen sich zwei ältere Herren ihre Lieblingstracks vor.<br> Unter dem Motto: „Handicapped Beats with flowering flavor“ tummelten sich die beiden Moderatoren schon vor Jahren im tiefsten Stadtsumpf des Berner Untergrunds. Es beschreibt nicht nur etwas aus ihrem Leben sondern betitelt auch ihren ganz eigenen Stil.</p><p>UrbanWolf versucht mit seinem breiten musikalischen Spektrum die HörerInnen immer wieder von Neuem zu verblüffen.<br> Von der RaBe-Programmkommission wurde die für den Freitagnachmittag vorgesehene Sendung auf den Samstagnachmittag geschoben, mit der Begründung: „Zu abgefahren für den Freitagnachmittag!“</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:20:16.134+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544310"
+      }
+    },
+    {
+      "id": "894544291",
+      "type": "shows",
+      "attributes": {
+        "name": "Worldwyld",
+        "details": "<p>Einen lauen Sommerabend in Indien oder drinnen vor dem Cheminée bei äusseren 10 Grad minus. Wunderschön aber dennoch enorm selten… Seltene und wunderschöne Tracks stellt Euch jetzt „Worldwyld“ vor. Nach nunmehr 20 Jahren der intensiven Recherche und Auslagen kann der Programmgestalter mittlerweilen auf zirka 4000 Schallplatten schauen und nun in einem unkomplizierten Medium darstellen.</p><p>Die Sendung, welche jeweils am Montagabend von zehn bis elf Uhr ausgestrahlt wird, umfasst die Stile von Accoustic-Folk bis Zaffaraya-Rap mit der Oberhand des Jazz und Soul. Durch die Sendung führt Stefan Müller (DJ sEAR) welcher bereits im Kindergartenalter zu Hause mit einem Lenco Plattenspieler Wunschkonzert gespielt hat. Seither ging einiges, sei es als Musiker, DJ, Barkeeper oder eben als Radiomacher. Mit der Musik wachsen – denn Musik ist Leben &amp; Liebe.</p><p>Worldwyld nimmt dich mit auf eine Reise, jede Woche neu und frei interpretiert, von Analog nach Digital und rückwärts und jeweils live ab den Nadeln des RaBe Studios.</p><p>Tune in – „Worldwyld“ loves you!</p>",
+        "created_at": null,
+        "updated_at": "2019-03-25T18:20:20.702+01:00",
+        "creator_id": null,
+        "updater_id": 135138680
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544291"
+      }
+    },
+    {
+      "id": "894544309",
+      "type": "shows",
+      "attributes": {
+        "name": "Ämplifier",
+        "details": null,
+        "created_at": null,
+        "updated_at": null,
+        "creator_id": null,
+        "updater_id": null
+      },
+      "relationships": {
+        "profile": {
+          "data": {
+            "id": "593363170",
+            "type": "profiles"
+          }
+        }
+      },
+      "links": {
+        "self": "/admin/shows/894544309"
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=3&page%5Bsize%5D=20&sort=name",
+    "first": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=1&page%5Bsize%5D=20&sort=name",
+    "prev": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=2&page%5Bsize%5D=20&sort=name",
+    "next": null,
+    "last": "http://localhost:4200/api/admin/shows?page%5Bnumber%5D=3&page%5Bsize%5D=20&sort=name"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": "310933667",
+      "type": "playback_formats",
+      "attributes": {
+        "name": "low",
+        "description": null,
+        "codec": "mp3",
+        "bitrate": 96,
+        "channels": 1,
+        "created_at": "2016-04-25T21:23:20.480+02:00",
+        "updated_at": "2016-04-25T21:23:20.480+02:00",
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": {
+        "self": "/admin/playback_formats/310933667"
+      }
+    },
+    {
+      "id": "822469720",
+      "type": "playback_formats",
+      "attributes": {
+        "name": "high",
+        "description": "High fidelity audio entertainment",
+        "codec": "mp3",
+        "bitrate": 192,
+        "channels": 2,
+        "created_at": "2016-04-25T21:23:20.480+02:00",
+        "updated_at": "2016-04-25T21:23:20.480+02:00",
+        "creator_id": null,
+        "updater_id": null
+      },
+      "links": {
+        "self": "/admin/playback_formats/822469720"
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "http://localhost:4200/api/admin/playback_formats?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=codec",
+    "first": "http://localhost:4200/api/admin/playback_formats?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=codec",
+    "prev": null,
+    "next": null,
+    "last": "http://localhost:4200/api/admin/playback_formats?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=codec"
+  }
+}

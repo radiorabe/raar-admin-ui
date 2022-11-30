@@ -17,12 +17,28 @@ describe("profiles", () => {
       statusCode: 200,
     });
     cy.intercept("GET", "/api/admin/shows?sort=name&page%5Bsize%5D=500", {
-      fixture: "shows/shows.json",
+      fixture: "shows/shows1.json",
       statusCode: 200,
     });
+    cy.intercept(
+      "GET",
+      "/api/admin/shows?page%5Bnumber%5D=2&page%5Bsize%5D=20&sort=name",
+      {
+        fixture: "shows/shows2.json",
+        statusCode: 200,
+      }
+    );
+    cy.intercept(
+      "GET",
+      "/api/admin/shows?page%5Bnumber%5D=3&page%5Bsize%5D=20&sort=name",
+      {
+        fixture: "shows/shows3.json",
+        statusCode: 200,
+      }
+    );
   });
 
-  it("searches and opens profile", function () {
+  it("opens profile", function () {
     cy.visit("/profiles", { failOnStatusCode: false });
 
     cy.get("h1").should("have.text", "Profile");
@@ -89,7 +105,18 @@ describe("profiles", () => {
     cy.get("sd-downgrade-action:first-child").should("contain", "Reduziere");
     cy.get("sd-downgrade-action:last-child").should("contain", "Lösche");
 
-    cy.get(".show-list li").should("have.length", 9);
+    cy.get(".show-list li").should("have.length", 8);
+
+    cy.intercept("GET", "/api/admin/shows/894544298", {
+      fixture: "shows/stadtgespraech.json",
+      statusCode: 200,
+    });
+    cy.get(".show-list li a").contains("Stadtgespräch").click();
+    cy.get(".content h1").should("have.text", "Stadtgespräch");
+    cy.get(".list-group-item")
+      .contains("Stadtgespräch")
+      .should("have.class", "active");
+    cy.get("#details").should("have.value", "Bla bla bla");
   });
 
   it("creates new profile", function () {

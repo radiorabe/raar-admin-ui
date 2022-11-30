@@ -1,0 +1,183 @@
+{
+  "data": [
+    {
+      "id": "66",
+      "type": "access_codes",
+      "attributes": {
+        "code": "se5nsd",
+        "expires_at": "2022-02-15",
+        "created_at": "2021-10-25T14:55:20.697+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/66"
+      }
+    },
+    {
+      "id": "67",
+      "type": "access_codes",
+      "attributes": {
+        "code": "se5zsd",
+        "expires_at": "2022-03-15",
+        "created_at": "2022-10-14T16:15:59.708+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/67"
+      }
+    },
+    {
+      "id": "68",
+      "type": "access_codes",
+      "attributes": {
+        "code": "7rsrgf",
+        "expires_at": "2022-04-15",
+        "created_at": "2022-10-14T16:16:23.592+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/68"
+      }
+    },
+    {
+      "id": "69",
+      "type": "access_codes",
+      "attributes": {
+        "code": "sge4ss",
+        "expires_at": "2022-05-15",
+        "created_at": "2022-10-14T16:16:30.524+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/69"
+      }
+    },
+    {
+      "id": "70",
+      "type": "access_codes",
+      "attributes": {
+        "code": "hjlt87",
+        "expires_at": "2022-06-15",
+        "created_at": "2022-10-14T16:16:38.568+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/70"
+      }
+    },
+    {
+      "id": "71",
+      "type": "access_codes",
+      "attributes": {
+        "code": "sdh5sd",
+        "expires_at": "2022-07-15",
+        "created_at": "2022-10-14T16:16:45.463+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/71"
+      }
+    },
+    {
+      "id": "72",
+      "type": "access_codes",
+      "attributes": {
+        "code": "45dftg",
+        "expires_at": "2022-08-15",
+        "created_at": "2022-10-14T16:16:50.045+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/72"
+      }
+    },
+    {
+      "id": "73",
+      "type": "access_codes",
+      "attributes": {
+        "code": "dtzjk5",
+        "expires_at": "2022-09-15",
+        "created_at": "2022-10-14T16:16:55.557+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/73"
+      }
+    },
+    {
+      "id": "74",
+      "type": "access_codes",
+      "attributes": {
+        "code": "basr4r",
+        "expires_at": "2022-10-15",
+        "created_at": "2022-10-14T16:17:00.411+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/74"
+      }
+    },
+    {
+      "id": "75",
+      "type": "access_codes",
+      "attributes": {
+        "code": "d6k788",
+        "expires_at": "2022-11-15",
+        "created_at": "2022-10-14T16:17:04.467+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/75"
+      }
+    },
+    {
+      "id": "76",
+      "type": "access_codes",
+      "attributes": {
+        "code": "sg5ktg",
+        "expires_at": "2022-12-15",
+        "created_at": "2022-10-14T16:17:17.038+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/76"
+      }
+    },
+    {
+      "id": "77",
+      "type": "access_codes",
+      "attributes": {
+        "code": "gr3sdf",
+        "expires_at": "2023-01-15",
+        "created_at": "2022-10-14T16:17:22.485+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/77"
+      }
+    },
+    {
+      "id": "78",
+      "type": "access_codes",
+      "attributes": {
+        "code": "se5ghs",
+        "expires_at": "2023-02-15",
+        "created_at": "2022-10-14T16:17:28.842+02:00",
+        "creator_id": 116
+      },
+      "links": {
+        "self": "/api/admin/access_codes/78"
+      }
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "https://localhost:4200/api/admin/access_codes?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=expires_at",
+    "first": "https://localhost:4200/api/admin/access_codes?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=expires_at",
+    "prev": null,
+    "next": null,
+    "last": "https://localhost:4200/api/admin/access_codes?page%5Bnumber%5D=1&page%5Bsize%5D=500&sort=expires_at"
+  }
+}
