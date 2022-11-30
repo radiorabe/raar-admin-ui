@@ -77,6 +77,8 @@ describe("playback formats", () => {
       "contain",
       "Der Eintrag wurde erfolgreich gespeichert"
     );
+    cy.get("#notification .alert-info .close").click();
+    cy.get("#notification").should("have.class", "remove");
     cy.get("aside .list-group .list-group-item").should("have.length", 3);
 
     cy.get(".list-group-item")

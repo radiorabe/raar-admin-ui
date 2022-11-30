@@ -71,6 +71,8 @@ describe("access codes", () => {
       "contain",
       "Der Eintrag wurde erfolgreich gespeichert"
     );
+    cy.get("#notification .alert-info .close").click();
+    cy.get("#notification").should("have.class", "remove");
     cy.get("aside .list-group .list-group-item").should("have.length", 14);
 
     cy.get(".list-group-item:first-child")

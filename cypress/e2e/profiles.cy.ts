@@ -148,6 +148,14 @@ describe("profiles", () => {
     cy.get("#description").type("Just a test");
     cy.get(".btn-primary").contains("Speichern").click();
 
+    cy.get("#notification .alert-info").should(
+      "contain",
+      "Der Eintrag wurde erfolgreich gespeichert"
+    );
+    cy.get("#notification .alert-info .close").click();
+    cy.get("sd-profile-form h1").should("have.text", "Test");
+    cy.get("aside .list-group .list-group-item").should("have.length", 4);
+
     // add archive format
     cy.get(".form-inline > select").select("mp3");
     cy.get(".accordion .accordion-group").should("have.length", 1);
