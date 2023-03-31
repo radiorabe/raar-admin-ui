@@ -4,7 +4,7 @@ import {
   HttpRequest,
   HttpEvent,
   HttpHandler,
-  HttpErrorResponse
+  HttpErrorResponse,
 } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
@@ -27,13 +27,13 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
         req.clone({ headers: req.headers.delete("Skip-Error-Handling") })
       );
     } else {
-      return next.handle(req).pipe(catchError(res => this.handleError(res)));
+      return next.handle(req).pipe(catchError((res) => this.handleError(res)));
     }
   }
 
   private handleError(res: HttpErrorResponse): Observable<HttpEvent<any>> {
     if (res.status === HTTP_UNAUTHORIZED) {
-      this.authService.resetUser();
+      this.authService.requestLogin();
     } else {
       return throwError(res);
     }
