@@ -1,5 +1,5 @@
 // ***********************************************************
-// This example support/e2e.ts is processed and
+// This example support/e2e.js is processed and
 // loaded automatically before your test files.
 //
 // This is a great place to put global configuration and
@@ -26,5 +26,5 @@ import "./commands";
 // });
 
 beforeEach(() => {
-  //cy.intercept("/api/**", { statusCode: 404, body: "Cypress forced 404" });
+  cy.intercept("/api/**", { statusCode: 404, body: "Cypress forced 404" });
 });
