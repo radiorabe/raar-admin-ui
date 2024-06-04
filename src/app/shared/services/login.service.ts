@@ -49,7 +49,7 @@ export class LoginService {
       .pipe(map((res) => this.setUserFromResponse(res)));
   }
 
-  private setUserFromResponse(res: HttpResponse<Object>): UserModel {
+  private setUserFromResponse(res: HttpResponse<unknown>): UserModel {
     const user = new UserModel();
     Object.assign(user, res.body["data"]);
     user.attributes.admin_token = res.headers.get("X-Auth-Token");

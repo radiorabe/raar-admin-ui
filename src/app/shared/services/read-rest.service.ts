@@ -7,10 +7,10 @@ import { map } from "rxjs/operators";
 export class ReadRestService<T extends CrudModel> {
   constructor(protected http: HttpClient, public baseUrlTemplate: string) {}
 
-  getList(params?: any): Observable<CrudList<T>> {
+  getList(params?: unknown): Observable<CrudList<T>> {
     return this.http
       .get(this.baseUrl, this.requestOptionsFromParams(params))
-      .pipe(map(json => this.buildListFromResponse(json, this.buildEntity)));
+      .pipe(map((json) => this.buildListFromResponse(json, this.buildEntity)));
   }
 
   getNextEntries(list: CrudList<T>): Observable<CrudList<T>> {
@@ -19,8 +19,8 @@ export class ReadRestService<T extends CrudModel> {
     }
 
     return this.http.get(list.links.next).pipe(
-      map(json => this.buildListFromResponse(json, this.buildEntity)),
-      map(res => {
+      map((json) => this.buildListFromResponse(json, this.buildEntity)),
+      map((res) => {
         res.links.prev = list.links.prev;
         res.entries = list.entries.concat(res.entries);
         res.included = list.included.concat(res.included);
@@ -42,7 +42,7 @@ export class ReadRestService<T extends CrudModel> {
     }
     return this.http
       .get(`${this.baseUrl}/${id}`)
-      .pipe(map(json => this.updateEntityFromResponse(json, entity)));
+      .pipe(map((json) => this.updateEntityFromResponse(json, entity)));
   }
 
   protected get baseUrl(): string {
@@ -50,11 +50,11 @@ export class ReadRestService<T extends CrudModel> {
   }
 
   protected buildListFromResponse<R extends CrudModel>(
-    json: any,
+    json: unknown,
     builder: () => R
   ): CrudList<R> {
     const list = new CrudList<R>();
-    list.entries = json["data"].map((item: any) =>
+    list.entries = json["data"].map((item: unknown) =>
       this.copyAttributes(item, builder())
     );
     Object.assign(list.links, json["links"]);
@@ -63,13 +63,13 @@ export class ReadRestService<T extends CrudModel> {
   }
 
   protected updateEntityFromResponse<R extends CrudModel>(
-    json: any,
+    json: unknown,
     entity: R
   ): R {
     return this.copyAttributes(json["data"], entity);
   }
 
-  protected copyAttributes<R extends CrudModel>(source: any, dest: R): R {
+  protected copyAttributes<R extends CrudModel>(source: unknown, dest: R): R {
     Object.assign(dest, source);
     dest.init();
     return dest;
@@ -81,17 +81,19 @@ export class ReadRestService<T extends CrudModel> {
     );
   }
 
-  protected requestOptionsFromParams(params?: any): { params?: HttpParams } {
+  protected requestOptionsFromParams(params?: unknown): {
+    params?: HttpParams;
+  } {
     if (!params) return {};
     return {
       params: Object.keys(params)
         .filter(this.paramFilter(params))
-        .reduce((s, key) => s.append(key, params[key]), new HttpParams())
+        .reduce((s, key) => s.append(key, params[key]), new HttpParams()),
     };
   }
 
-  private paramFilter(params: any): (key: string) => boolean {
-    return key =>
+  private paramFilter(params: unknown): (key: string) => boolean {
+    return (key) =>
       params[key] != null &&
       ((typeof params[key] !== "string" && !Array.isArray(params[key])) ||
         params[key].length !== 0);

@@ -8,7 +8,7 @@ export class DowngradeActionModel extends CrudModel {
   } = {
     months: 12,
     bitrate: 1,
-    channels: 2
+    channels: 2,
   };
 
   ereasing = false;

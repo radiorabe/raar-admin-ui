@@ -4,9 +4,7 @@ import { PlaybackFormatModel } from "../models/playback-format.model";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
-export class PlaybackFormatsRestService extends CrudRestService<
-  PlaybackFormatModel
-> {
+export class PlaybackFormatsRestService extends CrudRestService<PlaybackFormatModel> {
   constructor(http: HttpClient) {
     super(http, "/api/admin/playback_formats");
   }

@@ -12,23 +12,23 @@ export class CrudRestService<T extends CrudModel> extends ReadRestService<T> {
   create(entity: T, entityToUpdate: T = entity): Observable<T> {
     return this.http
       .post(this.baseUrl, this.rootedJson(entity))
-      .pipe(map(res => this.updateEntityFromResponse(res, entityToUpdate)));
+      .pipe(map((res) => this.updateEntityFromResponse(res, entityToUpdate)));
   }
 
   update(entity: T, entityToUpdate: T = entity): Observable<T> {
     return this.http
       .patch(`${this.baseUrl}/${entity.id}`, this.rootedJson(entity))
-      .pipe(map(res => this.updateEntityFromResponse(res, entityToUpdate)));
+      .pipe(map((res) => this.updateEntityFromResponse(res, entityToUpdate)));
   }
 
   remove(id: number): Observable<void> {
     return this.http
       .delete(`${this.baseUrl}/${id}`)
-      .pipe(map(res => undefined));
+      .pipe(map((_res) => undefined));
   }
 
   protected rootedJson(entity: T): string {
-    const data: any = {};
+    const data: unknown = {};
     data["data"] = entity;
     return JSON.stringify(data);
   }

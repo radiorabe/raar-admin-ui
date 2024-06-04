@@ -12,7 +12,7 @@ export class PlaybackFormatModel extends CrudModel {
     description: undefined,
     codec: "",
     bitrate: 1,
-    channels: 2
+    channels: 2,
   };
 
   toString(): string {

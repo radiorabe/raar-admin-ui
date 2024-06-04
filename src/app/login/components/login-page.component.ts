@@ -37,7 +37,7 @@ export class LoginPageComponent {
   private loginUser() {
     this.login.post(this.username, this.password).subscribe(
       (user) => this.loginSuccess(user),
-      (err) => this.loginFailed()
+      (_err) => this.loginFailed()
     );
   }
 

@@ -8,7 +8,7 @@ export class ProfileModel extends CrudModel {
   } = {
     name: "",
     description: undefined,
-    default: false
+    default: false,
   };
 
   toString(): string {

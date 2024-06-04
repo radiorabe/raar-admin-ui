@@ -18,9 +18,9 @@ import { ProfilesRestService } from "./services/profiles-rest.service";
     ProfileFormComponent,
     ArchiveFormatFormComponent,
     DowngradeActionComponent,
-    DowngradeActionFormComponent
+    DowngradeActionFormComponent,
   ],
   exports: [],
-  providers: [ProfilesRestService, ProfilesService]
+  providers: [ProfilesRestService, ProfilesService],
 })
 export class ProfilesModule {}

@@ -8,6 +8,6 @@ import { LoginPageComponent } from "./components/login-page.component";
   imports: [SharedModule, RouterModule.forChild(LoginRoutes)],
   declarations: [LoginPageComponent],
   exports: [],
-  providers: []
+  providers: [],
 })
 export class LoginModule {}

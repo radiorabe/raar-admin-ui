@@ -6,7 +6,7 @@ export class AccessCodeModel extends CrudModel {
     expires_at: Date | void;
   } = {
     code: undefined,
-    expires_at: undefined
+    expires_at: undefined,
   };
 
   toString(): string {

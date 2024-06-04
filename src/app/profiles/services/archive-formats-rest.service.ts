@@ -4,9 +4,7 @@ import { ArchiveFormatModel } from "../models/archive-format.model";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
-export class ArchiveFormatsRestService extends CrudRestService<
-  ArchiveFormatModel
-> {
+export class ArchiveFormatsRestService extends CrudRestService<ArchiveFormatModel> {
   profileId: number;
 
   constructor(http: HttpClient) {

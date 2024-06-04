@@ -1,7 +1,7 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
@@ -14,11 +14,9 @@ import { NotificationService } from "../../shared/services/notification.service"
 @Component({
   selector: "sd-access-code-form",
   templateUrl: "access-code-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AccessCodeFormComponent extends MainFormComponent<
-  AccessCodeModel
-> {
+export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> {
   constructor(
     route: ActivatedRoute,
     router: Router,
@@ -39,7 +37,7 @@ export class AccessCodeFormComponent extends MainFormComponent<
 
   reset() {
     this.form.reset({
-      expires_at: this.entry.expires_at_string
+      expires_at: this.entry.expires_at_string,
     });
   }
 
@@ -50,7 +48,7 @@ export class AccessCodeFormComponent extends MainFormComponent<
 
   protected createForm(fb: FormBuilder) {
     this.form = fb.group({
-      expires_at: ["", Validators.required]
+      expires_at: ["", Validators.required],
     });
   }
 

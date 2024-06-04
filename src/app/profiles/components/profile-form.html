@@ -98,7 +98,7 @@
           [ngStyle]="{
             display: shownArchiveFormat === format ? 'block' : 'none'
           }"
-          style="overflow: visible; height: auto;"
+          style="overflow: visible; height: auto"
         >
           <div class="panel-body card-block card-body">
             <sd-archive-format-form
@@ -120,9 +120,9 @@
       class="form-control"
     >
       <option></option>
-      <option *ngFor="let codec of availableCodecs" [value]="codec"
-        >{{ codec.toUpperCase() }}</option
-      >
+      <option *ngFor="let codec of availableCodecs" [value]="codec">
+        {{ codec.toUpperCase() }}
+      </option>
     </select>
   </div>
 </div>
@@ -132,9 +132,7 @@
 
   <ul class="show-list">
     <li *ngFor="let show of relatedShows() | async">
-      <a [routerLink]="['/shows', show.id]">
-        {{ show.attributes.name }}
-      </a>
+      <a [routerLink]="['/shows', show.id]"> {{ show.attributes.name }} </a>
     </li>
   </ul>
 

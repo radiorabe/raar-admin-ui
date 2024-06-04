@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
     <span *ngFor="let e of errors" class="help text-danger">
       {{ e }}
     </span>
-  `
+  `,
 })
 export class FieldErrorsComponent {
   @Input() errors: string[];

@@ -5,7 +5,7 @@ import {
   EventEmitter,
   OnInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
@@ -17,10 +17,12 @@ import { NotificationService } from "../../shared/services/notification.service"
 @Component({
   selector: "sd-downgrade-action-form",
   templateUrl: "downgrade-action-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DowngradeActionFormComponent extends ValidatedFormComponent
-  implements OnInit {
+export class DowngradeActionFormComponent
+  extends ValidatedFormComponent
+  implements OnInit
+{
   @Input() downgradeAction: DowngradeActionModel;
 
   @Input() restService: DowngradeActionsRestService;
@@ -57,7 +59,7 @@ export class DowngradeActionFormComponent extends ValidatedFormComponent
     this.form.reset({
       months: this.downgradeAction.attributes.months,
       bitrate: this.downgradeAction.attributes.bitrate,
-      channels: this.downgradeAction.attributes.channels
+      channels: this.downgradeAction.attributes.channels,
     });
     if (!this.downgradeAction.id) {
       this.form.markAsDirty();
@@ -68,7 +70,7 @@ export class DowngradeActionFormComponent extends ValidatedFormComponent
     this.form = fb.group({
       months: ["", Validators.required],
       bitrate: [""],
-      channels: [""]
+      channels: [""],
     });
   }
 
@@ -85,8 +87,8 @@ export class DowngradeActionFormComponent extends ValidatedFormComponent
       this.downgradeAction,
       new DowngradeActionModel()
     ).subscribe(
-      action => this.saved.next(action),
-      err => this.handleSubmitError(err)
+      (action) => this.saved.next(action),
+      (err) => this.handleSubmitError(err)
     );
   }
 }

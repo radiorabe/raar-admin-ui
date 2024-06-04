@@ -9,13 +9,13 @@ import {
   filter,
   distinctUntilChanged,
   switchMap,
-  map
+  map,
 } from "rxjs/operators";
 
 @Component({
   selector: "sd-shows",
   templateUrl: "shows.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShowsComponent {
   shows: Observable<ShowModel[]>;
@@ -33,7 +33,7 @@ export class ShowsComponent {
       debounceTime(50),
       filter((q: string) => q.length === 0 || q.length > 2),
       distinctUntilChanged(),
-      switchMap(q => this.fetchShows(q))
+      switchMap((q) => this.fetchShows(q))
     );
   }
 
@@ -41,6 +41,6 @@ export class ShowsComponent {
     const regexp = new RegExp(q, "i");
     return this.showService
       .getEntries()
-      .pipe(map(list => list.filter(e => e.toString().match(regexp))));
+      .pipe(map((list) => list.filter((e) => e.toString().match(regexp))));
   }
 }

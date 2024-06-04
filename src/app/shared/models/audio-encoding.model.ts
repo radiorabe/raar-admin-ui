@@ -12,7 +12,7 @@ export class AudioEncodingModel extends CrudModel {
     file_extension: "",
     mime_type: "",
     bitrates: [],
-    channels: []
+    channels: [],
   };
 
   toString(): string {

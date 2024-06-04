@@ -68,9 +68,9 @@ export class TokenAuthService {
   protected getToken(key: string): string {
     try {
       return window.localStorage.getItem(key) || "";
-    } catch (e) {
+    } catch (_e) {
       if (this.user) {
-        return (<any>this.user.attributes)[key] || "";
+        return (<unknown>this.user.attributes)[key] || "";
       } else {
         return "";
       }
@@ -81,7 +81,7 @@ export class TokenAuthService {
     if (!value) return;
     try {
       window.localStorage.setItem(key, value);
-    } catch (e) {
+    } catch (_e) {
       // no local storage, no problem
     }
   }
@@ -89,7 +89,7 @@ export class TokenAuthService {
   protected clearToken(key: string) {
     try {
       window.localStorage.removeItem(key);
-    } catch (e) {
+    } catch (_e) {
       // no local storage, no problem
     }
   }
@@ -123,7 +123,7 @@ export class TokenAuthService {
         this.setUser(user);
         return undefined;
       }),
-      catchError((err) => {
+      catchError((_err) => {
         this.clearToken(key);
         return of(undefined);
       })

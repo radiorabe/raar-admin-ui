@@ -10,7 +10,7 @@ interface ValidationError {
   };
 }
 
-const MESSAGES: any = {
+const MESSAGES = {
   required: "Erforderlich",
   "can't be blank": "Erforderlich",
   "must be blank": "Muss Voller Zugriff sein",
@@ -27,7 +27,7 @@ const MESSAGES: any = {
   "Cannot delete record because dependent broadcasts exist":
     "Diese Sendung kann nicht gelöscht werden, da sie bereits ausgestrahlt wurde.",
   "Cannot delete record because dependent shows exist":
-    "Dieses Profil kann nicht gelöscht werden, da es von Sendungen verwendet wird"
+    "Dieses Profil kann nicht gelöscht werden, da es von Sendungen verwendet wird",
 };
 
 export class ValidatedFormComponent {
@@ -71,7 +71,7 @@ export class ValidatedFormComponent {
   protected handleSubmitError(error: HttpErrorResponse) {
     if (error.status === 422) {
       const data = this.collectValidationErrors(error.error);
-      Object.keys(data).forEach(field => {
+      Object.keys(data).forEach((field) => {
         this.findFieldControl(field).setErrors(data[field]);
       });
       this.changeDetector.markForCheck();
@@ -85,8 +85,8 @@ export class ValidatedFormComponent {
 
   protected getErrors(control: AbstractControl): string[] {
     return Object.keys(control.errors || {})
-      .filter(error => control.errors && control.errors[error])
-      .map(error => MESSAGES[error] || error);
+      .filter((error) => control.errors && control.errors[error])
+      .map((error) => MESSAGES[error] || error);
   }
 
   protected findFieldControl(field: string): AbstractControl {
@@ -102,7 +102,7 @@ export class ValidatedFormComponent {
       control = this.form.get(field.substring(0, field.length - 3));
     } else if (field.indexOf(".") > 0) {
       let group = this.form;
-      field.split(".").forEach(f => {
+      field.split(".").forEach((f) => {
         if (group.get(f)) {
           control = group.get(f);
           if (control instanceof FormGroup) group = control;
@@ -125,7 +125,7 @@ export class ValidatedFormComponent {
     this.notificationService.notify(true, this.getDeleteSuccessMessage());
   }
 
-  protected createForm(fb: FormBuilder): void {
+  protected createForm(_fb: FormBuilder): void {
     // implement in subclass
   }
 
@@ -137,12 +137,12 @@ export class ValidatedFormComponent {
     return "Der Eintrag wurde gelöscht.";
   }
 
-  private collectValidationErrors(res: any): any {
-    const errors: any = {};
+  private collectValidationErrors(res: { errors }): unknown {
+    const errors: unknown = {};
     res.errors.forEach((e: ValidationError) => {
       const attr = e.source.pointer.split("/").pop();
       if (attr) {
-        if (!errors.hasOwnProperty(attr)) {
+        if (!Object.prototype.hasOwnProperty.call(errors, attr)) {
           errors[attr] = {};
         }
         errors[attr][e.detail] = true;

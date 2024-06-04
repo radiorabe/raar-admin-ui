@@ -11,7 +11,12 @@
 
   <div class="form-group" [class.has-error]="fieldErrors('details')">
     <label for="details" class="control-label">Beschreibung</label>
-    <textarea id="details" class="form-control" formControlName="details" rows="10">
+    <textarea
+      id="details"
+      class="form-control"
+      formControlName="details"
+      rows="10"
+    >
     </textarea>
     <sd-field-errors [errors]="fieldErrors('details')"></sd-field-errors>
   </div>
@@ -19,44 +24,52 @@
   <div class="form-group" [class.has-error]="fieldErrors('profile_id')">
     <label for="profile_id" class="control-label">Profil</label>
     <select id="profile_id" class="form-control" formControlName="profile_id">
-      <option *ngFor="let profile of (profilesService.getEntries() | async)" value="{{profile.id}}">
+      <option
+        *ngFor="let profile of (profilesService.getEntries() | async)"
+        value="{{profile.id}}"
+      >
         {{ profile.toString() }}
       </option>
     </select>
     <sd-field-errors [errors]="fieldErrors('profile_id')"></sd-field-errors>
     <div class="help-block" *ngIf="entry && entry.id">
-      <strong>Vorsicht!</strong> Eine Änderung des Profils wird beim nächsten Reduktionslauf
-      berücksichtigt und kann danach nicht mehr rückgängig gemacht werden, falls
-      das neue Profil tiefere Bitraten und/oder kürzere Aufbewahrungszeiten
-      definiert. In diesem Fall werden ältere Ausstrahlungen dieser Sendung
-      gemäss den Profileinstellungen reduziert bzw. gelöscht.
+      <strong>Vorsicht!</strong> Eine Änderung des Profils wird beim nächsten
+      Reduktionslauf berücksichtigt und kann danach nicht mehr rückgängig
+      gemacht werden, falls das neue Profil tiefere Bitraten und/oder kürzere
+      Aufbewahrungszeiten definiert. In diesem Fall werden ältere Ausstrahlungen
+      dieser Sendung gemäss den Profileinstellungen reduziert bzw. gelöscht.
     </div>
   </div>
 
   <div>
-    <button type="submit"
-            [disabled]="form.pristine || !form.valid"
-            class="btn btn-primary">
+    <button
+      type="submit"
+      [disabled]="form.pristine || !form.valid"
+      class="btn btn-primary"
+    >
       Speichern
     </button>
     &nbsp;
-    <button type="reset"
-            (click)="reset()"
-            [disabled]="form.pristine"
-            class="btn">
+    <button
+      type="reset"
+      (click)="reset()"
+      [disabled]="form.pristine"
+      class="btn"
+    >
       Zurücksetzen
     </button>
     &nbsp;
-    <button *ngIf="entry && entry.id"
-            (click)="remove($event)"
-            class="btn btn-danger pull-right">
+    <button
+      *ngIf="entry && entry.id"
+      (click)="remove($event)"
+      class="btn btn-danger pull-right"
+    >
       Löschen
     </button>
   </div>
 </form>
 
-<br/>
-<br/>
+<br />
+<br />
 
-<sd-show-merge [show]="entry" *ngIf="entry && entry.id">
-</sd-show-merge>
+<sd-show-merge [show]="entry" *ngIf="entry && entry.id"> </sd-show-merge>
