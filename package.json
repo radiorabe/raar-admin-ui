@@ -7,16 +7,14 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production && npm run package",
     "package": "cd dist/raar-admin-ui && gzip -kf *.js *.css && tar czf ../raar-admin-ui.tar.gz .",
-    "test": "ng test",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
     "format": "prettier --write \"./**/*.{js,ts,json,css,scss,html,md,yaml}\"",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run_with_server": "run-p --race start:ci cy:run",
-    "cy:ci": "npm run prepare:ci && npm run cy:run_with_server",
-    "prepare:ci": "ln -sf index.html dist/raar-admin-ui/404.html",
-    "start:ci": "http-server ./dist/raar-admin-ui -a localhost -p 4200 -c-1"
+    "cy:once": "npm run cy:once:prepare && npm run cy:once:serve_and_run",
+    "cy:once:serve_and_run": "run-p --race cy:once:serve cy:run",
+    "cy:once:prepare": "npm run build && ln -sf index.html dist/raar-admin-ui/404.html",
+    "cy:once:serve": "http-server ./dist/raar-admin-ui -a localhost -p 4200 -c-1"
   },
   "private": true,
   "dependencies": {
