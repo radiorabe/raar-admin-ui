@@ -4,9 +4,7 @@ import { DowngradeActionModel } from "../models/downgrade-action.model";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
-export class DowngradeActionsRestService extends CrudRestService<
-  DowngradeActionModel
-> {
+export class DowngradeActionsRestService extends CrudRestService<DowngradeActionModel> {
   profileId: number;
   archiveFormatId: number;
 

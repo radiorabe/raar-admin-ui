@@ -4,7 +4,7 @@ import { PlaybackFormatsService } from "../services/playback-formats.service";
 @Component({
   selector: "sd-playback-formats",
   templateUrl: "playback-formats.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlaybackFormatsComponent {
   constructor(public playbackFormatsService: PlaybackFormatsService) {

@@ -1,7 +1,7 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
@@ -16,11 +16,9 @@ import { NotificationService } from "../../shared/services/notification.service"
 @Component({
   selector: "sd-playback-format-form",
   templateUrl: "playback-format-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PlaybackFormatFormComponent extends MainFormComponent<
-  PlaybackFormatModel
-> {
+export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackFormatModel> {
   audioEncoding: AudioEncodingModel | void;
 
   constructor(
@@ -48,7 +46,7 @@ export class PlaybackFormatFormComponent extends MainFormComponent<
       description: this.entry.attributes.description,
       codec: this.entry.attributes.codec,
       bitrate: this.entry.attributes.bitrate,
-      channels: this.entry.attributes.channels
+      channels: this.entry.attributes.channels,
     });
   }
 
@@ -67,11 +65,13 @@ export class PlaybackFormatFormComponent extends MainFormComponent<
       description: "",
       codec: ["", Validators.required],
       bitrate: ["", Validators.required],
-      channels: ["", Validators.required]
+      channels: ["", Validators.required],
     });
-    this.form.controls["codec"].valueChanges.subscribe(value => {
-      this.audioEncodingsService.getEntries().subscribe(encodings => {
-        this.audioEncoding = encodings.find(e => e.attributes.codec === value);
+    this.form.controls["codec"].valueChanges.subscribe((value) => {
+      this.audioEncodingsService.getEntries().subscribe((encodings) => {
+        this.audioEncoding = encodings.find(
+          (e) => e.attributes.codec === value
+        );
       });
     });
   }

@@ -19,9 +19,9 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
   }
 
   intercept(
-    req: HttpRequest<any>,
+    req: HttpRequest<unknown>,
     next: HttpHandler
-  ): Observable<HttpEvent<any>> {
+  ): Observable<HttpEvent<unknown>> {
     if (req.headers.has("Skip-Error-Handling")) {
       return next.handle(
         req.clone({ headers: req.headers.delete("Skip-Error-Handling") })
@@ -31,7 +31,7 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
     }
   }
 
-  private handleError(res: HttpErrorResponse): Observable<HttpEvent<any>> {
+  private handleError(res: HttpErrorResponse): Observable<HttpEvent<unknown>> {
     if (res.status === HTTP_UNAUTHORIZED) {
       this.authService.requestLogin();
     } else {

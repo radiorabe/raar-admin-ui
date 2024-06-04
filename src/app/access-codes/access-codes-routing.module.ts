@@ -13,22 +13,22 @@ export const routes: Routes = [
     children: [
       {
         path: "new",
-        component: AccessCodeFormComponent
+        component: AccessCodeFormComponent,
       },
       {
         path: ":id",
-        component: AccessCodeFormComponent
+        component: AccessCodeFormComponent,
       },
       {
         path: "",
-        component: AccessCodesInitComponent
-      }
-    ]
-  }
+        component: AccessCodesInitComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AccessCodesRoutingModule {}

@@ -12,9 +12,9 @@ import { PlaybackFormatsRestService } from "./services/playback-formats-rest.ser
   declarations: [
     PlaybackFormatsComponent,
     PlaybackFormatsInitComponent,
-    PlaybackFormatFormComponent
+    PlaybackFormatFormComponent,
   ],
   exports: [],
-  providers: [PlaybackFormatsRestService, PlaybackFormatsService]
+  providers: [PlaybackFormatsRestService, PlaybackFormatsService],
 })
 export class PlaybackFormatsModule {}

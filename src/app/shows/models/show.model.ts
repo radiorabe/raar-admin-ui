@@ -6,7 +6,7 @@ export class ShowModel extends CrudModel {
     details: string | void;
   } = {
     name: "",
-    details: undefined
+    details: undefined,
   };
   relationships: {
     profile: {
@@ -16,7 +16,7 @@ export class ShowModel extends CrudModel {
       };
     } | void;
   } = {
-    profile: undefined
+    profile: undefined,
   };
 
   toString(): string {

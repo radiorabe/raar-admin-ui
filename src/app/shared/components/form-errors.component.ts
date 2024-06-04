@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
     <div *ngFor="let e of errors" class="alert alert-danger">
       {{ e }}
     </div>
-  `
+  `,
 })
 export class FormErrorsComponent {
   @Input() errors: string[];

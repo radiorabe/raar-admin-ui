@@ -3,7 +3,7 @@ import {
   Input,
   OnChanges,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -15,10 +15,12 @@ import { NotificationService } from "../../shared/services/notification.service"
 @Component({
   selector: "sd-show-merge",
   templateUrl: "show-merge.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShowMergeComponent extends ValidatedFormComponent
-  implements OnChanges {
+export class ShowMergeComponent
+  extends ValidatedFormComponent
+  implements OnChanges
+{
   @Input() show: ShowModel;
 
   constructor(
@@ -43,12 +45,12 @@ export class ShowMergeComponent extends ValidatedFormComponent
   reset() {
     this.submitted = false;
     this.form.reset({
-      target_id: ""
+      target_id: "",
     });
   }
   protected createForm(fb: FormBuilder) {
     this.form = fb.group({
-      target_id: ["", Validators.required]
+      target_id: ["", Validators.required],
     });
   }
 
@@ -56,16 +58,14 @@ export class ShowMergeComponent extends ValidatedFormComponent
     this.showsService
       .mergeEntry(this.show, this.form.value.target_id)
       .subscribe(
-        show => {
+        (show) => {
           this.router.navigate(["shows", show.id]);
           this.notificationService.notify(
             true,
-            `Die Sendung ${this.show.attributes.name} wurde mit ${
-              show.attributes.name
-            } zusammengeführt.`
+            `Die Sendung ${this.show.attributes.name} wurde mit ${show.attributes.name} zusammengeführt.`
           );
         },
-        err => this.handleSubmitError(err)
+        (err) => this.handleSubmitError(err)
       );
   }
 }

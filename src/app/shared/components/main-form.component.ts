@@ -12,14 +12,15 @@ import {
   distinctUntilChanged,
   switchMap,
   tap,
-  catchError
+  catchError,
 } from "rxjs/operators";
 import { CrudModel } from "../models/crud.model";
 
 @Directive()
 export class MainFormComponent<T extends CrudModel>
   extends ValidatedFormComponent
-  implements OnInit, OnDestroy {
+  implements OnInit, OnDestroy
+{
   entry: T;
 
   title: string;
@@ -41,20 +42,20 @@ export class MainFormComponent<T extends CrudModel>
     this.route.params
       .pipe(
         takeUntil(this.destroy$),
-        map(params => +params["id"]),
+        map((params) => +params["id"]),
         distinctUntilChanged(),
-        switchMap(id => {
+        switchMap((id) => {
           if (id > 0) {
             return this.modelsService
               .getEntry(id)
-              .pipe(catchError(err => this.newEntry()));
+              .pipe(catchError((_err) => this.newEntry()));
           } else {
             return this.newEntry();
           }
         }),
-        tap(_ => window.scrollTo(0, 0))
+        tap((_) => window.scrollTo(0, 0))
       )
-      .subscribe(entry => this.setEntry(entry));
+      .subscribe((entry) => this.setEntry(entry));
   }
 
   ngOnDestroy() {
@@ -72,11 +73,11 @@ export class MainFormComponent<T extends CrudModel>
     if (window.confirm(this.getRemoveQuestion())) {
       this.submitted = true;
       this.modelsService.removeEntry(this.entry).subscribe(
-        _ => {
+        (_) => {
           this.router.navigate([this.getMainRoute()]);
           this.notificationService.notify(true, this.getDeleteSuccessMessage());
         },
-        err => this.handleSubmitError(err)
+        (err) => this.handleSubmitError(err)
       );
     }
   }
@@ -90,12 +91,12 @@ export class MainFormComponent<T extends CrudModel>
 
   protected persist() {
     this.modelsService.storeEntry(this.entry).subscribe(
-      entry => {
+      (entry) => {
         this.router.navigate([this.getMainRoute(), entry.id]);
         this.setEntry(entry);
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      err => this.handleSubmitError(err)
+      (err) => this.handleSubmitError(err)
     );
   }
 

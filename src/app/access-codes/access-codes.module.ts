@@ -12,9 +12,9 @@ import { AccessCodesRestService } from "./services/access-codes-rest.service";
   declarations: [
     AccessCodesComponent,
     AccessCodesInitComponent,
-    AccessCodeFormComponent
+    AccessCodeFormComponent,
   ],
   exports: [],
-  providers: [AccessCodesRestService, AccessCodesService]
+  providers: [AccessCodesRestService, AccessCodesService],
 })
 export class AccessCodesModule {}

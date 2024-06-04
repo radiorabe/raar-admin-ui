@@ -5,7 +5,7 @@ import {
   EventEmitter,
   OnInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
@@ -21,10 +21,12 @@ import { NotificationService } from "../../shared/services/notification.service"
   selector: "sd-archive-format-form",
   templateUrl: "archive-format-form.html",
   providers: [DowngradeActionsRestService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArchiveFormatFormComponent extends ValidatedFormComponent
-  implements OnInit {
+export class ArchiveFormatFormComponent
+  extends ValidatedFormComponent
+  implements OnInit
+{
   @Input() archiveFormat: ArchiveFormatModel;
 
   @Input() restService: ArchiveFormatsRestService;
@@ -48,10 +50,10 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
   }
 
   ngOnInit() {
-    this.audioEncodingsService.getEntries().subscribe(list => {
+    this.audioEncodingsService.getEntries().subscribe((list) => {
       this.audioEncoding =
         list.find(
-          e => e.attributes.codec === this.archiveFormat.attributes.codec
+          (e) => e.attributes.codec === this.archiveFormat.attributes.codec
         ) || new AudioEncodingModel();
       this.reset();
       this.changeDetector.markForCheck();
@@ -61,7 +63,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
       this.downgradeActionsRest.archiveFormatId = this.archiveFormat.id;
       this.downgradeActionsRest
         .getList()
-        .subscribe(list => this.setDowngradeActions(list.entries));
+        .subscribe((list) => this.setDowngradeActions(list.entries));
     }
   }
 
@@ -78,14 +80,13 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
         : this.audioEncoding.attributes.bitrates[0],
       initial_channels: this.archiveFormat.attributes.initial_channels,
       max_public_bitrate: this.archiveFormat.attributes.max_public_bitrate,
-      max_logged_in_bitrate: this.archiveFormat.attributes
-        .max_logged_in_bitrate,
-      max_priviledged_bitrate: this.archiveFormat.attributes
-        .max_priviledged_bitrate,
-      priviledged_groups: this.archiveFormat.attributes.priviledged_groups.join(
-        ", "
-      ),
-      download_permission: this.archiveFormat.attributes.download_permission
+      max_logged_in_bitrate:
+        this.archiveFormat.attributes.max_logged_in_bitrate,
+      max_priviledged_bitrate:
+        this.archiveFormat.attributes.max_priviledged_bitrate,
+      priviledged_groups:
+        this.archiveFormat.attributes.priviledged_groups.join(", "),
+      download_permission: this.archiveFormat.attributes.download_permission,
     });
     if (!this.archiveFormat.id) {
       this.form.markAsDirty();
@@ -98,14 +99,14 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
       if (this.archiveFormat.id) {
         this.submitted = true;
         this.restService.remove(this.archiveFormat.id).subscribe(
-          _ => {
+          (_) => {
             this.removed.next();
             this.notificationService.notify(
               true,
               this.getDeleteSuccessMessage()
             );
           },
-          err => this.handleSubmitError(err)
+          (err) => this.handleSubmitError(err)
         );
       } else {
         this.removed.next();
@@ -130,7 +131,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
 
   updateDowngradeAction(action: DowngradeActionModel) {
     const list = this.downgradeActions
-      .filter(a => a.id !== action.id)
+      .filter((a) => a.id !== action.id)
       .concat([action])
       .sort((a, b) => a.attributes.months - b.attributes.months);
     this.editedDowngradeAction = undefined;
@@ -142,23 +143,23 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
     if (window.confirm("Willst du diesen Schritt wirklich löschen?")) {
       if (action.id) {
         this.downgradeActionsRest.remove(action.id).subscribe(
-          _ => {
+          (_) => {
             this.setDowngradeActions(
-              this.downgradeActions.filter(a => a !== action)
+              this.downgradeActions.filter((a) => a !== action)
             );
           },
-          err => this.handleSubmitError(err)
+          (err) => this.handleSubmitError(err)
         );
       } else {
         this.setDowngradeActions(
-          this.downgradeActions.filter(a => a !== action)
+          this.downgradeActions.filter((a) => a !== action)
         );
       }
     }
   }
 
   hasEreasingDowngrade(): boolean {
-    return this.downgradeActions.some(a => a.ereasing);
+    return this.downgradeActions.some((a) => a.ereasing);
   }
 
   protected createForm(fb: FormBuilder) {
@@ -169,7 +170,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
       max_logged_in_bitrate: [""],
       max_priviledged_bitrate: [""],
       priviledged_groups: [""],
-      download_permission: ["", Validators.required]
+      download_permission: ["", Validators.required],
     });
   }
 
@@ -190,9 +191,8 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
     this.archiveFormat.attributes.max_priviledged_bitrate = this.nullOrNumber(
       formModel.max_priviledged_bitrate
     );
-    this.archiveFormat.attributes.priviledged_groups = formModel.priviledged_groups.split(
-      ","
-    );
+    this.archiveFormat.attributes.priviledged_groups =
+      formModel.priviledged_groups.split(",");
     this.archiveFormat.attributes.download_permission =
       formModel.download_permission;
   }
@@ -200,7 +200,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
   private persist() {
     const action = this.archiveFormat.id ? "update" : "create";
     this.restService[action](this.archiveFormat).subscribe(
-      _ => {
+      (_) => {
         this.reset();
         if (action === "create") {
           this.downgradeActionsRest.archiveFormatId = this.archiveFormat.id;
@@ -208,7 +208,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
         this.changeDetector.markForCheck();
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      err => this.handleSubmitError(err)
+      (err) => this.handleSubmitError(err)
     );
   }
 
@@ -217,7 +217,7 @@ export class ArchiveFormatFormComponent extends ValidatedFormComponent
     this.changeDetector.markForCheck();
   }
 
-  private nullOrNumber(value: any): number | null {
+  private nullOrNumber(value: unknown): number | null {
     if (value === undefined || value === null || value === "null") {
       return null;
     } else {

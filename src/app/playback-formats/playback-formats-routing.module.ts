@@ -13,22 +13,22 @@ export const routes: Routes = [
     children: [
       {
         path: "new",
-        component: PlaybackFormatFormComponent
+        component: PlaybackFormatFormComponent,
       },
       {
         path: ":id",
-        component: PlaybackFormatFormComponent
+        component: PlaybackFormatFormComponent,
       },
       {
         path: "",
-        component: PlaybackFormatsInitComponent
-      }
-    ]
-  }
+        component: PlaybackFormatsInitComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class PlaybackFormatsRoutingModule {}

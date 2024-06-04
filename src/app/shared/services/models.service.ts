@@ -24,7 +24,7 @@ export class ModelsService<T extends CrudModel> {
   }
 
   getEntry(id: number): Observable<T> {
-    return this.crudRest.get(id).pipe(tap(e => this.updateListEntry(e)));
+    return this.crudRest.get(id).pipe(tap((e) => this.updateListEntry(e)));
   }
 
   storeEntry(entry: T): Observable<T> {
@@ -34,17 +34,17 @@ export class ModelsService<T extends CrudModel> {
     } else {
       action = this.crudRest.create(entry);
     }
-    return action.pipe(tap(result => this.updateListEntry(result)));
+    return action.pipe(tap((result) => this.updateListEntry(result)));
   }
 
   removeEntry(entry: T): Observable<void> {
     return this.crudRest
       .remove(entry.id)
-      .pipe(tap(_ => this.updateEntries(this.entriesWithout(entry.id))));
+      .pipe(tap((_) => this.updateEntries(this.entriesWithout(entry.id))));
   }
 
   reload() {
-    this.loadEntries().subscribe(list => this.updateEntries(list));
+    this.loadEntries().subscribe((list) => this.updateEntries(list));
   }
 
   protected sortEntries(entries: T[]): T[] {
@@ -54,7 +54,7 @@ export class ModelsService<T extends CrudModel> {
   }
 
   protected entriesWithout(id: number) {
-    return this.entries.filter(e => e.id !== id);
+    return this.entries.filter((e) => e.id !== id);
   }
 
   protected updateEntries(entries: T[]) {
@@ -66,9 +66,9 @@ export class ModelsService<T extends CrudModel> {
     return this.crudRest
       .getList({ sort: this.sortAttr, "page[size]": 500 })
       .pipe(
-        switchMap(list => this.loadAllEntries(list)),
-        map(list => list.entries),
-        catchError(_ => of([]))
+        switchMap((list) => this.loadAllEntries(list)),
+        map((list) => list.entries),
+        catchError((_) => of([]))
       );
   }
 
@@ -76,7 +76,7 @@ export class ModelsService<T extends CrudModel> {
     if (list.links.next) {
       return this.crudRest
         .getNextEntries(list)
-        .pipe(switchMap(l => this.loadAllEntries(l)));
+        .pipe(switchMap((l) => this.loadAllEntries(l)));
     } else {
       return of(list);
     }

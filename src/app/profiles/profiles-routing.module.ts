@@ -13,22 +13,22 @@ export const routes: Routes = [
     children: [
       {
         path: "new",
-        component: ProfileFormComponent
+        component: ProfileFormComponent,
       },
       {
         path: ":id",
-        component: ProfileFormComponent
+        component: ProfileFormComponent,
       },
       {
         path: "",
-        component: ProfilesInitComponent
-      }
-    ]
-  }
+        component: ProfilesInitComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProfilesRoutingModule {}

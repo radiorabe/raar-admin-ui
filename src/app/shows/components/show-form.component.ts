@@ -1,7 +1,7 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
@@ -15,7 +15,7 @@ import { NotificationService } from "../../shared/services/notification.service"
 @Component({
   selector: "sd-show-form",
   templateUrl: "show-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShowFormComponent extends MainFormComponent<ShowModel> {
   constructor(
@@ -36,7 +36,7 @@ export class ShowFormComponent extends MainFormComponent<ShowModel> {
       details: this.entry.attributes.details,
       profile_id:
         this.entry.relationships.profile &&
-        this.entry.relationships.profile.data.id
+        this.entry.relationships.profile.data.id,
     });
   }
 
@@ -45,7 +45,7 @@ export class ShowFormComponent extends MainFormComponent<ShowModel> {
     this.entry.attributes.name = formModel.name;
     this.entry.attributes.details = formModel.details;
     this.entry.relationships.profile = {
-      data: { id: formModel.profile_id, type: "profiles" }
+      data: { id: formModel.profile_id, type: "profiles" },
     };
   }
 
@@ -53,7 +53,7 @@ export class ShowFormComponent extends MainFormComponent<ShowModel> {
     this.form = fb.group({
       name: ["", Validators.required],
       details: "",
-      profile_id: ""
+      profile_id: "",
     });
   }
 
@@ -62,7 +62,7 @@ export class ShowFormComponent extends MainFormComponent<ShowModel> {
     const defaultProfile = this.profilesService.getDefaultEntry();
     if (defaultProfile) {
       show.relationships.profile = {
-        data: { id: defaultProfile.id, type: "profiles" }
+        data: { id: defaultProfile.id, type: "profiles" },
       };
     }
     return of(show);

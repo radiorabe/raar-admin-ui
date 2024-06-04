@@ -24,11 +24,11 @@ import { AccessCodesModule } from "./access-codes/access-codes.module";
     ProfilesModule,
     PlaybackFormatsModule,
     AccessCodesModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   declarations: [AppComponent, NotificationComponent],
   exports: [AppComponent],
   providers: [AudioEncodingsService, NotificationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -5,7 +5,7 @@ import { AppModule } from "./app.module";
 describe("Admin component", () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule]
+      imports: [AppModule],
     }).compileComponents();
   }));
 

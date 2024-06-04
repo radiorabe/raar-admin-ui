@@ -3,7 +3,7 @@ import {
   OnInit,
   OnDestroy,
   ChangeDetectionStrategy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
@@ -16,17 +16,18 @@ import { ProfileModel } from "../models/profile.model";
 import { ArchiveFormatModel } from "../models/archive-format.model";
 import { NotificationService } from "../../shared/services/notification.service";
 import { ShowsService } from "src/app/shows/services/shows.service";
-import { ShowModel } from "src/app/shows/models/show.model";
-import { filter, map } from "rxjs/operators";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: "sd-profile-form",
   templateUrl: "profile-form.html",
   providers: [ArchiveFormatsRestService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProfileFormComponent extends MainFormComponent<ProfileModel>
-  implements OnInit, OnDestroy {
+export class ProfileFormComponent
+  extends MainFormComponent<ProfileModel>
+  implements OnInit, OnDestroy
+{
   archiveFormats: ArchiveFormatModel[] = [];
 
   availableCodecs: string[] = [];
@@ -60,8 +61,8 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
       description: this.entry.attributes.description,
       default: {
         value: this.entry.attributes.default,
-        disabled: this.entry.attributes.default
-      }
+        disabled: this.entry.attributes.default,
+      },
     });
   }
 
@@ -75,7 +76,7 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
   removeArchiveFormat(format: ArchiveFormatModel) {
     this.setArchiveFormats(
       this.archiveFormats.filter(
-        f => f.attributes.codec !== format.attributes.codec
+        (f) => f.attributes.codec !== format.attributes.codec
       )
     );
   }
@@ -92,9 +93,9 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
     return this.showsService
       .getEntries()
       .pipe(
-        map(list =>
+        map((list) =>
           list.filter(
-            show =>
+            (show) =>
               show.relationships.profile &&
               show.relationships.profile.data.id === this.entry.id
           )
@@ -109,7 +110,7 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
       this.archiveFormatsRest.profileId = profile.id;
       this.archiveFormatsRest
         .getList()
-        .subscribe(list => this.setArchiveFormats(list.entries));
+        .subscribe((list) => this.setArchiveFormats(list.entries));
     } else {
       this.setArchiveFormats([]);
     }
@@ -126,7 +127,7 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
     this.form = fb.group({
       name: ["", Validators.required],
       description: "",
-      default: ""
+      default: "",
     });
   }
 
@@ -152,11 +153,11 @@ export class ProfileFormComponent extends MainFormComponent<ProfileModel>
   }
 
   private setArchiveFormats(formats: ArchiveFormatModel[]) {
-    this.audioEncodingsService.getEntries().subscribe(encodings => {
+    this.audioEncodingsService.getEntries().subscribe((encodings) => {
       this.archiveFormats = formats;
       this.availableCodecs = encodings
-        .map(e => e.attributes.codec)
-        .filter(codec => !formats.find(f => f.attributes.codec === codec));
+        .map((e) => e.attributes.codec)
+        .filter((codec) => !formats.find((f) => f.attributes.codec === codec));
       this.changeDetector.markForCheck();
     });
   }

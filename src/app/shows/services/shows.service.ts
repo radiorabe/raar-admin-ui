@@ -16,6 +16,6 @@ export class ShowsService extends ModelsService<ShowModel> {
   mergeEntry(show: ShowModel, targetId: number): Observable<ShowModel> {
     return (<ShowsRestService>this.crudRest)
       .merge(show, targetId)
-      .pipe(tap(_result => this.updateEntries(this.entriesWithout(show.id))));
+      .pipe(tap((_result) => this.updateEntries(this.entriesWithout(show.id))));
   }
 }

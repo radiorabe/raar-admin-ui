@@ -4,13 +4,17 @@
   </nav>
 
   <aside>
-    <sd-add-button [link]="['/profiles', 'new']">Profil erstellen</sd-add-button>
+    <sd-add-button [link]="['/profiles', 'new']"
+      >Profil erstellen</sd-add-button
+    >
 
     <div class="list-group">
-      <a *ngFor="let profile of profilesService.getEntries() | async"
-         [routerLink]="['/profiles', profile.id]"
-         routerLinkActive="active"
-         class="list-group-item title">
+      <a
+        *ngFor="let profile of profilesService.getEntries() | async"
+        [routerLink]="['/profiles', profile.id]"
+        routerLinkActive="active"
+        class="list-group-item title"
+      >
         {{ profile.toString() }}
       </a>
     </div>

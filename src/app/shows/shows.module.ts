@@ -18,14 +18,14 @@ import { ProfilesRestService } from "../profiles/services/profiles-rest.service"
     ShowsInitComponent,
     ShowFormComponent,
     ShowMergeComponent,
-    StatsComponent
+    StatsComponent,
   ],
   exports: [],
   providers: [
     ShowsRestService,
     ShowsService,
     ProfilesRestService,
-    ProfilesService
-  ]
+    ProfilesService,
+  ],
 })
 export class ShowsModule {}

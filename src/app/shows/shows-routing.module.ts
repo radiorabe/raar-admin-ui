@@ -13,22 +13,22 @@ export const routes: Routes = [
     children: [
       {
         path: "new",
-        component: ShowFormComponent
+        component: ShowFormComponent,
       },
       {
         path: ":id",
-        component: ShowFormComponent
+        component: ShowFormComponent,
       },
       {
         path: "",
-        component: ShowsInitComponent
-      }
-    ]
-  }
+        component: ShowsInitComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ShowsRoutingModule {}

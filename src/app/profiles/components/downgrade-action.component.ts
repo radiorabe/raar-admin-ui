@@ -3,14 +3,14 @@ import {
   Input,
   Output,
   EventEmitter,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import { DowngradeActionModel } from "../models/downgrade-action.model";
 
 @Component({
   selector: "sd-downgrade-action",
   templateUrl: "downgrade-action.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DowngradeActionComponent {
   @Input() downgradeAction: DowngradeActionModel;

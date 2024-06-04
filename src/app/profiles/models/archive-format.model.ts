@@ -18,7 +18,7 @@ export class ArchiveFormatModel extends CrudModel {
     max_logged_in_bitrate: 0,
     max_priviledged_bitrate: 0,
     priviledged_groups: [],
-    download_permission: "admin"
+    download_permission: "admin",
   };
 
   toString(): string {
