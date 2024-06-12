@@ -12,7 +12,7 @@ describe("playback formats", () => {
       {
         fixture: "playback_formats/playback_formats.json",
         statusCode: 200,
-      }
+      },
     );
     cy.intercept("GET", "/api/admin/audio_encodings", {
       fixture: "audio_encodings/audio_encodings.json",
@@ -25,7 +25,7 @@ describe("playback formats", () => {
 
     cy.get("sd-playback-formats-init h1").should(
       "have.text",
-      "Wiedergabeformate"
+      "Wiedergabeformate",
     );
     cy.get("aside .list-group .list-group-item").should("have.length", 2);
 
@@ -41,7 +41,7 @@ describe("playback formats", () => {
     cy.get(".content h1").should("have.text", "MP3 high");
     cy.get("#description").should(
       "have.value",
-      "High fidelity audio entertainment"
+      "High fidelity audio entertainment",
     );
     cy.get("#name").should("have.value", "high");
     cy.get("#codec").should("have.value", "mp3");
@@ -75,7 +75,7 @@ describe("playback formats", () => {
 
     cy.get("#notification .alert-info").should(
       "contain",
-      "Der Eintrag wurde erfolgreich gespeichert"
+      "Der Eintrag wurde erfolgreich gespeichert",
     );
     cy.get("#notification .alert-info .close").click();
     cy.get("#notification").should("have.class", "remove");
@@ -98,7 +98,7 @@ describe("playback formats", () => {
       .click();
     cy.get(".alert-info").should(
       "contain",
-      "Das Wiedergabeformat MP3 mid wurde gelöscht"
+      "Das Wiedergabeformat MP3 mid wurde gelöscht",
     );
     cy.get("sd-playback-formats-init").should("exist");
 

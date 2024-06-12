@@ -16,7 +16,7 @@ export class AddAuthHeaderInterceptor<T> implements HttpInterceptor {
 
   intercept(
     req: HttpRequest<T>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<unknown>> {
     return next.handle(this.transformRequest(req));
   }
@@ -41,7 +41,7 @@ export class AddAuthHeaderInterceptor<T> implements HttpInterceptor {
       return req.clone({
         headers: req.headers.set(
           "Authorization",
-          'Token token="' + this.auth.token + '"'
+          'Token token="' + this.auth.token + '"',
         ),
       });
     }

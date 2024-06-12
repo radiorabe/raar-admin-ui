@@ -44,7 +44,7 @@ export class ArchiveFormatFormComponent
     public downgradeActionsRest: DowngradeActionsRestService,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(fb, changeDetector, notificationService);
   }
@@ -53,7 +53,7 @@ export class ArchiveFormatFormComponent
     this.audioEncodingsService.getEntries().subscribe((list) => {
       this.audioEncoding =
         list.find(
-          (e) => e.attributes.codec === this.archiveFormat.attributes.codec
+          (e) => e.attributes.codec === this.archiveFormat.attributes.codec,
         ) || new AudioEncodingModel();
       this.reset();
       this.changeDetector.markForCheck();
@@ -103,10 +103,10 @@ export class ArchiveFormatFormComponent
             this.removed.next();
             this.notificationService.notify(
               true,
-              this.getDeleteSuccessMessage()
+              this.getDeleteSuccessMessage(),
             );
           },
-          (err) => this.handleSubmitError(err)
+          (err) => this.handleSubmitError(err),
         );
       } else {
         this.removed.next();
@@ -145,14 +145,14 @@ export class ArchiveFormatFormComponent
         this.downgradeActionsRest.remove(action.id).subscribe(
           (_) => {
             this.setDowngradeActions(
-              this.downgradeActions.filter((a) => a !== action)
+              this.downgradeActions.filter((a) => a !== action),
             );
           },
-          (err) => this.handleSubmitError(err)
+          (err) => this.handleSubmitError(err),
         );
       } else {
         this.setDowngradeActions(
-          this.downgradeActions.filter((a) => a !== action)
+          this.downgradeActions.filter((a) => a !== action),
         );
       }
     }
@@ -183,13 +183,13 @@ export class ArchiveFormatFormComponent
     this.archiveFormat.attributes.initial_bitrate = formModel.initial_bitrate;
     this.archiveFormat.attributes.initial_channels = formModel.initial_channels;
     this.archiveFormat.attributes.max_public_bitrate = this.nullOrNumber(
-      formModel.max_public_bitrate
+      formModel.max_public_bitrate,
     );
     this.archiveFormat.attributes.max_logged_in_bitrate = this.nullOrNumber(
-      formModel.max_logged_in_bitrate
+      formModel.max_logged_in_bitrate,
     );
     this.archiveFormat.attributes.max_priviledged_bitrate = this.nullOrNumber(
-      formModel.max_priviledged_bitrate
+      formModel.max_priviledged_bitrate,
     );
     this.archiveFormat.attributes.priviledged_groups =
       formModel.priviledged_groups.split(",");
@@ -208,7 +208,7 @@ export class ArchiveFormatFormComponent
         this.changeDetector.markForCheck();
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      (err) => this.handleSubmitError(err)
+      (err) => this.handleSubmitError(err),
     );
   }
 

@@ -28,7 +28,7 @@ export class ShowMergeComponent
     private router: Router,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(fb, changeDetector, notificationService);
   }
@@ -62,10 +62,10 @@ export class ShowMergeComponent
           this.router.navigate(["shows", show.id]);
           this.notificationService.notify(
             true,
-            `Die Sendung ${this.show.attributes.name} wurde mit ${show.attributes.name} zusammengeführt.`
+            `Die Sendung ${this.show.attributes.name} wurde mit ${show.attributes.name} zusammengeführt.`,
           );
         },
-        (err) => this.handleSubmitError(err)
+        (err) => this.handleSubmitError(err),
       );
   }
 }

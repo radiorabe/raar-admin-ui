@@ -25,7 +25,7 @@ export class StatsComponent {
   constructor(
     fb: FormBuilder,
     private http: HttpClient,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
   ) {
     this.createStatsForm(fb);
   }
@@ -38,7 +38,7 @@ export class StatsComponent {
         finalize(() => {
           this.loading = false;
           this.cd.markForCheck();
-        })
+        }),
       )
       .subscribe((blob) => this.openBlob(blob));
   }

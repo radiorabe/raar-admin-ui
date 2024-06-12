@@ -5,9 +5,9 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @for (e of errors; track e) {
-    <span class="help text-danger">
-      {{ e }}
-    </span>
+      <span class="help text-danger">
+        {{ e }}
+      </span>
     }
   `,
 })

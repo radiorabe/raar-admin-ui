@@ -16,7 +16,7 @@ describe("shows", () => {
       {
         fixture: "shows/shows2.json",
         statusCode: 200,
-      }
+      },
     );
     cy.intercept(
       "GET",
@@ -24,7 +24,7 @@ describe("shows", () => {
       {
         fixture: "shows/shows3.json",
         statusCode: 200,
-      }
+      },
     );
     cy.intercept("GET", "/api/admin/profiles?sort=name&page%5Bsize%5D=500", {
       fixture: "profiles/profiles.json",
@@ -42,7 +42,7 @@ describe("shows", () => {
     cy.get("aside .list-group .list-group-item").should("have.length", 3);
     cy.get("aside .list-group .list-group-item:first-child").should(
       "have.text",
-      "\n        Info\n      "
+      "\n        Info\n      ",
     );
     cy.get(".form-control-feedback > .glyphicon-remove").click();
     cy.get("aside .list-group .list-group-item").should("have.length", 58);
@@ -84,7 +84,7 @@ describe("shows", () => {
 
     cy.get("#notification .alert-info").should(
       "contain",
-      "Der Eintrag wurde erfolgreich gespeichert"
+      "Der Eintrag wurde erfolgreich gespeichert",
     );
     cy.get("#notification .alert-info .close").click();
     cy.get("#notification").should("have.class", "remove");
@@ -112,7 +112,7 @@ describe("shows", () => {
     cy.get("sd-show-form > form .btn-danger").contains("Löschen").click();
     cy.get(".alert-info").should(
       "contain",
-      "Die Sendung Test Send wurde gelöscht"
+      "Die Sendung Test Send wurde gelöscht",
     );
     cy.get("sd-shows-init").should("exist");
 

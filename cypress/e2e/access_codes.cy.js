@@ -12,7 +12,7 @@ describe("access codes", () => {
       {
         fixture: "access_codes/access_codes.json",
         statusCode: 200,
-      }
+      },
     );
   });
 
@@ -69,7 +69,7 @@ describe("access codes", () => {
 
     cy.get("#notification .alert-info").should(
       "contain",
-      "Der Eintrag wurde erfolgreich gespeichert"
+      "Der Eintrag wurde erfolgreich gespeichert",
     );
     cy.get("#notification .alert-info .close").click();
     cy.get("#notification").should("have.class", "remove");

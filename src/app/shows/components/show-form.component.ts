@@ -25,7 +25,7 @@ export class ShowFormComponent extends MainFormComponent<ShowModel> {
     public profilesService: ProfilesService,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(route, router, showsService, notificationService, changeDetector, fb);
   }

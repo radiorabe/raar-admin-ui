@@ -28,7 +28,7 @@ export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackForma
     public audioEncodingsService: AudioEncodingsService,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(
       route,
@@ -36,7 +36,7 @@ export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackForma
       playbackFormatsService,
       notificationService,
       changeDetector,
-      fb
+      fb,
     );
   }
 
@@ -70,7 +70,7 @@ export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackForma
     this.form.controls["codec"].valueChanges.subscribe((value) => {
       this.audioEncodingsService.getEntries().subscribe((encodings) => {
         this.audioEncoding = encodings.find(
-          (e) => e.attributes.codec === value
+          (e) => e.attributes.codec === value,
         );
       });
     });

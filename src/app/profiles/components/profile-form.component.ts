@@ -43,7 +43,7 @@ export class ProfileFormComponent
     private audioEncodingsService: AudioEncodingsService,
     notificationSerivce: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(
       route,
@@ -51,7 +51,7 @@ export class ProfileFormComponent
       profilesService,
       notificationSerivce,
       changeDetector,
-      fb
+      fb,
     );
   }
 
@@ -76,8 +76,8 @@ export class ProfileFormComponent
   removeArchiveFormat(format: ArchiveFormatModel) {
     this.setArchiveFormats(
       this.archiveFormats.filter(
-        (f) => f.attributes.codec !== format.attributes.codec
-      )
+        (f) => f.attributes.codec !== format.attributes.codec,
+      ),
     );
   }
 
@@ -97,9 +97,9 @@ export class ProfileFormComponent
           list.filter(
             (show) =>
               show.relationships.profile &&
-              show.relationships.profile.data.id === this.entry.id
-          )
-        )
+              show.relationships.profile.data.id === this.entry.id,
+          ),
+        ),
       );
   }
 

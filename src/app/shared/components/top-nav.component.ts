@@ -8,7 +8,10 @@ import { AdminAuthService } from "../services/admin-auth.service";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopNavComponent {
-  constructor(public auth: AdminAuthService, private router: Router) {}
+  constructor(
+    public auth: AdminAuthService,
+    private router: Router,
+  ) {}
 
   logout() {
     this.auth.logout();

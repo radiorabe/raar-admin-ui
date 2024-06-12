@@ -10,10 +10,10 @@ export class AudioEncodingsService extends ReadRestService<AudioEncodingModel> {
   private entries$ = this.getList().pipe(
     map((list) => list.entries),
     tap((entries) =>
-      entries.forEach((e) => e.attributes.bitrates.sort((a, b) => b - a))
+      entries.forEach((e) => e.attributes.bitrates.sort((a, b) => b - a)),
     ),
     publishLast(),
-    refCount()
+    refCount(),
   );
 
   constructor(http: HttpClient) {

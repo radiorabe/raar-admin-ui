@@ -11,7 +11,7 @@ export class DowngradeActionsRestService extends CrudRestService<DowngradeAction
   constructor(http: HttpClient) {
     super(
       http,
-      "/api/admin/profiles/{profileId}/archive_formats/{archiveFormatId}/downgrade_actions"
+      "/api/admin/profiles/{profileId}/archive_formats/{archiveFormatId}/downgrade_actions",
     );
   }
 

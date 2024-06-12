@@ -21,7 +21,7 @@ export class LoginPageComponent {
   constructor(
     private login: LoginService,
     private auth: AdminAuthService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
   ) {}
 
   submit() {
@@ -37,7 +37,7 @@ export class LoginPageComponent {
   private loginUser() {
     this.login.post(this.username, this.password).subscribe(
       (user) => this.loginSuccess(user),
-      (_err) => this.loginFailed()
+      (_err) => this.loginFailed(),
     );
   }
 

@@ -2,7 +2,10 @@ import { Injectable } from "@angular/core";
 import { ReplaySubject } from "rxjs";
 
 export class Notification {
-  constructor(public success: boolean, public message: string) {}
+  constructor(
+    public success: boolean,
+    public message: string,
+  ) {}
 }
 
 @Injectable()

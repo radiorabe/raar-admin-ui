@@ -38,7 +38,7 @@ export class ValidatedFormComponent {
   constructor(
     fb: FormBuilder,
     protected changeDetector: ChangeDetectorRef,
-    protected notificationService: NotificationService
+    protected notificationService: NotificationService,
   ) {
     this.createForm(fb);
   }
@@ -78,7 +78,7 @@ export class ValidatedFormComponent {
     } else {
       this.notificationService.notify(
         false,
-        this.extractResponseErrorMessage(error)
+        this.extractResponseErrorMessage(error),
       );
     }
   }
