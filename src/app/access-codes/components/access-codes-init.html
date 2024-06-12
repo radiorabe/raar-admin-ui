@@ -21,10 +21,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let code of accessCodesService.getEntries() | async">
+        @for (code of accessCodesService.getEntries() | async; track code) {
+        <tr>
           <td>{{ code.expires_at_string }}</td>
           <td>{{ code.attributes.code }}</td>
         </tr>
+        }
       </tbody>
     </table>
   </div>

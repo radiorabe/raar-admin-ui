@@ -24,21 +24,20 @@
   <div class="form-group" [class.has-error]="fieldErrors('profile_id')">
     <label for="profile_id" class="control-label">Profil</label>
     <select id="profile_id" class="form-control" formControlName="profile_id">
-      <option
-        *ngFor="let profile of (profilesService.getEntries() | async)"
-        value="{{profile.id}}"
-      >
-        {{ profile.toString() }}
-      </option>
+      @for (profile of (profilesService.getEntries() | async); track profile) {
+      <option value="{{profile.id}}">{{ profile.toString() }}</option>
+      }
     </select>
     <sd-field-errors [errors]="fieldErrors('profile_id')"></sd-field-errors>
-    <div class="help-block" *ngIf="entry && entry.id">
+    @if (entry && entry.id) {
+    <div class="help-block">
       <strong>Vorsicht!</strong> Eine Änderung des Profils wird beim nächsten
       Reduktionslauf berücksichtigt und kann danach nicht mehr rückgängig
       gemacht werden, falls das neue Profil tiefere Bitraten und/oder kürzere
       Aufbewahrungszeiten definiert. In diesem Fall werden ältere Ausstrahlungen
       dieser Sendung gemäss den Profileinstellungen reduziert bzw. gelöscht.
     </div>
+    }
   </div>
 
   <div>
@@ -58,18 +57,17 @@
     >
       Zurücksetzen
     </button>
-    &nbsp;
-    <button
-      *ngIf="entry && entry.id"
-      (click)="remove($event)"
-      class="btn btn-danger pull-right"
-    >
+    &nbsp; @if (entry && entry.id) {
+    <button (click)="remove($event)" class="btn btn-danger pull-right">
       Löschen
     </button>
+    }
   </div>
 </form>
 
 <br />
 <br />
 
-<sd-show-merge [show]="entry" *ngIf="entry && entry.id"> </sd-show-merge>
+@if (entry && entry.id) {
+<sd-show-merge [show]="entry"> </sd-show-merge>
+}

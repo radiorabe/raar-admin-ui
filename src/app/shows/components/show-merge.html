@@ -22,12 +22,9 @@
             formControlName="target_id"
           >
             <option value="">Bitte wählen</option>
-            <option
-              *ngFor="let s of (showsService.getEntries() | async)"
-              value="{{s.id}}"
-            >
-              {{ s.toString() }}
-            </option>
+            @for (s of (showsService.getEntries() | async); track s) {
+            <option value="{{s.id}}">{{ s.toString() }}</option>
+            }
           </select>
           <sd-field-errors
             [errors]="fieldErrors('target_id')"

@@ -19,14 +19,10 @@
             formControlName="max_public_bitrate"
           >
             <option [value]="null">Voller Zugriff</option>
-            <ng-container *ngIf="audioEncoding.attributes.bitrates.length > 1">
-              <option
-                *ngFor="let bitrate of audioEncoding.attributes.bitrates"
-                value="{{bitrate}}"
-              >
-                {{ bitrate }}
-              </option>
-            </ng-container>
+            @if (audioEncoding.attributes.bitrates.length > 1) { @for (bitrate
+            of audioEncoding.attributes.bitrates; track bitrate) {
+            <option value="{{bitrate}}">{{ bitrate }}</option>
+            } }
             <option value="0">Kein Zugriff</option>
           </select>
           <div class="input-group-addon">kbps</div>
@@ -52,14 +48,10 @@
             formControlName="max_logged_in_bitrate"
           >
             <option [value]="null">Voller Zugriff</option>
-            <ng-container *ngIf="audioEncoding.attributes.bitrates.length > 1">
-              <option
-                *ngFor="let bitrate of audioEncoding.attributes.bitrates"
-                value="{{bitrate}}"
-              >
-                {{ bitrate }}
-              </option>
-            </ng-container>
+            @if (audioEncoding.attributes.bitrates.length > 1) { @for (bitrate
+            of audioEncoding.attributes.bitrates; track bitrate) {
+            <option value="{{bitrate}}">{{ bitrate }}</option>
+            } }
             <option value="0">Kein Zugriff</option>
           </select>
           <div class="input-group-addon">kbps</div>
@@ -85,14 +77,10 @@
             formControlName="max_priviledged_bitrate"
           >
             <option [value]="null">Voller Zugriff</option>
-            <ng-container *ngIf="audioEncoding.attributes.bitrates.length > 1">
-              <option
-                *ngFor="let bitrate of audioEncoding.attributes.bitrates"
-                value="{{bitrate}}"
-              >
-                {{ bitrate }}
-              </option>
-            </ng-container>
+            @if (audioEncoding.attributes.bitrates.length > 1) { @for (bitrate
+            of audioEncoding.attributes.bitrates; track bitrate) {
+            <option value="{{bitrate}}">{{ bitrate }}</option>
+            } }
             <option value="0">Kein Zugriff</option>
           </select>
           <div class="input-group-addon">kbps</div>
@@ -151,11 +139,8 @@
   <div class="form-horizontal">
     <h4>Initialer Import</h4>
 
-    <div
-      *ngIf="audioEncoding.attributes.bitrates.length > 1"
-      class="form-group"
-      [class.has-error]="fieldErrors('initial_bitrate')"
-    >
+    @if (audioEncoding.attributes.bitrates.length > 1) {
+    <div class="form-group" [class.has-error]="fieldErrors('initial_bitrate')">
       <label for="initial_bitrate" class="col-md-2 control-label"
         >Bitrate</label
       >
@@ -166,12 +151,9 @@
             class="form-control"
             formControlName="initial_bitrate"
           >
-            <option
-              *ngFor="let bitrate of audioEncoding.attributes.bitrates"
-              value="{{bitrate}}"
-            >
-              {{ bitrate }}
-            </option>
+            @for (bitrate of audioEncoding.attributes.bitrates; track bitrate) {
+            <option value="{{bitrate}}">{{ bitrate }}</option>
+            }
           </select>
           <div class="input-group-addon">kbps</div>
         </div>
@@ -180,6 +162,7 @@
         ></sd-field-errors>
       </div>
     </div>
+    }
 
     <div class="form-group" [class.has-error]="fieldErrors('initial_channels')">
       <label for="initial_channels" class="col-md-2 control-label"
@@ -191,12 +174,9 @@
           class="form-control"
           formControlName="initial_channels"
         >
-          <option
-            *ngFor="let channel of audioEncoding.attributes.channels"
-            value="{{channel}}"
-          >
-            {{ channel }}
-          </option>
+          @for (channel of audioEncoding.attributes.channels; track channel) {
+          <option value="{{channel}}">{{ channel }}</option>
+          }
         </select>
         <sd-field-errors
           [errors]="fieldErrors('initial_channels')"
@@ -229,24 +209,23 @@
   </div>
 </form>
 
-<div *ngIf="archiveFormat.id">
+@if (archiveFormat.id) {
+<div>
   <br />
-
   <h4>Datenreduktion</h4>
-
   <ul class="list-group" style="margin-bottom: 10px">
+    @for (action of downgradeActions; track action) {
     <sd-downgrade-action
-      *ngFor="let action of downgradeActions"
       [class.disabled]="!!editedDowngradeAction"
       [downgradeAction]="action"
       (edit)="editDowngradeAction(action)"
       (remove)="removeDowngradeAction(action)"
     >
     </sd-downgrade-action>
+    }
   </ul>
-
+  @if (editedDowngradeAction) {
   <sd-downgrade-action-form
-    *ngIf="editedDowngradeAction"
     [downgradeAction]="editedDowngradeAction"
     [audioEncoding]="audioEncoding"
     [restService]="downgradeActionsRest"
@@ -254,20 +233,18 @@
     (canceled)="editedDowngradeAction = undefined"
   >
   </sd-downgrade-action-form>
-
-  <p *ngIf="!hasEreasingDowngrade() && !editedDowngradeAction">
+  } @if (!hasEreasingDowngrade() && !editedDowngradeAction) {
+  <p>
     <a (click)="addDowngradeAction(false)">Reduktionsschritt hinzufügen</a>
     /
     <a (click)="addDowngradeAction(true)">Löschzeitpunkt hinzufügen</a>
   </p>
+  }
 </div>
-
-<br *ngIf="archiveFormat.id && audioEncoding.attributes.bitrates.length > 1" />
-
-<div
-  class="alert alert-warning"
-  *ngIf="archiveFormat.id && audioEncoding.attributes.bitrates.length > 1"
->
+} @if (archiveFormat.id && audioEncoding.attributes.bitrates.length > 1) {
+<br />
+} @if (archiveFormat.id && audioEncoding.attributes.bitrates.length > 1) {
+<div class="alert alert-warning">
   <p>
     <strong>Vorsicht!</strong>
     Änderungen an den Archivierungsformaten (ausser den Zugriffsberechtigungen)
@@ -286,3 +263,4 @@
     möglich.
   </p>
 </div>
+}

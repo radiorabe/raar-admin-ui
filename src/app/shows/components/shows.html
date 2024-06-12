@@ -26,14 +26,15 @@
     </div>
 
     <div class="list-group">
+      @for (show of shows | async; track show) {
       <a
-        *ngFor="let show of shows | async"
         [routerLink]="['/shows', show.id]"
         routerLinkActive="active"
         class="list-group-item title"
       >
         {{ show.toString() }}
       </a>
+      }
     </div>
   </aside>
 </sd-layout>

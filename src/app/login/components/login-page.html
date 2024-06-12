@@ -1,13 +1,15 @@
 <div class="modal-dialog modal-sm">
-  <div class="modal-content" *ngIf="!hasUser">
+  @if (!hasUser) {
+  <div class="modal-content">
     <div class="modal-header">
       <h4 class="modal-title">Login</h4>
     </div>
     <div class="modal-body">
-      <div *ngIf="failure" class="alert alert-danger">
+      @if (failure) {
+      <div class="alert alert-danger">
         Benutzername oder Password sind ungültig.
       </div>
-
+      }
       <form (submit)="submit()">
         <div class="form-group">
           <label for="username">Benutzername</label>
@@ -38,9 +40,11 @@
       </form>
     </div>
   </div>
-  <div class="modal-content" *ngIf="hasUser">
+  } @if (hasUser) {
+  <div class="modal-content">
     <div class="modal-body">
       <p>Du bist nicht berechtigt, auf diese Seite zuzugreifen.</p>
     </div>
   </div>
+  }
 </div>

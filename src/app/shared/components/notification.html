@@ -1,6 +1,6 @@
 <div id="notification" [class.display]="show" [class.remove]="!show">
+  @if (current) {
   <div
-    *ngIf="current"
     class="alert alert-dismissible"
     [class.alert-info]="current.success"
     [class.alert-danger]="!current.success"
@@ -8,7 +8,7 @@
     <button type="button" class="close" (click)="close()">
       <span aria-hidden="true">&times;</span>
     </button>
-
     {{ current.message }}
   </div>
+  }
 </div>
