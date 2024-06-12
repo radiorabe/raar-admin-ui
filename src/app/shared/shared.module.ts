@@ -7,7 +7,11 @@ import { LoginWindowService } from "./services/login-window.service";
 import { TokenAuthService } from "./services/token-auth.service";
 import { LayoutComponent } from "./components/layout.component";
 import { LoginService } from "./services/login.service";
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import {
+  HTTP_INTERCEPTORS,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from "@angular/common/http";
 import { AddAuthHeaderInterceptor } from "./services/add-auth-header-interceptor.service";
 import { RemoteErrorInterceptor } from "./services/remote-error-interceptor.service";
 import { FieldErrorsComponent } from "./components/field-errors.component";
@@ -27,13 +31,6 @@ const interceptors = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    HttpClientModule,
-  ],
   declarations: [
     LayoutComponent,
     SmallModalComponent,
@@ -47,7 +44,6 @@ const interceptors = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    HttpClientModule,
     LayoutComponent,
     SmallModalComponent,
     FieldErrorsComponent,
@@ -55,6 +51,7 @@ const interceptors = [
     TopNavComponent,
     AddButtonComponent,
   ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {
@@ -66,6 +63,7 @@ export class SharedModule {
         LoginWindowService,
         AdminGuard,
         AdminAuthService,
+        provideHttpClient(withInterceptorsFromDi()),
         ...interceptors,
       ],
     };
