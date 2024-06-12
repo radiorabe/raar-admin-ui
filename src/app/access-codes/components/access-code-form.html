@@ -1,8 +1,10 @@
 <h1>{{ title }}</h1>
 
-<div class="well" *ngIf="entry && entry.attributes.code">
+@if (entry && entry.attributes.code) {
+<div class="well">
   <strong>{{ entry.attributes.code }}</strong>
 </div>
+}
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <sd-form-errors [errors]="formErrors()"></sd-form-errors>
@@ -35,13 +37,10 @@
     >
       Zurücksetzen
     </button>
-    &nbsp;
-    <button
-      *ngIf="entry && entry.id"
-      (click)="remove($event)"
-      class="btn btn-danger pull-right"
-    >
+    &nbsp; @if (entry && entry.id) {
+    <button (click)="remove($event)" class="btn btn-danger pull-right">
       Löschen
     </button>
+    }
   </div>
 </form>

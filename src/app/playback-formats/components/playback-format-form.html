@@ -24,53 +24,42 @@
   <div class="form-group" [class.has-error]="fieldErrors('codec')">
     <label for="codec" class="control-label">Codec</label>
     <select id="codec" class="form-control" formControlName="codec">
-      <option *ngIf="entry && !entry.attributes.codec.length"></option>
-      <option
-        *ngFor="let encoding of this.audioEncodingsService.getEntries() | async"
-        value="{{encoding.attributes.codec}}"
-      >
+      @if (entry && !entry.attributes.codec.length) {
+      <option></option>
+      } @for (encoding of this.audioEncodingsService.getEntries() | async; track
+      encoding) {
+      <option value="{{encoding.attributes.codec}}">
         {{ encoding.toString() }}
       </option>
+      }
     </select>
     <sd-field-errors [errors]="fieldErrors('codec')"></sd-field-errors>
   </div>
 
-  <div
-    *ngIf="audioEncoding && audioEncoding.attributes.bitrates.length > 1"
-    class="form-group"
-    [class.has-error]="fieldErrors('bitrate')"
-  >
+  @if (audioEncoding && audioEncoding.attributes.bitrates.length > 1) {
+  <div class="form-group" [class.has-error]="fieldErrors('bitrate')">
     <label for="bitrate" class="control-label">Bitrate</label>
     <div class="input-group">
       <select id="bitrate" class="form-control" formControlName="bitrate">
-        <option
-          *ngFor="let bitrate of audioEncoding.attributes.bitrates"
-          value="{{bitrate}}"
-        >
-          {{ bitrate }}
-        </option>
+        @for (bitrate of audioEncoding.attributes.bitrates; track bitrate) {
+        <option value="{{bitrate}}">{{ bitrate }}</option>
+        }
       </select>
       <div class="input-group-addon">kbps</div>
     </div>
     <sd-field-errors [errors]="fieldErrors('bitrate')"></sd-field-errors>
   </div>
-
-  <div
-    class="form-group"
-    *ngIf="audioEncoding"
-    [class.has-error]="fieldErrors('channels')"
-  >
+  } @if (audioEncoding) {
+  <div class="form-group" [class.has-error]="fieldErrors('channels')">
     <label for="channels" class="control-label">Anzahl Kanäle</label>
     <select id="channels" class="form-control" formControlName="channels">
-      <option
-        *ngFor="let channel of audioEncoding.attributes.channels"
-        value="{{channel}}"
-      >
-        {{ channel }}
-      </option>
+      @for (channel of audioEncoding.attributes.channels; track channel) {
+      <option value="{{channel}}">{{ channel }}</option>
+      }
     </select>
     <sd-field-errors [errors]="fieldErrors('channels')"></sd-field-errors>
   </div>
+  }
 
   <div>
     <button
@@ -89,13 +78,10 @@
     >
       Zurücksetzen
     </button>
-    &nbsp;
-    <button
-      *ngIf="entry && entry.id"
-      (click)="remove($event)"
-      class="btn btn-danger pull-right"
-    >
+    &nbsp; @if (entry && entry.id) {
+    <button (click)="remove($event)" class="btn btn-danger pull-right">
       Löschen
     </button>
+    }
   </div>
 </form>

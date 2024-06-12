@@ -8,14 +8,15 @@
     >
 
     <div class="list-group">
+      @for (code of accessCodesService.getEntries() | async; track code) {
       <a
-        *ngFor="let code of accessCodesService.getEntries() | async"
         [routerLink]="['/access_codes', code.id]"
         routerLinkActive="active"
         class="list-group-item title"
       >
         {{ code.toString() }}
       </a>
+      }
     </div>
   </aside>
 </sd-layout>

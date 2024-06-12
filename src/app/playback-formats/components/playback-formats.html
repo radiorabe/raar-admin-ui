@@ -8,14 +8,16 @@
     >
 
     <div class="list-group">
+      @for (format of playbackFormatsService.getEntries() | async; track format)
+      {
       <a
-        *ngFor="let format of playbackFormatsService.getEntries() | async"
         [routerLink]="['/playback_formats', format.id]"
         routerLinkActive="active"
         class="list-group-item title"
       >
         {{ format.toString() }}
       </a>
+      }
     </div>
   </aside>
 </sd-layout>

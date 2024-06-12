@@ -4,9 +4,11 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   selector: "sd-form-errors",
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div *ngFor="let e of errors" class="alert alert-danger">
+    @for (e of errors; track e) {
+    <div class="alert alert-danger">
       {{ e }}
     </div>
+    }
   `,
 })
 export class FormErrorsComponent {
