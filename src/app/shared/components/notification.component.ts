@@ -26,7 +26,7 @@ export class NotificationComponent {
 
   constructor(
     notifications: NotificationService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
   ) {
     notifications.pipe(takeUntil(this.destroy$)).subscribe((n) => {
       this.current = n;
@@ -34,7 +34,7 @@ export class NotificationComponent {
       this.clearTimer();
       this.timer = setTimeout(
         () => this.close(),
-        NOTIFICATION_DURATION
+        NOTIFICATION_DURATION,
       ) as unknown as number;
       this.cd.markForCheck();
     });

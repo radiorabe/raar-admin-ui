@@ -20,11 +20,11 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
 
   intercept(
     req: HttpRequest<unknown>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<unknown>> {
     if (req.headers.has("Skip-Error-Handling")) {
       return next.handle(
-        req.clone({ headers: req.headers.delete("Skip-Error-Handling") })
+        req.clone({ headers: req.headers.delete("Skip-Error-Handling") }),
       );
     } else {
       return next.handle(req).pipe(catchError((res) => this.handleError(res)));

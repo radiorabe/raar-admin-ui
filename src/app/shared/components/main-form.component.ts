@@ -33,7 +33,7 @@ export class MainFormComponent<T extends CrudModel>
     protected modelsService: ModelsService<T>,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(fb, changeDetector, notificationService);
   }
@@ -53,7 +53,7 @@ export class MainFormComponent<T extends CrudModel>
             return this.newEntry();
           }
         }),
-        tap((_) => window.scrollTo(0, 0))
+        tap((_) => window.scrollTo(0, 0)),
       )
       .subscribe((entry) => this.setEntry(entry));
   }
@@ -77,7 +77,7 @@ export class MainFormComponent<T extends CrudModel>
           this.router.navigate([this.getMainRoute()]);
           this.notificationService.notify(true, this.getDeleteSuccessMessage());
         },
-        (err) => this.handleSubmitError(err)
+        (err) => this.handleSubmitError(err),
       );
     }
   }
@@ -96,7 +96,7 @@ export class MainFormComponent<T extends CrudModel>
         this.setEntry(entry);
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      (err) => this.handleSubmitError(err)
+      (err) => this.handleSubmitError(err),
     );
   }
 

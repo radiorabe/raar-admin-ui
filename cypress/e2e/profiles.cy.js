@@ -26,7 +26,7 @@ describe("profiles", () => {
       {
         fixture: "shows/shows2.json",
         statusCode: 200,
-      }
+      },
     );
     cy.intercept(
       "GET",
@@ -34,7 +34,7 @@ describe("profiles", () => {
       {
         fixture: "shows/shows3.json",
         statusCode: 200,
-      }
+      },
     );
   });
 
@@ -58,7 +58,7 @@ describe("profiles", () => {
       {
         fixture: "profiles/important_mp3_actions.json",
         statusCode: 200,
-      }
+      },
     );
     cy.intercept(
       "GET",
@@ -66,7 +66,7 @@ describe("profiles", () => {
       {
         fixture: "profiles/important_flac_actions.json",
         statusCode: 200,
-      }
+      },
     );
 
     cy.get("aside .list-group-item").contains("Important").click();
@@ -80,25 +80,25 @@ describe("profiles", () => {
     cy.get(".accordion .accordion-group").should("have.length", 2);
     cy.get(".accordion .accordion-group:first-child .panel-title").should(
       "contain",
-      "FLAC"
+      "FLAC",
     );
     cy.get(".accordion .accordion-group:first-child .panel-title").click();
     cy.get(".accordion .accordion-group:first-child").should(
       "have.class",
-      "panel-open"
+      "panel-open",
     );
     cy.get(".accordion .accordion-group:last-child .panel-title").should(
       "contain",
-      "MP3"
+      "MP3",
     );
     cy.get(".accordion .accordion-group:last-child .panel-title").click();
     cy.get(".accordion .accordion-group:first-child").should(
       "not.have.class",
-      "panel-open"
+      "panel-open",
     );
     cy.get(".accordion .accordion-group:last-child").should(
       "have.class",
-      "panel-open"
+      "panel-open",
     );
 
     cy.get("sd-downgrade-action").should("have.length", 2);
@@ -150,7 +150,7 @@ describe("profiles", () => {
 
     cy.get("#notification .alert-info").should(
       "contain",
-      "Der Eintrag wurde erfolgreich gespeichert"
+      "Der Eintrag wurde erfolgreich gespeichert",
     );
     cy.get("#notification .alert-info .close").click();
     cy.get("sd-profile-form h1").should("have.text", "Test");
@@ -161,7 +161,7 @@ describe("profiles", () => {
     cy.get(".accordion .accordion-group").should("have.length", 1);
     cy.get(".accordion .accordion-group:first-child .panel-title").should(
       "contain",
-      "MP3"
+      "MP3",
     );
     cy.get(".form-inline > select option").should("have.length", 2);
     cy.get(".form-inline > select option").should("not.contain", "MP3");
@@ -183,7 +183,7 @@ describe("profiles", () => {
     cy.get(".accordion-group .btn-primary").contains("Speichern").click();
     cy.get("h3").should(
       "contain",
-      "Archivierungsformate & Zugriffsberechtigungen"
+      "Archivierungsformate & Zugriffsberechtigungen",
     );
     cy.get("div").should("contain", "Keine Sendungen zugewiesen");
 
@@ -204,7 +204,7 @@ describe("profiles", () => {
       {
         fixture: "profiles/test_mp3_downgrade.json",
         statusCode: 201,
-      }
+      },
     );
 
     cy.get("sd-downgrade-action-form .btn-primary")
@@ -217,7 +217,7 @@ describe("profiles", () => {
     cy.get("sd-downgrade-action .downgrade-value").should("contain", "6");
     cy.get("sd-downgrade-action .downgrade-value").should(
       "contain",
-      "160 kbps"
+      "160 kbps",
     );
 
     // add Löschzeitpunkt
@@ -235,7 +235,7 @@ describe("profiles", () => {
       {
         fixture: "profiles/test_mp3_remove.json",
         statusCode: 201,
-      }
+      },
     );
 
     cy.get("sd-downgrade-action-form .btn-primary")
@@ -247,7 +247,7 @@ describe("profiles", () => {
     cy.get("sd-downgrade-action:last-child").should("contain", "Lösche nach");
     cy.get("sd-downgrade-action:last-child .downgrade-value").should(
       "contain",
-      "36"
+      "36",
     );
 
     // edit Reduktionsschritt
@@ -255,7 +255,7 @@ describe("profiles", () => {
     cy.get("sd-downgrade-action-form").should("exist");
     cy.get("sd-downgrade-action-form input[type=number]").should(
       "have.value",
-      6
+      6,
     );
     cy.get("sd-downgrade-action:first-child").should("have.class", "disabled");
     cy.get("sd-downgrade-action:first-child a .glyphicon-trash").click();
@@ -264,7 +264,7 @@ describe("profiles", () => {
     cy.get("sd-downgrade-action-form").should("not.exist");
     cy.get("sd-archive-format-form sd-downgrade-action:first-child").should(
       "not.have.class",
-      "disabled"
+      "disabled",
     );
 
     // delete Reduktionsschritt
@@ -273,7 +273,7 @@ describe("profiles", () => {
       "/api/admin/profiles/42/archive_formats/43/downgrade_actions/44",
       {
         statusCode: 204,
-      }
+      },
     );
 
     cy.on("window:confirm", (message) => {

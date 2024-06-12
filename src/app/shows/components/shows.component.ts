@@ -33,7 +33,7 @@ export class ShowsComponent {
       debounceTime(50),
       filter((q: string) => q.length === 0 || q.length > 2),
       distinctUntilChanged(),
-      switchMap((q) => this.fetchShows(q))
+      switchMap((q) => this.fetchShows(q)),
     );
   }
 

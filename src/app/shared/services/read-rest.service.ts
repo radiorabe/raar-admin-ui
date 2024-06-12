@@ -5,7 +5,10 @@ import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
 
 export class ReadRestService<T extends CrudModel> {
-  constructor(protected http: HttpClient, public baseUrlTemplate: string) {}
+  constructor(
+    protected http: HttpClient,
+    public baseUrlTemplate: string,
+  ) {}
 
   getList(params?: unknown): Observable<CrudList<T>> {
     return this.http
@@ -25,7 +28,7 @@ export class ReadRestService<T extends CrudModel> {
         res.entries = list.entries.concat(res.entries);
         res.included = list.included.concat(res.included);
         return res;
-      })
+      }),
     );
   }
 
@@ -51,11 +54,11 @@ export class ReadRestService<T extends CrudModel> {
 
   protected buildListFromResponse<R extends CrudModel>(
     json: unknown,
-    builder: () => R
+    builder: () => R,
   ): CrudList<R> {
     const list = new CrudList<R>();
     list.entries = json["data"].map((item: unknown) =>
-      this.copyAttributes(item, builder())
+      this.copyAttributes(item, builder()),
     );
     Object.assign(list.links, json["links"]);
 
@@ -64,7 +67,7 @@ export class ReadRestService<T extends CrudModel> {
 
   protected updateEntityFromResponse<R extends CrudModel>(
     json: unknown,
-    entity: R
+    entity: R,
   ): R {
     return this.copyAttributes(json["data"], entity);
   }
@@ -77,7 +80,7 @@ export class ReadRestService<T extends CrudModel> {
 
   protected buildEntity(): T {
     throw new Error(
-      `${this.constructor.name}#buildEntity() is not implemented`
+      `${this.constructor.name}#buildEntity() is not implemented`,
     );
   }
 

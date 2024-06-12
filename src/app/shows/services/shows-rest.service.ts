@@ -15,7 +15,7 @@ export class ShowsRestService extends CrudRestService<ShowModel> {
     return this.http
       .post(`${this.baseUrl}/${entity.id}/merge/${targetId}`, undefined)
       .pipe(
-        map((res) => this.updateEntityFromResponse(res, this.buildEntity()))
+        map((res) => this.updateEntityFromResponse(res, this.buildEntity())),
       );
   }
 

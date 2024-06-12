@@ -49,7 +49,7 @@ export class ModelsService<T extends CrudModel> {
 
   protected sortEntries(entries: T[]): T[] {
     return entries.sort((a: T, b: T) =>
-      a.toString().localeCompare(b.toString())
+      a.toString().localeCompare(b.toString()),
     );
   }
 
@@ -68,7 +68,7 @@ export class ModelsService<T extends CrudModel> {
       .pipe(
         switchMap((list) => this.loadAllEntries(list)),
         map((list) => list.entries),
-        catchError((_) => of([]))
+        catchError((_) => of([])),
       );
   }
 

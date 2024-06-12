@@ -23,7 +23,7 @@ export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> 
     accessCodesService: AccessCodesService,
     notificationService: NotificationService,
     changeDetector: ChangeDetectorRef,
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(
       route,
@@ -31,7 +31,7 @@ export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> 
       accessCodesService,
       notificationService,
       changeDetector,
-      fb
+      fb,
     );
   }
 

@@ -10,18 +10,21 @@ import { tap } from "rxjs/operators";
 
 @Injectable()
 export class AdminGuard {
-  constructor(private auth: AdminAuthService, private router: Router) {}
+  constructor(
+    private auth: AdminAuthService,
+    private router: Router,
+  ) {}
 
   canActivate(
     _route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    state: RouterStateSnapshot,
   ): Observable<boolean> | Promise<boolean> | boolean {
     return this.auth.isLoggedIn.pipe(
       tap((loggedIn) => {
         if (!loggedIn) {
           this.auth.requestLogin(state.url);
         }
-      })
+      }),
     );
   }
 }

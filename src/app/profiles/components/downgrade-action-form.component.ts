@@ -36,7 +36,7 @@ export class DowngradeActionFormComponent
   constructor(
     changeDetector: ChangeDetectorRef,
     fb: FormBuilder,
-    notificationService: NotificationService
+    notificationService: NotificationService,
   ) {
     super(fb, changeDetector, notificationService);
   }
@@ -85,10 +85,10 @@ export class DowngradeActionFormComponent
     const action = this.downgradeAction.id ? "update" : "create";
     this.restService[action](
       this.downgradeAction,
-      new DowngradeActionModel()
+      new DowngradeActionModel(),
     ).subscribe(
       (action) => this.saved.next(action),
-      (err) => this.handleSubmitError(err)
+      (err) => this.handleSubmitError(err),
     );
   }
 }
