@@ -12,9 +12,10 @@ import { AccessCodeModel } from "../models/access-code.model";
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-access-code-form",
-  templateUrl: "access-code-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-access-code-form",
+    templateUrl: "access-code-form.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> {
   constructor(

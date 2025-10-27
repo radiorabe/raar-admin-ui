@@ -13,9 +13,10 @@ import { ShowsService } from "../services/shows.service";
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-show-merge",
-  templateUrl: "show-merge.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-show-merge",
+    templateUrl: "show-merge.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ShowMergeComponent
   extends ValidatedFormComponent

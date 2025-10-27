@@ -10,9 +10,10 @@ import { HttpClient } from "@angular/common/http";
 import { finalize } from "rxjs/operators";
 
 @Component({
-  selector: "sd-stats",
-  templateUrl: "stats.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-stats",
+    templateUrl: "stats.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class StatsComponent {
   statsForm: FormGroup;

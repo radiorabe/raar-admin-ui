@@ -19,10 +19,11 @@ import { ShowsService } from "src/app/shows/services/shows.service";
 import { map } from "rxjs/operators";
 
 @Component({
-  selector: "sd-profile-form",
-  templateUrl: "profile-form.html",
-  providers: [ArchiveFormatsRestService],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-profile-form",
+    templateUrl: "profile-form.html",
+    providers: [ArchiveFormatsRestService],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ProfileFormComponent
   extends MainFormComponent<ProfileModel>

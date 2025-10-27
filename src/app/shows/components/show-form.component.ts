@@ -13,9 +13,10 @@ import { ShowModel } from "../models/show.model";
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-show-form",
-  templateUrl: "show-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-show-form",
+    templateUrl: "show-form.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ShowFormComponent extends MainFormComponent<ShowModel> {
   constructor(

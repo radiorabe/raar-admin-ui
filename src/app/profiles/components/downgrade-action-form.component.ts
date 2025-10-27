@@ -15,9 +15,10 @@ import { DowngradeActionsRestService } from "../services/downgrade-actions-rest.
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-downgrade-action-form",
-  templateUrl: "downgrade-action-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-downgrade-action-form",
+    templateUrl: "downgrade-action-form.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class DowngradeActionFormComponent
   extends ValidatedFormComponent

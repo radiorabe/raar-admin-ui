@@ -3,9 +3,10 @@ import { Router } from "@angular/router";
 import { AdminAuthService } from "../services/admin-auth.service";
 
 @Component({
-  selector: "sd-admin-nav",
-  templateUrl: "top-nav.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-admin-nav",
+    templateUrl: "top-nav.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class TopNavComponent {
   constructor(

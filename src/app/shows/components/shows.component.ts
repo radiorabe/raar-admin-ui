@@ -13,9 +13,10 @@ import {
 } from "rxjs/operators";
 
 @Component({
-  selector: "sd-shows",
-  templateUrl: "shows.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-shows",
+    templateUrl: "shows.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ShowsComponent {
   shows: Observable<ShowModel[]>;

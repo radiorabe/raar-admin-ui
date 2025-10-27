@@ -18,10 +18,11 @@ import { AudioEncodingsService } from "../../shared/services/audio-encodings.ser
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-archive-format-form",
-  templateUrl: "archive-format-form.html",
-  providers: [DowngradeActionsRestService],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-archive-format-form",
+    templateUrl: "archive-format-form.html",
+    providers: [DowngradeActionsRestService],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ArchiveFormatFormComponent
   extends ValidatedFormComponent

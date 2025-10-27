@@ -8,9 +8,10 @@ import { AdminAuthService } from "../../shared/services/admin-auth.service";
 import { UserModel } from "src/app/shared/models/user.model";
 
 @Component({
-  selector: "sd-login-page",
-  templateUrl: "login-page.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-login-page",
+    templateUrl: "login-page.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class LoginPageComponent {
   username: string;

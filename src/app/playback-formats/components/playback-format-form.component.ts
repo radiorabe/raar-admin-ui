@@ -14,9 +14,10 @@ import { AudioEncodingModel } from "../../shared/models/audio-encoding.model";
 import { NotificationService } from "../../shared/services/notification.service";
 
 @Component({
-  selector: "sd-playback-format-form",
-  templateUrl: "playback-format-form.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sd-playback-format-form",
+    templateUrl: "playback-format-form.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackFormatModel> {
   audioEncoding: AudioEncodingModel | void;
