@@ -1,12 +1,12 @@
 <h1>{{ title }}</h1>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <sd-form-errors [errors]="formErrors()"></sd-form-errors>
+  <sd-form-errors [errors]="formErrors()" />
 
   <div class="form-group" [class.has-error]="hasFieldErrors('name')">
     <label for="name" class="control-label">Name</label>
     <input id="name" class="form-control" formControlName="name" />
-    <sd-field-errors [errors]="fieldErrors('name')"></sd-field-errors>
+    <sd-field-errors [errors]="fieldErrors('name')" />
   </div>
 
   <div class="form-group" [class.has-error]="hasFieldErrors('description')">
@@ -18,7 +18,7 @@
       rows="5"
     >
     </textarea>
-    <sd-field-errors [errors]="fieldErrors('description')"></sd-field-errors>
+    <sd-field-errors [errors]="fieldErrors('description')" />
   </div>
 
   <div class="checkbox" [class.has-error]="hasFieldErrors('default')">
@@ -26,7 +26,7 @@
       <input type="checkbox" formControlName="default" />
       Standardprofil
     </label>
-    <sd-field-errors [errors]="fieldErrors('default')"></sd-field-errors>
+    <sd-field-errors [errors]="fieldErrors('default')" />
   </div>
 
   <div>
@@ -101,8 +101,7 @@
               [archiveFormat]="format"
               [restService]="archiveFormatsRest"
               (removed)="removeArchiveFormat(format)"
-            >
-            </sd-archive-format-form>
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-inline well">
-  <sd-form-errors [errors]="formErrors()"></sd-form-errors>
+  <sd-form-errors [errors]="formErrors()" />
 
   @if (!downgradeAction.ereasing) {
   <div>
@@ -62,9 +62,9 @@
   </div>
   }
 
-  <sd-field-errors [errors]="fieldErrors('months')"></sd-field-errors>
-  <sd-field-errors [errors]="fieldErrors('bitrate')"></sd-field-errors>
-  <sd-field-errors [errors]="fieldErrors('channels')"></sd-field-errors>
+  <sd-field-errors [errors]="fieldErrors('months')" />
+  <sd-field-errors [errors]="fieldErrors('bitrate')" />
+  <sd-field-errors [errors]="fieldErrors('channels')" />
 
   <br />
   <div>

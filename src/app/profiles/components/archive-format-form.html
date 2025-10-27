@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <sd-form-errors [errors]="formErrors()"></sd-form-errors>
+  <sd-form-errors [errors]="formErrors()" />
 
   <div class="form-horizontal">
     <h4>Zugriffsberechtigungen</h4>
@@ -27,9 +27,7 @@
           </select>
           <div class="input-group-addon">kbps</div>
         </div>
-        <sd-field-errors
-          [errors]="fieldErrors('max_public_bitrate')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('max_public_bitrate')" />
       </div>
     </div>
 
@@ -56,9 +54,7 @@
           </select>
           <div class="input-group-addon">kbps</div>
         </div>
-        <sd-field-errors
-          [errors]="fieldErrors('max_logged_in_bitrate')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('max_logged_in_bitrate')" />
       </div>
     </div>
 
@@ -85,9 +81,7 @@
           </select>
           <div class="input-group-addon">kbps</div>
         </div>
-        <sd-field-errors
-          [errors]="fieldErrors('max_priviledged_bitrate')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('max_priviledged_bitrate')" />
       </div>
     </div>
 
@@ -105,9 +99,7 @@
           class="form-control"
           formControlName="priviledged_groups"
         />
-        <sd-field-errors
-          [errors]="fieldErrors('priviledged_groups')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('priviledged_groups')" />
       </div>
     </div>
 
@@ -129,9 +121,7 @@
           <option value="priviledged">Privilegierte Gruppen</option>
           <option value="admin">Administratoren</option>
         </select>
-        <sd-field-errors
-          [errors]="fieldErrors('download_permission')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('download_permission')" />
       </div>
     </div>
   </div>
@@ -160,9 +150,7 @@
           </select>
           <div class="input-group-addon">kbps</div>
         </div>
-        <sd-field-errors
-          [errors]="fieldErrors('initial_bitrate')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('initial_bitrate')" />
       </div>
     </div>
     }
@@ -184,9 +172,7 @@
           <option value="{{channel}}">{{ channel }}</option>
           }
         </select>
-        <sd-field-errors
-          [errors]="fieldErrors('initial_channels')"
-        ></sd-field-errors>
+        <sd-field-errors [errors]="fieldErrors('initial_channels')" />
       </div>
     </div>
   </div>
@@ -226,8 +212,7 @@
       [downgradeAction]="action"
       (edit)="editDowngradeAction(action)"
       (remove)="removeDowngradeAction(action)"
-    >
-    </sd-downgrade-action>
+    />
     }
   </ul>
   @if (editedDowngradeAction) {
@@ -237,8 +222,7 @@
     [restService]="downgradeActionsRest"
     (saved)="updateDowngradeAction($event)"
     (canceled)="editedDowngradeAction = undefined"
-  >
-  </sd-downgrade-action-form>
+  />
   } @if (!hasEreasingDowngrade() && !editedDowngradeAction) {
   <p>
     <a (click)="addDowngradeAction(false)">Reduktionsschritt hinzufügen</a>

@@ -7,7 +7,7 @@
 }
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <sd-form-errors [errors]="formErrors()"></sd-form-errors>
+  <sd-form-errors [errors]="formErrors()" />
 
   <div class="form-group" [class.has-error]="hasFieldErrors('expires_at')">
     <label for="expires_at" class="control-label">Gültig bis</label>
@@ -17,7 +17,7 @@
       formControlName="expires_at"
       type="text"
     />
-    <sd-field-errors [errors]="fieldErrors('expires_at')"></sd-field-errors>
+    <sd-field-errors [errors]="fieldErrors('expires_at')" />
   </div>
 
   <div>

@@ -11,7 +11,7 @@
     </p>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <sd-form-errors [errors]="formErrors()"></sd-form-errors>
+      <sd-form-errors [errors]="formErrors()" />
 
       <div class="form-inline">
         <div class="form-group" [class.has-error]="hasFieldErrors('target_id')">
@@ -26,9 +26,7 @@
             <option value="{{s.id}}">{{ s.toString() }}</option>
             }
           </select>
-          <sd-field-errors
-            [errors]="fieldErrors('target_id')"
-          ></sd-field-errors>
+          <sd-field-errors [errors]="fieldErrors('target_id')" />
         </div>
         <button
           type="submit"
