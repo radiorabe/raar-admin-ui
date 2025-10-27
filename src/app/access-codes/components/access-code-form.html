@@ -9,7 +9,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <sd-form-errors [errors]="formErrors()"></sd-form-errors>
 
-  <div class="form-group" [class.has-error]="fieldErrors('expires_at')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('expires_at')">
     <label for="expires_at" class="control-label">Gültig bis</label>
     <input
       id="expires_at"

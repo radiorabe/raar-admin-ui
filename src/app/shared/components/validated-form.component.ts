@@ -43,21 +43,25 @@ export class ValidatedFormComponent {
     this.createForm(fb);
   }
 
-  formErrors(): string[] | void {
+  formErrors(): string[] {
     if (this.submitted && this.form.errors) {
       return this.getErrors(this.form);
     } else {
-      return undefined;
+      return [];
     }
   }
 
-  fieldErrors(name: string): string[] | void {
+  fieldErrors(name: string): string[] {
     const control = this.findFieldControl(name);
     if (control && (control.touched || this.submitted) && control.errors) {
       return this.getErrors(control);
     } else {
-      return undefined;
+      return [];
     }
+  }
+
+  hasFieldErrors(name: string): boolean {
+    return this.fieldErrors(name).length > 0;
   }
 
   resetFieldErrors(name: string): void {

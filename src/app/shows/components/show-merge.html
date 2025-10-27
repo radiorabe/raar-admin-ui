@@ -14,7 +14,7 @@
       <sd-form-errors [errors]="formErrors()"></sd-form-errors>
 
       <div class="form-inline">
-        <div class="form-group" [class.has-error]="fieldErrors('target_id')">
+        <div class="form-group" [class.has-error]="hasFieldErrors('target_id')">
           <label for="target_id" class="control-label">Mit Sendung </label>
           <select
             id="target_id"

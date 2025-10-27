@@ -79,6 +79,10 @@ export class ProfileFormComponent
     });
   }
 
+  getSelectedCodec(event: Event): string {
+    return (event.target as HTMLSelectElement).value;
+  }
+
   addArchiveFormat(codec: string) {
     const newFormat = new ArchiveFormatModel();
     newFormat.attributes.codec = codec;

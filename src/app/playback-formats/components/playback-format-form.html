@@ -3,13 +3,13 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <sd-form-errors [errors]="formErrors()"></sd-form-errors>
 
-  <div class="form-group" [class.has-error]="fieldErrors('name')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('name')">
     <label for="name" class="control-label">Name</label>
     <input id="name" class="form-control" formControlName="name" />
     <sd-field-errors [errors]="fieldErrors('name')"></sd-field-errors>
   </div>
 
-  <div class="form-group" [class.has-error]="fieldErrors('description')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('description')">
     <label for="description" class="control-label">Beschreibung</label>
     <textarea
       id="description"
@@ -21,7 +21,7 @@
     <sd-field-errors [errors]="fieldErrors('description')"></sd-field-errors>
   </div>
 
-  <div class="form-group" [class.has-error]="fieldErrors('codec')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('codec')">
     <label for="codec" class="control-label">Codec</label>
     <select id="codec" class="form-control" formControlName="codec">
       @if (entry && !entry.attributes.codec.length) {
@@ -37,7 +37,7 @@
   </div>
 
   @if (audioEncoding && audioEncoding.attributes.bitrates.length > 1) {
-  <div class="form-group" [class.has-error]="fieldErrors('bitrate')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('bitrate')">
     <label for="bitrate" class="control-label">Bitrate</label>
     <div class="input-group">
       <select id="bitrate" class="form-control" formControlName="bitrate">
@@ -50,7 +50,7 @@
     <sd-field-errors [errors]="fieldErrors('bitrate')"></sd-field-errors>
   </div>
   } @if (audioEncoding) {
-  <div class="form-group" [class.has-error]="fieldErrors('channels')">
+  <div class="form-group" [class.has-error]="hasFieldErrors('channels')">
     <label for="channels" class="control-label">Anzahl Kanäle</label>
     <select id="channels" class="form-control" formControlName="channels">
       @for (channel of audioEncoding.attributes.channels; track channel) {

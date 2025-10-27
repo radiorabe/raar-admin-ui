@@ -6,7 +6,7 @@
 
     <div
       class="form-group"
-      [class.has-error]="fieldErrors('max_public_bitrate')"
+      [class.has-error]="hasFieldErrors('max_public_bitrate')"
     >
       <label for="max_public_bitrate" class="col-md-6 control-label">
         Maximale Bitrate für nicht eingeloggte Benutzende
@@ -35,7 +35,7 @@
 
     <div
       class="form-group"
-      [class.has-error]="fieldErrors('max_logged_in_bitrate')"
+      [class.has-error]="hasFieldErrors('max_logged_in_bitrate')"
     >
       <label for="max_logged_in_bitrate" class="col-md-6 control-label">
         Maximale Bitrate für eingeloggte Benutzende/Gäste
@@ -64,7 +64,7 @@
 
     <div
       class="form-group"
-      [class.has-error]="fieldErrors('max_priviledged_bitrate')"
+      [class.has-error]="hasFieldErrors('max_priviledged_bitrate')"
     >
       <label for="max_priviledged_bitrate" class="col-md-6 control-label">
         Maximale Bitrate für privilegierte Gruppen
@@ -93,7 +93,7 @@
 
     <div
       class="form-group"
-      [class.has-error]="fieldErrors('priviledged_groups')"
+      [class.has-error]="hasFieldErrors('priviledged_groups')"
     >
       <label for="priviledged_groups" class="col-md-6 control-label">
         Privilegierte Gruppen (Komma getrennt)
@@ -113,7 +113,7 @@
 
     <div
       class="form-group"
-      [class.has-error]="fieldErrors('download_permission')"
+      [class.has-error]="hasFieldErrors('download_permission')"
     >
       <label for="download_permission" class="col-md-6 control-label">
         Download erlaubt für
@@ -140,7 +140,10 @@
     <h4>Initialer Import</h4>
 
     @if (audioEncoding.attributes.bitrates.length > 1) {
-    <div class="form-group" [class.has-error]="fieldErrors('initial_bitrate')">
+    <div
+      class="form-group"
+      [class.has-error]="hasFieldErrors('initial_bitrate')"
+    >
       <label for="initial_bitrate" class="col-md-2 control-label"
         >Bitrate</label
       >
@@ -164,7 +167,10 @@
     </div>
     }
 
-    <div class="form-group" [class.has-error]="fieldErrors('initial_channels')">
+    <div
+      class="form-group"
+      [class.has-error]="hasFieldErrors('initial_channels')"
+    >
       <label for="initial_channels" class="col-md-2 control-label"
         >Anzahl Kanäle</label
       >
