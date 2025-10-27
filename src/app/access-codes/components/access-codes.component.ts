@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { AccessCodesService } from "../services/access-codes.service";
 import { LayoutComponent } from "../../shared/components/layout.component";
 import { TopNavComponent } from "../../shared/components/top-nav.component";
@@ -20,7 +20,9 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class AccessCodesComponent {
-  constructor(public accessCodesService: AccessCodesService) {
-    accessCodesService.reload();
+  accessCodesService = inject(AccessCodesService);
+
+  constructor() {
+    this.accessCodesService.reload();
   }
 }

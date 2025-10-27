@@ -2,6 +2,7 @@ import {
   Component,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
+  inject,
 } from "@angular/core";
 import { LoginService } from "../../shared/services/login.service";
 import { AdminAuthService } from "../../shared/services/admin-auth.service";
@@ -15,16 +16,14 @@ import { FormsModule } from "@angular/forms";
   imports: [FormsModule],
 })
 export class LoginPageComponent {
+  private login = inject(LoginService);
+  private auth = inject(AdminAuthService);
+  private cd = inject(ChangeDetectorRef);
+
   username: string;
   password: string;
   checking = false;
   failure = false;
-
-  constructor(
-    private login: LoginService,
-    private auth: AdminAuthService,
-    private cd: ChangeDetectorRef,
-  ) {}
 
   submit() {
     this.failure = false;

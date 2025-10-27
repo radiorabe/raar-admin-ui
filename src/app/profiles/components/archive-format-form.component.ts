@@ -5,7 +5,7 @@ import {
   EventEmitter,
   OnInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  inject,
 } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
@@ -15,7 +15,6 @@ import { DowngradeActionModel } from "../models/downgrade-action.model";
 import { ArchiveFormatsRestService } from "../services/archive-formats-rest.service";
 import { DowngradeActionsRestService } from "../services/downgrade-actions-rest.service";
 import { AudioEncodingsService } from "../../shared/services/audio-encodings.service";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 import { DowngradeActionComponent } from "./downgrade-action.component";
@@ -44,21 +43,14 @@ export class ArchiveFormatFormComponent
 
   @Output() removed = new EventEmitter<void>();
 
+  audioEncodingsService = inject(AudioEncodingsService);
+  downgradeActionsRest = inject(DowngradeActionsRestService);
+
   audioEncoding: AudioEncodingModel = new AudioEncodingModel();
 
   downgradeActions: DowngradeActionModel[] = [];
 
   editedDowngradeAction: DowngradeActionModel | void;
-
-  constructor(
-    public audioEncodingsService: AudioEncodingsService,
-    public downgradeActionsRest: DowngradeActionsRestService,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(fb, changeDetector, notificationService);
-  }
 
   ngOnInit() {
     this.audioEncodingsService.getEntries().subscribe((list) => {

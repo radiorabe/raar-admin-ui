@@ -1,4 +1,4 @@
-import { ChangeDetectorRef } from "@angular/core";
+import { ChangeDetectorRef, inject } from "@angular/core";
 import { FormGroup, AbstractControl, FormBuilder } from "@angular/forms";
 import { NotificationService } from "../services/notification.service";
 import { HttpErrorResponse } from "@angular/common/http";
@@ -30,17 +30,16 @@ const MESSAGES = {
     "Dieses Profil kann nicht gelöscht werden, da es von Sendungen verwendet wird",
 };
 
-export class ValidatedFormComponent {
+export abstract class ValidatedFormComponent {
   form: FormGroup;
 
   submitted = false;
 
-  constructor(
-    fb: FormBuilder,
-    protected changeDetector: ChangeDetectorRef,
-    protected notificationService: NotificationService,
-  ) {
-    this.createForm(fb);
+  protected notificationService = inject(NotificationService);
+  protected changeDetector = inject(ChangeDetectorRef);
+
+  constructor() {
+    this.createForm(inject(FormBuilder));
   }
 
   formErrors(): string[] {

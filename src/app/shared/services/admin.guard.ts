@@ -1,19 +1,12 @@
-import { Injectable } from "@angular/core";
-import {
-  Router,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-} from "@angular/router";
+import { Injectable, inject } from "@angular/core";
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs";
 import { AdminAuthService } from "./admin-auth.service";
 import { tap } from "rxjs/operators";
 
 @Injectable()
 export class AdminGuard {
-  constructor(
-    private auth: AdminAuthService,
-    private router: Router,
-  ) {}
+  private auth = inject(AdminAuthService);
 
   canActivate(
     _route: ActivatedRouteSnapshot,

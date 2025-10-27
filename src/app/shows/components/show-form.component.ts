@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-} from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import {
   FormBuilder,
   Validators,
@@ -15,7 +10,6 @@ import { MainFormComponent } from "../../shared/components/main-form.component";
 import { ShowsService } from "../services/shows.service";
 import { ProfilesService } from "../../profiles/services/profiles.service";
 import { ShowModel } from "../models/show.model";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 import { ShowMergeComponent } from "./show-merge.component";
@@ -35,17 +29,9 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class ShowFormComponent extends MainFormComponent<ShowModel> {
-  constructor(
-    route: ActivatedRoute,
-    router: Router,
-    showsService: ShowsService,
-    public profilesService: ProfilesService,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(route, router, showsService, notificationService, changeDetector, fb);
-  }
+  profilesService = inject(ProfilesService);
+
+  protected modelsService = inject(ShowsService);
 
   reset() {
     this.form.reset({

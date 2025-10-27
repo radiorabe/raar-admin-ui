@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { PlaybackFormatsService } from "../services/playback-formats.service";
 import { LayoutComponent } from "../../shared/components/layout.component";
 import { TopNavComponent } from "../../shared/components/top-nav.component";
@@ -20,7 +20,9 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class PlaybackFormatsComponent {
-  constructor(public playbackFormatsService: PlaybackFormatsService) {
-    playbackFormatsService.reload();
+  playbackFormatsService = inject(PlaybackFormatsService);
+
+  constructor() {
+    this.playbackFormatsService.reload();
   }
 }

@@ -3,7 +3,7 @@ import {
   Input,
   OnChanges,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  inject,
 } from "@angular/core";
 import {
   FormBuilder,
@@ -15,7 +15,6 @@ import { Router } from "@angular/router";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
 import { ShowModel } from "../models/show.model";
 import { ShowsService } from "../services/shows.service";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 import { AsyncPipe } from "@angular/common";
@@ -36,17 +35,10 @@ export class ShowMergeComponent
   extends ValidatedFormComponent
   implements OnChanges
 {
-  @Input() show: ShowModel;
+  showsService = inject(ShowsService);
+  private router = inject(Router);
 
-  constructor(
-    public showsService: ShowsService,
-    private router: Router,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(fb, changeDetector, notificationService);
-  }
+  @Input() show: ShowModel;
 
   ngOnChanges() {
     this.reset();

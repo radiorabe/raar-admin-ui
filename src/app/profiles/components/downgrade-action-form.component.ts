@@ -5,14 +5,12 @@ import {
   EventEmitter,
   OnInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
 } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
 import { DowngradeActionModel } from "../models/downgrade-action.model";
 import { AudioEncodingModel } from "../../shared/models/audio-encoding.model";
 import { DowngradeActionsRestService } from "../services/downgrade-actions-rest.service";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 
@@ -35,14 +33,6 @@ export class DowngradeActionFormComponent
   @Output() saved = new EventEmitter<DowngradeActionModel>();
 
   @Output() canceled = new EventEmitter<void>();
-
-  constructor(
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-    notificationService: NotificationService,
-  ) {
-    super(fb, changeDetector, notificationService);
-  }
 
   ngOnInit() {
     this.reset();

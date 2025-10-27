@@ -4,6 +4,7 @@ import {
   ViewChild,
   ElementRef,
   ChangeDetectorRef,
+  inject,
 } from "@angular/core";
 import {
   FormBuilder,
@@ -22,6 +23,9 @@ import { finalize } from "rxjs/operators";
   imports: [FormsModule, ReactiveFormsModule],
 })
 export class StatsComponent {
+  private http = inject(HttpClient);
+  private cd = inject(ChangeDetectorRef);
+
   statsForm: FormGroup;
 
   loading = false;
@@ -29,12 +33,8 @@ export class StatsComponent {
   @ViewChild("downloadLink", { static: true })
   private downloadLink: ElementRef;
 
-  constructor(
-    fb: FormBuilder,
-    private http: HttpClient,
-    private cd: ChangeDetectorRef,
-  ) {
-    this.createStatsForm(fb);
+  constructor() {
+    this.createStatsForm(inject(FormBuilder));
   }
 
   downloadStats(): void {

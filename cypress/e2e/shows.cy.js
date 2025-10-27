@@ -75,6 +75,8 @@ describe("shows", () => {
     });
 
     cy.visit("/shows", { failOnStatusCode: false });
+    cy.get("sd-shows-init h1").should("have.text", "Sendungen");
+    cy.get("aside .list-group .list-group-item").should("have.length", 58);
 
     cy.get("a.btn-add").click();
     cy.get(".content h1").should("have.text", "Neue Sendung");

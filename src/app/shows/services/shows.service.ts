@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { Observable } from "rxjs";
 import { ModelsService } from "../../shared/services/models.service";
 import { ShowModel } from "../models/show.model";
@@ -7,11 +7,9 @@ import { tap } from "rxjs/operators";
 
 @Injectable()
 export class ShowsService extends ModelsService<ShowModel> {
-  protected sortAttr = "name";
+  protected crudRest = inject(ShowsRestService);
 
-  constructor(rest: ShowsRestService) {
-    super(rest);
-  }
+  protected sortAttr = "name";
 
   mergeEntry(show: ShowModel, targetId: number): Observable<ShowModel> {
     return (<ShowsRestService>this.crudRest)

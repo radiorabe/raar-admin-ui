@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { ProfilesService } from "../services/profiles.service";
 import { LayoutComponent } from "../../shared/components/layout.component";
 import { TopNavComponent } from "../../shared/components/top-nav.component";
@@ -20,7 +20,9 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class ProfilesComponent {
-  constructor(public profilesService: ProfilesService) {
-    profilesService.reload();
+  profilesService = inject(ProfilesService);
+
+  constructor() {
+    this.profilesService.reload();
   }
 }

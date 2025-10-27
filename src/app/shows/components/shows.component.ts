@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Observable } from "rxjs";
 import { ShowsService } from "../services/shows.service";
@@ -33,12 +33,14 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class ShowsComponent {
+  private showService = inject(ShowsService);
+
   shows: Observable<ShowModel[]>;
 
   query: FormControl = new FormControl();
 
-  constructor(private showService: ShowsService) {
-    showService.reload();
+  constructor() {
+    this.showService.reload();
     this.shows = this.showObservable();
   }
 

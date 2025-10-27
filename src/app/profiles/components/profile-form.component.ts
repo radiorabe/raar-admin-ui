@@ -3,24 +3,23 @@ import {
   OnInit,
   OnDestroy,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  inject,
 } from "@angular/core";
-import { Router, ActivatedRoute, RouterLink } from "@angular/router";
+import { RouterLink } from "@angular/router";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { MainFormComponent } from "../../shared/components/main-form.component";
-import { ProfilesService } from "../services/profiles.service";
 import { ArchiveFormatsRestService } from "../services/archive-formats-rest.service";
 import { AudioEncodingsService } from "../../shared/services/audio-encodings.service";
 import { ProfileModel } from "../models/profile.model";
 import { ArchiveFormatModel } from "../models/archive-format.model";
-import { NotificationService } from "../../shared/services/notification.service";
 import { ShowsService } from "src/app/shows/services/shows.service";
 import { map } from "rxjs/operators";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 import { NgStyle, AsyncPipe } from "@angular/common";
 import { ArchiveFormatFormComponent } from "./archive-format-form.component";
+import { ProfilesService } from "../services/profiles.service";
 
 @Component({
   selector: "sd-profile-form",
@@ -41,32 +40,18 @@ export class ProfileFormComponent
   extends MainFormComponent<ProfileModel>
   implements OnInit, OnDestroy
 {
+  archiveFormatsRest = inject(ArchiveFormatsRestService);
+
   archiveFormats: ArchiveFormatModel[] = [];
 
   availableCodecs: string[] = [];
 
   shownArchiveFormat: ArchiveFormatModel | void;
 
-  constructor(
-    route: ActivatedRoute,
-    router: Router,
-    profilesService: ProfilesService,
-    public archiveFormatsRest: ArchiveFormatsRestService,
-    private showsService: ShowsService,
-    private audioEncodingsService: AudioEncodingsService,
-    notificationSerivce: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(
-      route,
-      router,
-      profilesService,
-      notificationSerivce,
-      changeDetector,
-      fb,
-    );
-  }
+  protected modelsService = inject(ProfilesService);
+
+  private showsService = inject(ShowsService);
+  private audioEncodingsService = inject(AudioEncodingsService);
 
   reset() {
     this.form.reset({

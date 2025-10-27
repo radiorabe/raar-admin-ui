@@ -2,6 +2,7 @@ import {
   Component,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
+  inject,
 } from "@angular/core";
 import {
   NotificationService,
@@ -18,16 +19,17 @@ const NOTIFICATION_DURATION = 5000;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotificationComponent {
+  private cd = inject(ChangeDetectorRef);
+
   current: Notification | undefined;
   show = false;
 
   private timer: number | undefined;
   private readonly destroy$ = new Subject();
 
-  constructor(
-    notifications: NotificationService,
-    private cd: ChangeDetectorRef,
-  ) {
+  constructor() {
+    const notifications = inject(NotificationService);
+
     notifications.pipe(takeUntil(this.destroy$)).subscribe((n) => {
       this.current = n;
       this.show = true;

@@ -1,15 +1,9 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-} from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { MainFormComponent } from "../../shared/components/main-form.component";
 import { AccessCodesService } from "../services/access-codes.service";
 import { AccessCodeModel } from "../models/access-code.model";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 
@@ -20,23 +14,7 @@ import { FieldErrorsComponent } from "../../shared/components/field-errors.compo
   imports: [ReactiveFormsModule, FormErrorsComponent, FieldErrorsComponent],
 })
 export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> {
-  constructor(
-    route: ActivatedRoute,
-    router: Router,
-    accessCodesService: AccessCodesService,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(
-      route,
-      router,
-      accessCodesService,
-      notificationService,
-      changeDetector,
-      fb,
-    );
-  }
+  protected modelsService = inject(AccessCodesService);
 
   reset() {
     this.form.reset({

@@ -3,12 +3,12 @@ import { CrudList } from "../models/crud-list";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
+import { inject } from "@angular/core";
 
-export class ReadRestService<T extends CrudModel> {
-  constructor(
-    protected http: HttpClient,
-    public baseUrlTemplate: string,
-  ) {}
+export abstract class ReadRestService<T extends CrudModel> {
+  protected http = inject(HttpClient);
+
+  constructor(public baseUrlTemplate: string) {}
 
   getList(params?: unknown): Observable<CrudList<T>> {
     return this.http

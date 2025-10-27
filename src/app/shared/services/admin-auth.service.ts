@@ -1,17 +1,11 @@
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { TokenAuthService } from "./token-auth.service";
-import { LoginService } from "./login.service";
 import { UserModel } from "../models/user.model";
 import { environment } from "../../../environments/environment";
 
 @Injectable()
 export class AdminAuthService extends TokenAuthService {
   protected tokenKey = "admin_token";
-
-  constructor(login: LoginService, router: Router) {
-    super(login, router);
-  }
 
   requestLogin(redirectUrl?: string): void {
     this.redirectUrl = redirectUrl;

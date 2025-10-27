@@ -1,15 +1,12 @@
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { ModelsService } from "../../shared/services/models.service";
 import { AccessCodeModel } from "../models/access-code.model";
 import { AccessCodesRestService } from "./access-codes-rest.service";
 
 @Injectable()
 export class AccessCodesService extends ModelsService<AccessCodeModel> {
+  protected crudRest = inject(AccessCodesRestService);
   protected sortAttr = "expires_at";
-
-  constructor(rest: AccessCodesRestService) {
-    super(rest);
-  }
 
   protected sortEntries(entries: AccessCodeModel[]): AccessCodeModel[] {
     return entries.sort((a: AccessCodeModel, b: AccessCodeModel) => {

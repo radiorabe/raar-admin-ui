@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { AccessCodesService } from "../services/access-codes.service";
 import { AsyncPipe } from "@angular/common";
 
@@ -9,5 +9,5 @@ import { AsyncPipe } from "@angular/common";
   imports: [AsyncPipe],
 })
 export class AccessCodesInitComponent {
-  constructor(public accessCodesService: AccessCodesService) {}
+  accessCodesService = inject(AccessCodesService);
 }

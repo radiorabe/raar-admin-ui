@@ -7,14 +7,14 @@ import { tap, switchMap, map, catchError } from "rxjs/operators";
 import { CrudList } from "../models/crud-list";
 
 @Injectable()
-export class ModelsService<T extends CrudModel> {
-  protected entries: T[] = [];
-
+export abstract class ModelsService<T extends CrudModel> {
+  protected readonly crudRest: CrudRestService<T>;
   protected readonly sortAttr: string;
 
+  protected entries: T[] = [];
   private entries$ = new BehaviorSubject<T[]>([]);
 
-  constructor(protected crudRest: CrudRestService<T>) {
+  constructor() {
     // only reload after instance variables from subclasses have been set.
     setTimeout(() => this.reload());
   }

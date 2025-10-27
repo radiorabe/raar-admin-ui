@@ -4,8 +4,12 @@ import { Observable, of } from "rxjs";
 import { map, catchError } from "rxjs/operators";
 import { UserModel } from "../models/user.model";
 import { environment } from "../../../environments/environment";
+import { inject } from "@angular/core";
 
 export class TokenAuthService {
+  protected login = inject(LoginService);
+  protected router = inject(Router);
+
   protected _redirectUrl: string | void;
 
   protected tokenKey = "api_token";
@@ -13,11 +17,6 @@ export class TokenAuthService {
   private _user: UserModel | void;
 
   private _initialized = false;
-
-  constructor(
-    protected login: LoginService,
-    protected router: Router,
-  ) {}
 
   get isLoggedIn(): Observable<boolean> {
     return this.checkUserAuth().pipe(map((_) => this.isUserAuthenticated));

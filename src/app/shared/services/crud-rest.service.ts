@@ -1,12 +1,13 @@
-import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { ReadRestService } from "./read-rest.service";
 import { CrudModel } from "../models/crud.model";
 
-export class CrudRestService<T extends CrudModel> extends ReadRestService<T> {
-  constructor(http: HttpClient, baseUrlTemplate: string) {
-    super(http, baseUrlTemplate);
+export abstract class CrudRestService<
+  T extends CrudModel,
+> extends ReadRestService<T> {
+  constructor(baseUrlTemplate: string) {
+    super(baseUrlTemplate);
   }
 
   create(entity: T, entityToUpdate: T = entity): Observable<T> {

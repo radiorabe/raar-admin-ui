@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map, tap, publishLast, refCount } from "rxjs/operators";
 import { ReadRestService } from "./read-rest.service";
@@ -16,8 +15,8 @@ export class AudioEncodingsService extends ReadRestService<AudioEncodingModel> {
     refCount(),
   );
 
-  constructor(http: HttpClient) {
-    super(http, "/api/admin/audio_encodings");
+  constructor() {
+    super("/api/admin/audio_encodings");
   }
 
   getEntries(): Observable<AudioEncodingModel[]> {

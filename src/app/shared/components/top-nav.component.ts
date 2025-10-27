@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
-import { Router, RouterLinkActive, RouterLink } from "@angular/router";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
+import { RouterLinkActive, RouterLink } from "@angular/router";
 import { AdminAuthService } from "../services/admin-auth.service";
 
 @Component({
@@ -9,10 +9,7 @@ import { AdminAuthService } from "../services/admin-auth.service";
   imports: [RouterLinkActive, RouterLink],
 })
 export class TopNavComponent {
-  constructor(
-    public auth: AdminAuthService,
-    private router: Router,
-  ) {}
+  auth = inject(AdminAuthService);
 
   logout() {
     this.auth.logout();

@@ -1,11 +1,9 @@
-import { OnInit, OnDestroy, ChangeDetectorRef, Directive } from "@angular/core";
+import { OnInit, OnDestroy, Directive, inject } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { FormBuilder } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { Subject } from "rxjs";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
 import { ModelsService } from "../services/models.service";
-import { NotificationService } from "../services/notification.service";
 import {
   takeUntil,
   map,
@@ -17,7 +15,7 @@ import {
 import { CrudModel } from "../models/crud.model";
 
 @Directive()
-export class MainFormComponent<T extends CrudModel>
+export abstract class MainFormComponent<T extends CrudModel>
   extends ValidatedFormComponent
   implements OnInit, OnDestroy
 {
@@ -25,18 +23,12 @@ export class MainFormComponent<T extends CrudModel>
 
   title: string;
 
-  private readonly destroy$ = new Subject();
+  protected readonly modelsService: ModelsService<T>;
 
-  constructor(
-    protected route: ActivatedRoute,
-    protected router: Router,
-    protected modelsService: ModelsService<T>,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(fb, changeDetector, notificationService);
-  }
+  protected route = inject(ActivatedRoute);
+  protected router = inject(Router);
+
+  private readonly destroy$ = new Subject();
 
   ngOnInit() {
     this.route.params

@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-} from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { MainFormComponent } from "../../shared/components/main-form.component";
@@ -11,7 +6,6 @@ import { PlaybackFormatsService } from "../services/playback-formats.service";
 import { PlaybackFormatModel } from "../models/playback-format.model";
 import { AudioEncodingsService } from "../../shared/services/audio-encodings.service";
 import { AudioEncodingModel } from "../../shared/models/audio-encoding.model";
-import { NotificationService } from "../../shared/services/notification.service";
 import { FormErrorsComponent } from "../../shared/components/form-errors.component";
 import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 import { AsyncPipe } from "@angular/common";
@@ -28,26 +22,11 @@ import { AsyncPipe } from "@angular/common";
   ],
 })
 export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackFormatModel> {
+  audioEncodingsService = inject(AudioEncodingsService);
+
   audioEncoding: AudioEncodingModel | void;
 
-  constructor(
-    route: ActivatedRoute,
-    router: Router,
-    playbackFormatsService: PlaybackFormatsService,
-    public audioEncodingsService: AudioEncodingsService,
-    notificationService: NotificationService,
-    changeDetector: ChangeDetectorRef,
-    fb: FormBuilder,
-  ) {
-    super(
-      route,
-      router,
-      playbackFormatsService,
-      notificationService,
-      changeDetector,
-      fb,
-    );
-  }
+  protected modelsService = inject(PlaybackFormatsService);
 
   reset() {
     this.form.reset({
