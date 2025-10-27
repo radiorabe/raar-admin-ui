@@ -8,8 +8,9 @@ import { AccessCodesService } from "./services/access-codes.service";
 import { AccessCodesRestService } from "./services/access-codes-rest.service";
 
 @NgModule({
-  imports: [SharedModule, AccessCodesRoutingModule],
-  declarations: [
+  imports: [
+    SharedModule,
+    AccessCodesRoutingModule,
     AccessCodesComponent,
     AccessCodesInitComponent,
     AccessCodeFormComponent,

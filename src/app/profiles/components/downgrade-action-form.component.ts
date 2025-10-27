@@ -7,18 +7,20 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
 } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
 import { DowngradeActionModel } from "../models/downgrade-action.model";
 import { AudioEncodingModel } from "../../shared/models/audio-encoding.model";
 import { DowngradeActionsRestService } from "../services/downgrade-actions-rest.service";
 import { NotificationService } from "../../shared/services/notification.service";
+import { FormErrorsComponent } from "../../shared/components/form-errors.component";
+import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 
 @Component({
-    selector: "sd-downgrade-action-form",
-    templateUrl: "downgrade-action-form.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-downgrade-action-form",
+  templateUrl: "downgrade-action-form.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [ReactiveFormsModule, FormErrorsComponent, FieldErrorsComponent],
 })
 export class DowngradeActionFormComponent
   extends ValidatedFormComponent

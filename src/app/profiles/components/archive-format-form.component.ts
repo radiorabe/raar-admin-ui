@@ -7,7 +7,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
 } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { ValidatedFormComponent } from "../../shared/components/validated-form.component";
 import { ArchiveFormatModel } from "../models/archive-format.model";
 import { AudioEncodingModel } from "../../shared/models/audio-encoding.model";
@@ -16,13 +16,23 @@ import { ArchiveFormatsRestService } from "../services/archive-formats-rest.serv
 import { DowngradeActionsRestService } from "../services/downgrade-actions-rest.service";
 import { AudioEncodingsService } from "../../shared/services/audio-encodings.service";
 import { NotificationService } from "../../shared/services/notification.service";
+import { FormErrorsComponent } from "../../shared/components/form-errors.component";
+import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
+import { DowngradeActionComponent } from "./downgrade-action.component";
+import { DowngradeActionFormComponent } from "./downgrade-action-form.component";
 
 @Component({
-    selector: "sd-archive-format-form",
-    templateUrl: "archive-format-form.html",
-    providers: [DowngradeActionsRestService],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-archive-format-form",
+  templateUrl: "archive-format-form.html",
+  providers: [DowngradeActionsRestService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    ReactiveFormsModule,
+    FormErrorsComponent,
+    FieldErrorsComponent,
+    DowngradeActionComponent,
+    DowngradeActionFormComponent,
+  ],
 })
 export class ArchiveFormatFormComponent
   extends ValidatedFormComponent

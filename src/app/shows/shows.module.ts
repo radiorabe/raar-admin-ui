@@ -12,8 +12,9 @@ import { ProfilesService } from "../profiles/services/profiles.service";
 import { ProfilesRestService } from "../profiles/services/profiles-rest.service";
 
 @NgModule({
-  imports: [SharedModule, ShowsRoutingModule],
-  declarations: [
+  imports: [
+    SharedModule,
+    ShowsRoutingModule,
     ShowsComponent,
     ShowsInitComponent,
     ShowFormComponent,

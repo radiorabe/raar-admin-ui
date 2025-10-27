@@ -5,8 +5,8 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
 } from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
-import { FormBuilder, Validators } from "@angular/forms";
+import { Router, ActivatedRoute, RouterLink } from "@angular/router";
+import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { MainFormComponent } from "../../shared/components/main-form.component";
 import { ProfilesService } from "../services/profiles.service";
@@ -17,13 +17,25 @@ import { ArchiveFormatModel } from "../models/archive-format.model";
 import { NotificationService } from "../../shared/services/notification.service";
 import { ShowsService } from "src/app/shows/services/shows.service";
 import { map } from "rxjs/operators";
+import { FormErrorsComponent } from "../../shared/components/form-errors.component";
+import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
+import { NgStyle, AsyncPipe } from "@angular/common";
+import { ArchiveFormatFormComponent } from "./archive-format-form.component";
 
 @Component({
-    selector: "sd-profile-form",
-    templateUrl: "profile-form.html",
-    providers: [ArchiveFormatsRestService],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-profile-form",
+  templateUrl: "profile-form.html",
+  providers: [ArchiveFormatsRestService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    ReactiveFormsModule,
+    FormErrorsComponent,
+    FieldErrorsComponent,
+    NgStyle,
+    ArchiveFormatFormComponent,
+    RouterLink,
+    AsyncPipe,
+  ],
 })
 export class ProfileFormComponent
   extends MainFormComponent<ProfileModel>

@@ -8,8 +8,9 @@ import { PlaybackFormatsService } from "./services/playback-formats.service";
 import { PlaybackFormatsRestService } from "./services/playback-formats-rest.service";
 
 @NgModule({
-  imports: [SharedModule, PlaybackFormatsRoutingModule],
-  declarations: [
+  imports: [
+    SharedModule,
+    PlaybackFormatsRoutingModule,
     PlaybackFormatsComponent,
     PlaybackFormatsInitComponent,
     PlaybackFormatFormComponent,

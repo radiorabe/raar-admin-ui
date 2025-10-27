@@ -8,10 +8,9 @@ import {
 import { DowngradeActionModel } from "../models/downgrade-action.model";
 
 @Component({
-    selector: "sd-downgrade-action",
-    templateUrl: "downgrade-action.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-downgrade-action",
+  templateUrl: "downgrade-action.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DowngradeActionComponent {
   @Input() downgradeAction: DowngradeActionModel;

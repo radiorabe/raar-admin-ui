@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, RouterLinkActive, RouterLink } from "@angular/router";
 import { AdminAuthService } from "../services/admin-auth.service";
 
 @Component({
-    selector: "sd-admin-nav",
-    templateUrl: "top-nav.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-admin-nav",
+  templateUrl: "top-nav.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLinkActive, RouterLink],
 })
 export class TopNavComponent {
   constructor(

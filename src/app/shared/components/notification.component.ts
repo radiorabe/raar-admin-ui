@@ -13,10 +13,9 @@ import { takeUntil } from "rxjs/operators";
 const NOTIFICATION_DURATION = 5000;
 
 @Component({
-    selector: "sd-notification",
-    templateUrl: "notification.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-notification",
+  templateUrl: "notification.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotificationComponent {
   current: Notification | undefined;

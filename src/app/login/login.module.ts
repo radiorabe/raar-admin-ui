@@ -5,8 +5,11 @@ import { LoginRoutes } from "./login.routes";
 import { LoginPageComponent } from "./components/login-page.component";
 
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(LoginRoutes)],
-  declarations: [LoginPageComponent],
+  imports: [
+    SharedModule,
+    RouterModule.forChild(LoginRoutes),
+    LoginPageComponent,
+  ],
   exports: [],
   providers: [],
 })

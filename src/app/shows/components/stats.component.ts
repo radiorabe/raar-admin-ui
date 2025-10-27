@@ -5,15 +5,21 @@ import {
   ElementRef,
   ChangeDetectorRef,
 } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
 import { finalize } from "rxjs/operators";
 
 @Component({
-    selector: "sd-stats",
-    templateUrl: "stats.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-stats",
+  templateUrl: "stats.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FormsModule, ReactiveFormsModule],
 })
 export class StatsComponent {
   statsForm: FormGroup;

@@ -4,18 +4,20 @@ import {
   ChangeDetectorRef,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Observable, of } from "rxjs";
 import { MainFormComponent } from "../../shared/components/main-form.component";
 import { AccessCodesService } from "../services/access-codes.service";
 import { AccessCodeModel } from "../models/access-code.model";
 import { NotificationService } from "../../shared/services/notification.service";
+import { FormErrorsComponent } from "../../shared/components/form-errors.component";
+import { FieldErrorsComponent } from "../../shared/components/field-errors.component";
 
 @Component({
-    selector: "sd-access-code-form",
-    templateUrl: "access-code-form.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-access-code-form",
+  templateUrl: "access-code-form.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [ReactiveFormsModule, FormErrorsComponent, FieldErrorsComponent],
 })
 export class AccessCodeFormComponent extends MainFormComponent<AccessCodeModel> {
   constructor(

@@ -6,12 +6,13 @@ import {
 import { LoginService } from "../../shared/services/login.service";
 import { AdminAuthService } from "../../shared/services/admin-auth.service";
 import { UserModel } from "src/app/shared/models/user.model";
+import { FormsModule } from "@angular/forms";
 
 @Component({
-    selector: "sd-login-page",
-    templateUrl: "login-page.html",
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: "sd-login-page",
+  templateUrl: "login-page.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FormsModule],
 })
 export class LoginPageComponent {
   username: string;
