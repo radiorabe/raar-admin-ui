@@ -39,7 +39,7 @@
     "@angular-eslint/schematics": "^20.5.0",
     "@angular-eslint/template-parser": "^20.5.0",
     "@angular/build": "^20.3.25",
-    "@angular/cli": "^20.3.19",
+    "@angular/cli": "^20.3.25",
     "@angular/compiler-cli": "^20.3.19",
     "@angular/language-service": "^20.3.19",
     "@types/node": "^22.18.0",
