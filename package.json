@@ -23,7 +23,7 @@
     "@angular/compiler": "^20.3.19",
     "@angular/core": "^20.3.19",
     "@angular/forms": "^20.3.19",
-    "@angular/platform-browser": "^20.3.19",
+    "@angular/platform-browser": "^20.3.20",
     "@angular/platform-browser-dynamic": "^20.3.19",
     "@angular/router": "^20.3.19",
     "bootstrap-sass": "^3.4.1",
