@@ -1,6 +1,6 @@
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { ReadRestService } from "./read-rest.service";
+import { ModelResponse, ReadRestService } from "./read-rest.service";
 import { CrudModel } from "../models/crud.model";
 
 export abstract class CrudRestService<
@@ -12,13 +12,15 @@ export abstract class CrudRestService<
 
   create(entity: T, entityToUpdate: T = entity): Observable<T> {
     return this.http
-      .post(this.baseUrl, this.rootedJson(entity))
+      .post<ModelResponse<T>>(this.baseUrl, this.rootedJson(entity))
       .pipe(map((res) => this.updateEntityFromResponse(res, entityToUpdate)));
   }
 
   update(entity: T, entityToUpdate: T = entity): Observable<T> {
     return this.http
-      .patch(`${this.baseUrl}/${entity.id}`, this.rootedJson(entity))
+      .patch<
+        ModelResponse<T>
+      >(`${this.baseUrl}/${entity.id}`, this.rootedJson(entity))
       .pipe(map((res) => this.updateEntityFromResponse(res, entityToUpdate)));
   }
 
@@ -29,7 +31,7 @@ export abstract class CrudRestService<
   }
 
   protected rootedJson(entity: T): string {
-    const data: unknown = {};
+    const data: Record<string, unknown> = {};
     data["data"] = entity;
     return JSON.stringify(data);
   }

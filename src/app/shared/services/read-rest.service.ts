@@ -5,14 +5,27 @@ import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
 import { inject } from "@angular/core";
 
+export type ListResponse<T extends CrudModel> = {
+  data: T[];
+  included: unknown[];
+  links: {
+    next: string;
+    prev: string;
+  };
+};
+
+export type ModelResponse<T extends CrudModel> = {
+  data: T;
+};
+
 export abstract class ReadRestService<T extends CrudModel> {
   protected http = inject(HttpClient);
 
   constructor(public baseUrlTemplate: string) {}
 
-  getList(params?: unknown): Observable<CrudList<T>> {
+  getList(params?: Record<string, unknown>): Observable<CrudList<T>> {
     return this.http
-      .get(this.baseUrl, this.requestOptionsFromParams(params))
+      .get<ListResponse<T>>(this.baseUrl, this.requestOptionsFromParams(params))
       .pipe(map((json) => this.buildListFromResponse(json, this.buildEntity)));
   }
 
@@ -21,7 +34,7 @@ export abstract class ReadRestService<T extends CrudModel> {
       return new BehaviorSubject<CrudList<T>>(list);
     }
 
-    return this.http.get(list.links.next).pipe(
+    return this.http.get<ListResponse<T>>(list.links.next).pipe(
       map((json) => this.buildListFromResponse(json, this.buildEntity)),
       map((res) => {
         res.links.prev = list.links.prev;
@@ -44,7 +57,7 @@ export abstract class ReadRestService<T extends CrudModel> {
       entity = entityOrId;
     }
     return this.http
-      .get(`${this.baseUrl}/${id}`)
+      .get<ModelResponse<T>>(`${this.baseUrl}/${id}`)
       .pipe(map((json) => this.updateEntityFromResponse(json, entity)));
   }
 
@@ -53,11 +66,11 @@ export abstract class ReadRestService<T extends CrudModel> {
   }
 
   protected buildListFromResponse<R extends CrudModel>(
-    json: unknown,
+    json: ListResponse<R>,
     builder: () => R,
   ): CrudList<R> {
     const list = new CrudList<R>();
-    list.entries = json["data"].map((item: unknown) =>
+    list.entries = json["data"].map((item: R) =>
       this.copyAttributes(item, builder()),
     );
     Object.assign(list.links, json["links"]);
@@ -66,7 +79,7 @@ export abstract class ReadRestService<T extends CrudModel> {
   }
 
   protected updateEntityFromResponse<R extends CrudModel>(
-    json: unknown,
+    json: ModelResponse<R>,
     entity: R,
   ): R {
     return this.copyAttributes(json["data"], entity);
@@ -84,21 +97,26 @@ export abstract class ReadRestService<T extends CrudModel> {
     );
   }
 
-  protected requestOptionsFromParams(params?: unknown): {
+  protected requestOptionsFromParams(params?: Record<string, unknown>): {
     params?: HttpParams;
   } {
     if (!params) return {};
     return {
       params: Object.keys(params)
         .filter(this.paramFilter(params))
-        .reduce((s, key) => s.append(key, params[key]), new HttpParams()),
+        .reduce(
+          (s, key) => s.append(key, params[key] as string),
+          new HttpParams(),
+        ),
     };
   }
 
-  private paramFilter(params: unknown): (key: string) => boolean {
+  private paramFilter(
+    params: Record<string, unknown>,
+  ): (key: string) => boolean {
     return (key) =>
       params[key] != null &&
       ((typeof params[key] !== "string" && !Array.isArray(params[key])) ||
-        params[key].length !== 0);
+        (params[key] as string | unknown[]).length !== 0);
   }
 }

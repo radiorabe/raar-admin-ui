@@ -11,6 +11,7 @@ import {
   HTTP_INTERCEPTORS,
   provideHttpClient,
   withInterceptorsFromDi,
+  withXhr,
 } from "@angular/common/http";
 import { AddAuthHeaderInterceptor } from "./services/add-auth-header-interceptor.service";
 import { RemoteErrorInterceptor } from "./services/remote-error-interceptor.service";
@@ -66,7 +67,7 @@ export class SharedModule {
         LoginWindowService,
         AdminGuard,
         AdminAuthService,
-        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClient(withXhr(), withInterceptorsFromDi()),
         ...interceptors,
       ],
     };

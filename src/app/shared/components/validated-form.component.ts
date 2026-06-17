@@ -31,7 +31,7 @@ const MESSAGES = {
 };
 
 export abstract class ValidatedFormComponent {
-  form: FormGroup;
+  form!: FormGroup;
 
   submitted = false;
 
@@ -64,7 +64,7 @@ export abstract class ValidatedFormComponent {
   }
 
   resetFieldErrors(name: string): void {
-    this.form.get(name).setErrors(null);
+    this.form.get(name)?.setErrors(null);
   }
 
   reset() {
@@ -75,7 +75,7 @@ export abstract class ValidatedFormComponent {
     if (error.status === 422) {
       const data = this.collectValidationErrors(error.error);
       Object.keys(data).forEach((field) => {
-        this.findFieldControl(field).setErrors(data[field]);
+        this.findFieldControl(field).setErrors(data[field] as Record<string, boolean>);
       });
       this.changeDetector.markForCheck();
     } else {
@@ -89,7 +89,7 @@ export abstract class ValidatedFormComponent {
   protected getErrors(control: AbstractControl): string[] {
     return Object.keys(control.errors || {})
       .filter((error) => control.errors && control.errors[error])
-      .map((error) => MESSAGES[error] || error);
+      .map((error) => (MESSAGES as Record<string, string>)[error] || error);
   }
 
   protected findFieldControl(field: string): AbstractControl {
@@ -97,17 +97,17 @@ export abstract class ValidatedFormComponent {
     if (field === "base") {
       control = this.form;
     } else if (this.form.get(field)) {
-      control = this.form.get(field);
+      control = this.form.get(field)!;
     } else if (
       field.match(/_id$/) &&
       this.form.get(field.substring(0, field.length - 3))
     ) {
-      control = this.form.get(field.substring(0, field.length - 3));
+      control = this.form.get(field.substring(0, field.length - 3))!;
     } else if (field.indexOf(".") > 0) {
       let group = this.form;
       field.split(".").forEach((f) => {
         if (group.get(f)) {
-          control = group.get(f);
+          control = group.get(f)!;
           if (control instanceof FormGroup) group = control;
         } else {
           control = group;
@@ -140,8 +140,8 @@ export abstract class ValidatedFormComponent {
     return "Der Eintrag wurde gelöscht.";
   }
 
-  private collectValidationErrors(res: { errors }): unknown {
-    const errors: unknown = {};
+  private collectValidationErrors(res: { errors: ValidationError[] }): Record<string, Record<string, boolean>> {
+    const errors: Record<string, Record<string, boolean>> = {};
     res.errors.forEach((e: ValidationError) => {
       const attr = e.source.pointer.split("/").pop();
       if (attr) {

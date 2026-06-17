@@ -1,9 +1,16 @@
-import { Component, OnDestroy, Input, inject } from "@angular/core";
+import {
+  Component,
+  OnDestroy,
+  Input,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { Router, NavigationEnd, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "sd-layout",
   templateUrl: "layout.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterOutlet],
 })
 export class LayoutComponent implements OnDestroy {

@@ -37,9 +37,9 @@ export class ArchiveFormatFormComponent
   extends ValidatedFormComponent
   implements OnInit
 {
-  @Input() archiveFormat: ArchiveFormatModel;
+  @Input() archiveFormat!: ArchiveFormatModel;
 
-  @Input() restService: ArchiveFormatsRestService;
+  @Input() restService!: ArchiveFormatsRestService;
 
   @Output() removed = new EventEmitter<void>();
 
@@ -50,7 +50,7 @@ export class ArchiveFormatFormComponent
 
   downgradeActions: DowngradeActionModel[] = [];
 
-  editedDowngradeAction: DowngradeActionModel | void;
+  editedDowngradeAction: DowngradeActionModel | undefined;
 
   ngOnInit() {
     this.audioEncodingsService.getEntries().subscribe((list) => {

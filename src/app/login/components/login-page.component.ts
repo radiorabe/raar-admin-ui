@@ -20,8 +20,8 @@ export class LoginPageComponent {
   private auth = inject(AdminAuthService);
   private cd = inject(ChangeDetectorRef);
 
-  username: string;
-  password: string;
+  username: string = "";
+  password: string = "";
   checking = false;
   failure = false;
 

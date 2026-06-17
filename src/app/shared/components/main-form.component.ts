@@ -19,11 +19,11 @@ export abstract class MainFormComponent<T extends CrudModel>
   extends ValidatedFormComponent
   implements OnInit, OnDestroy
 {
-  entry: T;
+  entry!: T;
 
-  title: string;
+  title!: string;
 
-  protected readonly modelsService: ModelsService<T>;
+  protected readonly modelsService!: ModelsService<T>;
 
   protected route = inject(ActivatedRoute);
   protected router = inject(Router);

@@ -8,5 +8,5 @@ import { RouterLink } from "@angular/router";
   imports: [RouterLink],
 })
 export class AddButtonComponent {
-  @Input() link: string[];
+  @Input() link!: string[];
 }

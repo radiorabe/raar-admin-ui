@@ -38,7 +38,7 @@ export class ShowMergeComponent
   showsService = inject(ShowsService);
   private router = inject(Router);
 
-  @Input() show: ShowModel;
+  @Input() show!: ShowModel;
 
   ngOnChanges() {
     this.reset();

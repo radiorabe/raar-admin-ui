@@ -5,6 +5,12 @@
     "types": []
   },
   "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    },
     "preserveWhitespaces": true
   },
   "files": ["main.ts", "polyfills.ts"],

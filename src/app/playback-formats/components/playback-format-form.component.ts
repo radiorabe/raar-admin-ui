@@ -24,7 +24,7 @@ import { AsyncPipe } from "@angular/common";
 export class PlaybackFormatFormComponent extends MainFormComponent<PlaybackFormatModel> {
   audioEncodingsService = inject(AudioEncodingsService);
 
-  audioEncoding: AudioEncodingModel | void;
+  audioEncoding: AudioEncodingModel | undefined;
 
   protected modelsService = inject(PlaybackFormatsService);
 
