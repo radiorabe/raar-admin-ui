@@ -10,7 +10,7 @@ import { NgStyle } from "@angular/common";
 @Component({
   selector: "sd-small-modal",
   templateUrl: "small-modal.html",
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgStyle],
 })
 export class SmallModalComponent {
