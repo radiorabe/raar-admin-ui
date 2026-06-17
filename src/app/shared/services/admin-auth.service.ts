@@ -8,7 +8,7 @@ export class AdminAuthService extends TokenAuthService {
   protected tokenKey = "admin_token";
 
   requestLogin(redirectUrl?: string): void {
-    this.redirectUrl = redirectUrl;
+    if (redirectUrl) this.redirectUrl = redirectUrl;
     if (this.sso && !this.isUserAuthenticated) {
       // /sso is a virtual path that redirects to SSO
       window.location.href = this.applicationRootUrl + "/sso";

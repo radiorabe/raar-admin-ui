@@ -4,7 +4,7 @@ import { ArchiveFormatModel } from "../models/archive-format.model";
 
 @Injectable()
 export class ArchiveFormatsRestService extends CrudRestService<ArchiveFormatModel> {
-  profileId: number;
+  profileId!: number;
 
   constructor() {
     super("/api/admin/profiles/{profileId}/archive_formats");

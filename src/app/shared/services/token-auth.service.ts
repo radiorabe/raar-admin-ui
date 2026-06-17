@@ -10,11 +10,11 @@ export class TokenAuthService {
   protected login = inject(LoginService);
   protected router = inject(Router);
 
-  protected _redirectUrl: string | void;
+  protected _redirectUrl: string | undefined;
 
   protected tokenKey = "api_token";
 
-  private _user: UserModel | void;
+  private _user: UserModel | undefined;
 
   private _initialized = false;
 
@@ -26,11 +26,11 @@ export class TokenAuthService {
     return !!this.token;
   }
 
-  get user(): UserModel | void {
+  get user(): UserModel | undefined {
     return this._user;
   }
 
-  setUser(user: UserModel | void) {
+  setUser(user: UserModel | undefined) {
     this._user = user;
     if (user) this.storeUserToken(user);
     if (this._redirectUrl) {
@@ -39,7 +39,7 @@ export class TokenAuthService {
     }
   }
 
-  set redirectUrl(url: string) {
+  set redirectUrl(url: string | undefined) {
     if (!this._redirectUrl) {
       this._redirectUrl = url;
     }
@@ -72,7 +72,9 @@ export class TokenAuthService {
       return window.localStorage.getItem(key) || "";
     } catch (_e) {
       if (this.user) {
-        return (<unknown>this.user.attributes)[key] || "";
+        return (
+          (this.user.attributes as unknown as Record<string, string>)[key] || ""
+        );
       } else {
         return "";
       }

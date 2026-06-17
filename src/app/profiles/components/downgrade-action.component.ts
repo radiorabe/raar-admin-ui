@@ -13,7 +13,7 @@ import { DowngradeActionModel } from "../models/downgrade-action.model";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DowngradeActionComponent {
-  @Input() downgradeAction: DowngradeActionModel;
+  @Input() downgradeAction!: DowngradeActionModel;
 
   @Output() edit = new EventEmitter<void>();
 

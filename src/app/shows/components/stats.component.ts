@@ -26,12 +26,12 @@ export class StatsComponent {
   private http = inject(HttpClient);
   private cd = inject(ChangeDetectorRef);
 
-  statsForm: FormGroup;
+  statsForm!: FormGroup;
 
   loading = false;
 
   @ViewChild("downloadLink", { static: true })
-  private downloadLink: ElementRef;
+  private downloadLink!: ElementRef;
 
   constructor() {
     this.createStatsForm(inject(FormBuilder));

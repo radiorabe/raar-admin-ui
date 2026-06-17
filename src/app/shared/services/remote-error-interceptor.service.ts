@@ -32,9 +32,8 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
   private handleError(res: HttpErrorResponse): Observable<HttpEvent<unknown>> {
     if (res.status === HTTP_UNAUTHORIZED) {
       this.authService.requestLogin();
-    } else {
-      return throwError(() => res);
     }
+    return throwError(() => res);
   }
 
   private get authService(): AdminAuthService {

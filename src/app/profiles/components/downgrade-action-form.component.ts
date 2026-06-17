@@ -24,11 +24,11 @@ export class DowngradeActionFormComponent
   extends ValidatedFormComponent
   implements OnInit
 {
-  @Input() downgradeAction: DowngradeActionModel;
+  @Input() downgradeAction!: DowngradeActionModel;
 
-  @Input() restService: DowngradeActionsRestService;
+  @Input() restService!: DowngradeActionsRestService;
 
-  @Input() audioEncoding: AudioEncodingModel;
+  @Input() audioEncoding!: AudioEncodingModel;
 
   @Output() saved = new EventEmitter<DowngradeActionModel>();
 

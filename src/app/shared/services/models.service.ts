@@ -8,8 +8,8 @@ import { CrudList } from "../models/crud-list";
 
 @Injectable()
 export abstract class ModelsService<T extends CrudModel> {
-  protected readonly crudRest: CrudRestService<T>;
-  protected readonly sortAttr: string;
+  protected readonly crudRest!: CrudRestService<T>;
+  protected readonly sortAttr!: string;
 
   protected entries: T[] = [];
   private entries$ = new BehaviorSubject<T[]>([]);

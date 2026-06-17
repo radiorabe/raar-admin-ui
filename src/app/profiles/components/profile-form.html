@@ -133,7 +133,7 @@
     </li>
     }
   </ul>
-  @if ((relatedShows() | async).length === 0) {
+  @if ((relatedShows() | async)!.length === 0) {
   <div>Keine Sendungen zugewiesen.</div>
   }
 </div>

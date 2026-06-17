@@ -12,5 +12,5 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   `,
 })
 export class FormErrorsComponent {
-  @Input() errors: string[];
+  @Input() errors: string[] = [];
 }

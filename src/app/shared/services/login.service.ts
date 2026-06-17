@@ -51,8 +51,8 @@ export class LoginService {
 
   private setUserFromResponse(res: HttpResponse<unknown>): UserModel {
     const user = new UserModel();
-    Object.assign(user, res.body["data"]);
-    user.attributes.admin_token = res.headers.get("X-Auth-Token");
+    Object.assign(user, (res.body as Record<string, unknown>)["data"]);
+    user.attributes.admin_token = res.headers.get("X-Auth-Token") ?? undefined;
     return user;
   }
 }

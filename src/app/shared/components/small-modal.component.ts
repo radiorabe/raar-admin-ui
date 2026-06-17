@@ -1,15 +1,22 @@
-import { Component, Input, ChangeDetectorRef, inject } from "@angular/core";
+import {
+  Component,
+  Input,
+  ChangeDetectorRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { NgStyle } from "@angular/common";
 
 @Component({
   selector: "sd-small-modal",
   templateUrl: "small-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgStyle],
 })
 export class SmallModalComponent {
   private cd = inject(ChangeDetectorRef);
 
-  @Input() title: string;
+  @Input() title!: string;
 
   visible = false;
   visibleAnimate = false;

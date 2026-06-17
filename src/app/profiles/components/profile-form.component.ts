@@ -46,7 +46,7 @@ export class ProfileFormComponent
 
   availableCodecs: string[] = [];
 
-  shownArchiveFormat: ArchiveFormatModel | void;
+  shownArchiveFormat: ArchiveFormatModel | undefined;
 
   protected modelsService = inject(ProfilesService);
 

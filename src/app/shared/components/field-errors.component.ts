@@ -12,5 +12,5 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   `,
 })
 export class FieldErrorsComponent {
-  @Input() errors: string[];
+  @Input() errors: string[] = [];
 }

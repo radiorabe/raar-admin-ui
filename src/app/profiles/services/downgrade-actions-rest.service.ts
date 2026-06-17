@@ -4,8 +4,8 @@ import { DowngradeActionModel } from "../models/downgrade-action.model";
 
 @Injectable()
 export class DowngradeActionsRestService extends CrudRestService<DowngradeActionModel> {
-  profileId: number;
-  archiveFormatId: number;
+  profileId!: number;
+  archiveFormatId!: number;
 
   constructor() {
     super(
