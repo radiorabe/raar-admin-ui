@@ -4,22 +4,27 @@ import {
   Input,
   inject,
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
 } from "@angular/core";
 import { Router, NavigationEnd, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "sd-layout",
   templateUrl: "layout.html",
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
 })
 export class LayoutComponent implements OnDestroy {
   @Input() collapsibleNav = true;
 
   private _showNav = false;
+  private cd = inject(ChangeDetectorRef);
 
   private routerSub = inject(Router).events.subscribe((e) => {
-    if (e instanceof NavigationEnd) this._showNav = false;
+    if (e instanceof NavigationEnd) {
+      this._showNav = false;
+      this.cd.markForCheck();
+    }
   });
 
   get showNav(): boolean {

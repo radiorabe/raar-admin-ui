@@ -4,5 +4,5 @@ export class CrudModel {
   attributes: unknown;
   links: unknown;
 
-  init() {} // eslint-disable-line
+  init() {}
 }
