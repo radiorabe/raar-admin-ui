@@ -1,5 +1,8 @@
 name: Build
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -33,6 +36,7 @@ jobs:
         uses: cypress-io/github-action@948d67d3074f1bbb6379c8bdbb04e95d2f8e593f # v7.4.0
         with:
           config: video=false
+          install-command: "true" # re-use installed npm from above
           build: npm run build:prod
           start: npm run start
 
