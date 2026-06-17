@@ -79,9 +79,9 @@ export class DowngradeActionFormComponent
     this.restService[action](
       this.downgradeAction,
       new DowngradeActionModel(),
-    ).subscribe(
-      (action) => this.saved.next(action),
-      (err) => this.handleSubmitError(err),
-    );
+    ).subscribe({
+      next: (action) => this.saved.next(action),
+      error: (err) => this.handleSubmitError(err),
+    });
   }
 }

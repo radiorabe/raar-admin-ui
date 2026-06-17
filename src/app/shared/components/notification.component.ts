@@ -25,7 +25,7 @@ export class NotificationComponent {
   show = false;
 
   private timer: number | undefined;
-  private readonly destroy$ = new Subject();
+  private readonly destroy$ = new Subject<void>();
 
   constructor() {
     const notifications = inject(NotificationService);

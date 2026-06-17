@@ -28,7 +28,7 @@ export abstract class MainFormComponent<T extends CrudModel>
   protected route = inject(ActivatedRoute);
   protected router = inject(Router);
 
-  private readonly destroy$ = new Subject();
+  private readonly destroy$ = new Subject<void>();
 
   ngOnInit() {
     this.route.params
@@ -64,13 +64,13 @@ export abstract class MainFormComponent<T extends CrudModel>
     e.preventDefault();
     if (window.confirm(this.getRemoveQuestion())) {
       this.submitted = true;
-      this.modelsService.removeEntry(this.entry).subscribe(
-        (_) => {
+      this.modelsService.removeEntry(this.entry).subscribe({
+        next: (_) => {
           this.router.navigate([this.getMainRoute()]);
           this.notificationService.notify(true, this.getDeleteSuccessMessage());
         },
-        (err) => this.handleSubmitError(err),
-      );
+        error: (err) => this.handleSubmitError(err),
+      });
     }
   }
 
@@ -82,14 +82,14 @@ export abstract class MainFormComponent<T extends CrudModel>
   }
 
   protected persist() {
-    this.modelsService.storeEntry(this.entry).subscribe(
-      (entry) => {
+    this.modelsService.storeEntry(this.entry).subscribe({
+      next: (entry) => {
         this.router.navigate([this.getMainRoute(), entry.id]);
         this.setEntry(entry);
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      (err) => this.handleSubmitError(err),
-    );
+      error: (err) => this.handleSubmitError(err),
+    });
   }
 
   protected serialize() {
