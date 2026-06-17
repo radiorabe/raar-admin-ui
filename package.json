@@ -28,7 +28,7 @@
     "@angular/router": "^21.2.17",
     "bootstrap-sass": "^3.4.1",
     "core-js": "^3.6.4",
-    "rxjs": "^6.5.4",
+    "rxjs": "^7.8.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.15.1"
   },

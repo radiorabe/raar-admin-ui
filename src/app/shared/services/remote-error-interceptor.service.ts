@@ -33,7 +33,7 @@ export class RemoteErrorInterceptor implements HttpInterceptor {
     if (res.status === HTTP_UNAUTHORIZED) {
       this.authService.requestLogin();
     } else {
-      return throwError(res);
+      return throwError(() => res);
     }
   }
 

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { map, tap, publishLast, refCount } from "rxjs/operators";
+import { map, tap, shareReplay } from "rxjs/operators";
 import { ReadRestService } from "./read-rest.service";
 import { AudioEncodingModel } from "../models/audio-encoding.model";
 
@@ -11,8 +11,7 @@ export class AudioEncodingsService extends ReadRestService<AudioEncodingModel> {
     tap((entries) =>
       entries.forEach((e) => e.attributes.bitrates.sort((a, b) => b - a)),
     ),
-    publishLast(),
-    refCount(),
+    shareReplay(1),
   );
 
   constructor() {

@@ -101,16 +101,16 @@ export class ArchiveFormatFormComponent
     if (window.confirm("Willst du dieses Format wirklich löschen?")) {
       if (this.archiveFormat.id) {
         this.submitted = true;
-        this.restService.remove(this.archiveFormat.id).subscribe(
-          (_) => {
+        this.restService.remove(this.archiveFormat.id).subscribe({
+          next: (_) => {
             this.removed.next();
             this.notificationService.notify(
               true,
               this.getDeleteSuccessMessage(),
             );
           },
-          (err) => this.handleSubmitError(err),
-        );
+          error: (err) => this.handleSubmitError(err),
+        });
       } else {
         this.removed.next();
       }
@@ -145,14 +145,14 @@ export class ArchiveFormatFormComponent
     if (this.editedDowngradeAction) return;
     if (window.confirm("Willst du diesen Schritt wirklich löschen?")) {
       if (action.id) {
-        this.downgradeActionsRest.remove(action.id).subscribe(
-          (_) => {
+        this.downgradeActionsRest.remove(action.id).subscribe({
+          next: (_) => {
             this.setDowngradeActions(
               this.downgradeActions.filter((a) => a !== action),
             );
           },
-          (err) => this.handleSubmitError(err),
-        );
+          error: (err) => this.handleSubmitError(err),
+        });
       } else {
         this.setDowngradeActions(
           this.downgradeActions.filter((a) => a !== action),
@@ -202,8 +202,8 @@ export class ArchiveFormatFormComponent
 
   private persist() {
     const action = this.archiveFormat.id ? "update" : "create";
-    this.restService[action](this.archiveFormat).subscribe(
-      (_) => {
+    this.restService[action](this.archiveFormat).subscribe({
+      next: (_) => {
         this.reset();
         if (action === "create") {
           this.downgradeActionsRest.archiveFormatId = this.archiveFormat.id;
@@ -211,8 +211,8 @@ export class ArchiveFormatFormComponent
         this.changeDetector.markForCheck();
         this.notificationService.notify(true, this.getSaveSuccessMessage());
       },
-      (err) => this.handleSubmitError(err),
-    );
+      error: (err) => this.handleSubmitError(err),
+    });
   }
 
   private setDowngradeActions(actions: DowngradeActionModel[]) {
