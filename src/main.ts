@@ -1,4 +1,8 @@
-import { enableProdMode, importProvidersFrom } from "@angular/core";
+import {
+  enableProdMode,
+  importProvidersFrom,
+  provideZoneChangeDetection,
+} from "@angular/core";
 
 import { environment } from "./environments/environment";
 import { AudioEncodingsService } from "./app/shared/services/audio-encodings.service";
@@ -20,6 +24,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideZoneChangeDetection(),
     importProvidersFrom(
       BrowserModule,
       SharedModule.forRoot(),
