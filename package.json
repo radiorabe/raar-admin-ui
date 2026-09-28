@@ -43,7 +43,7 @@
     "@types/node": "^26.6.2",
     "@typescript-eslint/eslint-plugin": "^8.65.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "cypress": "^15.21.0",
+    "cypress": "^16.1.0",
     "eslint": "^10.11.0",
     "http-server": "^14.1.1",
     "istanbul-lib-instrument": "^6.0.3",
